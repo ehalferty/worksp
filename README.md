@@ -1,2 +1,0 @@
-# worksp
-My GitHub Workspace
