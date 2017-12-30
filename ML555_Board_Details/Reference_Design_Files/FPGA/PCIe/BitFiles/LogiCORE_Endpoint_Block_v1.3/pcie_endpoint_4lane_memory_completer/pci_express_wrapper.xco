@@ -1,0 +1,136 @@
+##############################################################
+#
+# Xilinx Core Generator version IP1_J.12
+# Date: Fri Feb 23 13:35:36 2007
+#
+##############################################################
+#
+#  This file contains the customisation parameters for a
+#  Xilinx CORE Generator IP GUI. It is strongly recommended
+#  that you do not manually alter this file as it may cause
+#  unexpected and unsupported behavior.
+#
+##############################################################
+#
+# BEGIN Project Options
+SET addpads = False
+SET asysymbol = False
+SET busformat = BusFormatAngleBracketNotRipped
+SET createndf = False
+SET designentry = Verilog
+SET device = xc5vlx50t
+SET devicefamily = virtex5
+SET flowvendor = Other
+SET formalverification = False
+SET foundationsym = False
+SET implementationfiletype = Ngc
+SET package = ff1136
+SET removerpms = False
+SET simulationfiles = Behavioral
+SET speedgrade = -1
+SET verilogsim = True
+SET vhdlsim = False
+# END Project Options
+# BEGIN Select
+SELECT PCI_Express_Endpoint_Block family Xilinx,_Inc. 1.3
+# END Select
+# BEGIN Parameters
+CSET bar0_64bit=false
+CSET bar0_enabled=true
+CSET bar0_prefetchable=false
+CSET bar0_scale=Megabytes
+CSET bar0_size=1
+CSET bar0_type=Memory
+CSET bar0_value=FFF00000
+CSET bar1_enabled=false
+CSET bar1_prefetchable=false
+CSET bar1_scale=bytes
+CSET bar1_size=0
+CSET bar1_type=Memory
+CSET bar1_value=00000000
+CSET bar2_64bit=false
+CSET bar2_enabled=false
+CSET bar2_prefetchable=false
+CSET bar2_scale=bytes
+CSET bar2_size=0
+CSET bar2_type=Memory
+CSET bar2_value=00000000
+CSET bar3_enabled=false
+CSET bar3_prefetchable=false
+CSET bar3_scale=bytes
+CSET bar3_size=0
+CSET bar3_type=Memory
+CSET bar3_value=00000000
+CSET bar4_64bit=false
+CSET bar4_enabled=false
+CSET bar4_prefetchable=false
+CSET bar4_scale=bytes
+CSET bar4_size=0
+CSET bar4_type=Memory
+CSET bar4_value=00000000
+CSET bar5_enabled=false
+CSET bar5_prefetchable=false
+CSET bar5_scale=bytes
+CSET bar5_size=0
+CSET bar5_type=Memory
+CSET bar5_value=00000000
+CSET bar_monitor_enabled=false
+CSET buffer_setup_mode=Manual
+CSET cardbus_cis_pointer=00000000
+CSET class_code_base=05
+CSET class_code_interface=00
+CSET class_code_sub=00
+CSET class_code_value=050000
+CSET class_lookup_base=Memory_controller
+CSET class_lookup_sub=RAM
+CSET clock_ratio=1/2
+CSET component_name=pci_express_wrapper
+CSET component_type=PCI_Express_Endpoint_Device
+CSET device_acceptable_l0s_latency=maximum_of_64ns
+CSET device_acceptable_l1_latency=maximum_of_1us
+CSET device_id=5050
+CSET device_max_payload_size_supported=128
+CSET disable_scrambling=false
+CSET dsn_capability_enabled=false
+CSET dsn_device_serial_number=E000000001000A35
+CSET interrupt_pin=None
+CSET link_enable_aspm_l1_support=false
+CSET link_l0s_exit_latency=more_than_4us
+CSET link_l0s_exit_latency_common_clock=more_than_4us
+CSET link_l1_exit_latency=more_than_64us
+CSET link_l1_exit_latency_common_clock=more_than_64us
+CSET link_port_number=00
+CSET mode=Advanced
+CSET msi_capability_enabled=false
+CSET msi_multiple_message_capable=1_message
+CSET num_fast_training_sequences=255
+CSET num_fast_training_sequences_common_clock=255
+CSET num_lanes=x4
+CSET num_reset_domains=4
+CSET pm_device_specific_initialization=true
+CSET ref_clock_freq=100
+CSET retry_buffer_size=4096
+CSET revision_id=00
+CSET slot_clock_configuration=true
+CSET subsystem_id=5050
+CSET subsystem_vendor_id=10EE
+CSET vc0_completion_rx_fifo_size=1368
+CSET vc0_completion_tx_fifo_size=1024
+CSET vc0_non_posted_rx_fifo_size=192
+CSET vc0_non_posted_tx_fifo_size=192
+CSET vc0_posted_rx_fifo_size=1024
+CSET vc0_posted_tx_fifo_size=1024
+CSET vc1_completion_rx_fifo_size=0
+CSET vc1_completion_tx_fifo_size=0
+CSET vc1_non_posted_rx_fifo_size=0
+CSET vc1_non_posted_tx_fifo_size=0
+CSET vc1_posted_rx_fifo_size=0
+CSET vc1_posted_tx_fifo_size=0
+CSET vc_arbitration=None
+CSET vc_capability_enabled=false
+CSET vc_num_virtual_channels=1
+CSET vendor_id=10EE
+# END Parameters
+GENERATE
+# CRC: 30299762
+

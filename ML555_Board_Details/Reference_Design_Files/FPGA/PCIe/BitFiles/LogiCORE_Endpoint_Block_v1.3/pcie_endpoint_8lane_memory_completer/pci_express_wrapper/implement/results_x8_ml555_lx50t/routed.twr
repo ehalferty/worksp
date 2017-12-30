@@ -1,0 +1,1595 @@
+--------------------------------------------------------------------------------
+Release 9.1.01i Trace 
+Copyright (c) 1995-2007 Xilinx, Inc.  All rights reserved.
+
+trce -u -e 10 -s -1 routed -o routed mapped.pcf
+
+Design file:              routed.ncd
+Physical constraint file: mapped.pcf
+Device,package,speed:     xc5vlx50t,ff1136,-1 (ADVANCED 1.52 2007-02-05, STEPPING level 0)
+Report level:             error report, limited to 10 items per constraint
+                          unconstrained path report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2802 - Read 113 constraints.  If you are experiencing memory or 
+   runtime issues it may help to consolidate some of these constraints.  For 
+   more details please see solution 10784 at support.xilinx.com
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+================================================================================
+Timing constraint: NET "core_clk" PERIOD = 4 ns HIGH 50%;
+
+ 124137 items analyzed, 886 timing errors detected. (886 setup errors, 0 hold errors)
+ Minimum period is   6.712ns.
+--------------------------------------------------------------------------------
+Slack:                  -2.712ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               dut_b/pcie_top_inst/pcie_ep (CPU)
+  Destination:          completer/mem/gen_ldword[1].ldword (RAM)
+  Requirement:          4.000ns
+  Data Path Delay:      6.515ns (Levels of Logic = 4)
+  Clock Path Skew:      -0.122ns
+  Source Clock:         core_clk rising at 0.000ns
+  Destination Clock:    core_clk rising at 4.000ns
+  Clock Uncertainty:    0.075ns
+
+  Clock Uncertainty:          0.075ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.131ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path: dut_b/pcie_top_inst/pcie_ep to completer/mem/gen_ldword[1].ldword
+    Location               Delay type         Delay(ns)  Physical Resource
+                                                         Logical Resource(s)
+    ---------------------------------------------------  -------------------
+    PCIE_X0Y0.LLKRXVALIDN0 Tpcicko_LLK           1.527   dut_b/pcie_top_inst/pcie_ep
+                                                         dut_b/pcie_top_inst/pcie_ep
+    SLICE_X53Y24.D5        net (fanout=46)       0.980   llk_rx_valid_n<0>
+    SLICE_X53Y24.D         Tilo                  0.094   completer/I0/current_state_FFd17
+                                                         completer/I0/current_state_FFd11-In11
+    SLICE_X42Y17.B6        net (fanout=23)       1.288   completer/I0/current_state_not0000
+    SLICE_X42Y17.B         Tilo                  0.094   completer/I0/ram_write_address_internal<12>
+                                                         completer/I0/inc_ram_addr_counter25
+    SLICE_X43Y17.C6        net (fanout=31)       0.296   completer/I0/inc_ram_addr_counter
+    SLICE_X43Y17.C         Tilo                  0.094   completer/I0/stored_header3<15>
+                                                         completer/I0/ram_read_address<13>1
+    SLICE_X42Y16.B2        net (fanout=3)        0.783   completer/ram_read_address<13>
+    SLICE_X42Y16.B         Tilo                  0.094   completer/I0/stored_header3<9>
+                                                         completer/mem/Mshift_ldw_enb_shift0000_Result<1>1
+    RAMB36_X1Y1.ENBU       net (fanout=4)        0.851   completer/mem/ldw_enb<1>
+    RAMB36_X1Y1.CLKBWRCLKU Trcck_ENB             0.414   completer/mem/gen_ldword[1].ldword
+                                                         completer/mem/gen_ldword[1].ldword
+    ---------------------------------------------------  ---------------------------
+    Total                                        6.515ns (2.317ns logic, 4.198ns route)
+                                                         (35.6% logic, 64.4% route)
+
+--------------------------------------------------------------------------------
+Slack:                  -2.701ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               dut_b/pcie_top_inst/pcie_ep (CPU)
+  Destination:          completer/mem/gen_ldword[1].ldword (RAM)
+  Requirement:          4.000ns
+  Data Path Delay:      6.515ns (Levels of Logic = 4)
+  Clock Path Skew:      -0.111ns
+  Source Clock:         core_clk rising at 0.000ns
+  Destination Clock:    core_clk rising at 4.000ns
+  Clock Uncertainty:    0.075ns
+
+  Clock Uncertainty:          0.075ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.131ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path: dut_b/pcie_top_inst/pcie_ep to completer/mem/gen_ldword[1].ldword
+    Location               Delay type         Delay(ns)  Physical Resource
+                                                         Logical Resource(s)
+    ---------------------------------------------------  -------------------
+    PCIE_X0Y0.LLKRXVALIDN0 Tpcicko_LLK           1.527   dut_b/pcie_top_inst/pcie_ep
+                                                         dut_b/pcie_top_inst/pcie_ep
+    SLICE_X53Y24.D5        net (fanout=46)       0.980   llk_rx_valid_n<0>
+    SLICE_X53Y24.D         Tilo                  0.094   completer/I0/current_state_FFd17
+                                                         completer/I0/current_state_FFd11-In11
+    SLICE_X42Y17.B6        net (fanout=23)       1.288   completer/I0/current_state_not0000
+    SLICE_X42Y17.B         Tilo                  0.094   completer/I0/ram_write_address_internal<12>
+                                                         completer/I0/inc_ram_addr_counter25
+    SLICE_X43Y17.C6        net (fanout=31)       0.296   completer/I0/inc_ram_addr_counter
+    SLICE_X43Y17.C         Tilo                  0.094   completer/I0/stored_header3<15>
+                                                         completer/I0/ram_read_address<13>1
+    SLICE_X42Y16.B2        net (fanout=3)        0.783   completer/ram_read_address<13>
+    SLICE_X42Y16.B         Tilo                  0.094   completer/I0/stored_header3<9>
+                                                         completer/mem/Mshift_ldw_enb_shift0000_Result<1>1
+    RAMB36_X1Y1.ENBWRENL   net (fanout=4)        0.851   completer/mem/ldw_enb<1>
+    RAMB36_X1Y1.CLKBWRCLKL Trcck_ENB             0.414   completer/mem/gen_ldword[1].ldword
+                                                         completer/mem/gen_ldword[1].ldword
+    ---------------------------------------------------  ---------------------------
+    Total                                        6.515ns (2.317ns logic, 4.198ns route)
+                                                         (35.6% logic, 64.4% route)
+
+--------------------------------------------------------------------------------
+Slack:                  -2.658ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               dut_b/pcie_top_inst/pcie_ep (CPU)
+  Destination:          completer/mem/gen_hdword[0].hdword (RAM)
+  Requirement:          4.000ns
+  Data Path Delay:      6.422ns (Levels of Logic = 4)
+  Clock Path Skew:      -0.161ns
+  Source Clock:         core_clk rising at 0.000ns
+  Destination Clock:    core_clk rising at 4.000ns
+  Clock Uncertainty:    0.075ns
+
+  Clock Uncertainty:          0.075ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.131ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path: dut_b/pcie_top_inst/pcie_ep to completer/mem/gen_hdword[0].hdword
+    Location               Delay type         Delay(ns)  Physical Resource
+                                                         Logical Resource(s)
+    ---------------------------------------------------  -------------------
+    PCIE_X0Y0.LLKRXVALIDN0 Tpcicko_LLK           1.527   dut_b/pcie_top_inst/pcie_ep
+                                                         dut_b/pcie_top_inst/pcie_ep
+    SLICE_X53Y24.D5        net (fanout=46)       0.980   llk_rx_valid_n<0>
+    SLICE_X53Y24.D         Tilo                  0.094   completer/I0/current_state_FFd17
+                                                         completer/I0/current_state_FFd11-In11
+    SLICE_X42Y17.B6        net (fanout=23)       1.288   completer/I0/current_state_not0000
+    SLICE_X42Y17.B         Tilo                  0.094   completer/I0/ram_write_address_internal<12>
+                                                         completer/I0/inc_ram_addr_counter25
+    SLICE_X43Y17.B5        net (fanout=31)       0.306   completer/I0/inc_ram_addr_counter
+    SLICE_X43Y17.B         Tilo                  0.094   completer/I0/stored_header3<15>
+                                                         completer/I0/ram_read_address<11>1
+    SLICE_X42Y17.C2        net (fanout=3)        0.802   completer/ram_read_address<11>
+    SLICE_X42Y17.C         Tilo                  0.094   completer/I0/ram_write_address_internal<12>
+                                                         completer/mem/Mshift_ldw_enb_shift0000_Result<0>1
+    RAMB36_X1Y4.ENBU       net (fanout=4)        0.729   completer/mem/ldw_enb<0>
+    RAMB36_X1Y4.CLKBWRCLKU Trcck_ENB             0.414   completer/mem/gen_hdword[0].hdword
+                                                         completer/mem/gen_hdword[0].hdword
+    ---------------------------------------------------  ---------------------------
+    Total                                        6.422ns (2.317ns logic, 4.105ns route)
+                                                         (36.1% logic, 63.9% route)
+
+--------------------------------------------------------------------------------
+Slack:                  -2.653ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               dut_b/pcie_top_inst/pcie_ep (CPU)
+  Destination:          completer/mem/gen_hdword[0].hdword (RAM)
+  Requirement:          4.000ns
+  Data Path Delay:      6.422ns (Levels of Logic = 4)
+  Clock Path Skew:      -0.156ns
+  Source Clock:         core_clk rising at 0.000ns
+  Destination Clock:    core_clk rising at 4.000ns
+  Clock Uncertainty:    0.075ns
+
+  Clock Uncertainty:          0.075ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.131ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path: dut_b/pcie_top_inst/pcie_ep to completer/mem/gen_hdword[0].hdword
+    Location               Delay type         Delay(ns)  Physical Resource
+                                                         Logical Resource(s)
+    ---------------------------------------------------  -------------------
+    PCIE_X0Y0.LLKRXVALIDN0 Tpcicko_LLK           1.527   dut_b/pcie_top_inst/pcie_ep
+                                                         dut_b/pcie_top_inst/pcie_ep
+    SLICE_X53Y24.D5        net (fanout=46)       0.980   llk_rx_valid_n<0>
+    SLICE_X53Y24.D         Tilo                  0.094   completer/I0/current_state_FFd17
+                                                         completer/I0/current_state_FFd11-In11
+    SLICE_X42Y17.B6        net (fanout=23)       1.288   completer/I0/current_state_not0000
+    SLICE_X42Y17.B         Tilo                  0.094   completer/I0/ram_write_address_internal<12>
+                                                         completer/I0/inc_ram_addr_counter25
+    SLICE_X43Y17.B5        net (fanout=31)       0.306   completer/I0/inc_ram_addr_counter
+    SLICE_X43Y17.B         Tilo                  0.094   completer/I0/stored_header3<15>
+                                                         completer/I0/ram_read_address<11>1
+    SLICE_X42Y17.C2        net (fanout=3)        0.802   completer/ram_read_address<11>
+    SLICE_X42Y17.C         Tilo                  0.094   completer/I0/ram_write_address_internal<12>
+                                                         completer/mem/Mshift_ldw_enb_shift0000_Result<0>1
+    RAMB36_X1Y4.ENBWRENL   net (fanout=4)        0.729   completer/mem/ldw_enb<0>
+    RAMB36_X1Y4.CLKBWRCLKL Trcck_ENB             0.414   completer/mem/gen_hdword[0].hdword
+                                                         completer/mem/gen_hdword[0].hdword
+    ---------------------------------------------------  ---------------------------
+    Total                                        6.422ns (2.317ns logic, 4.105ns route)
+                                                         (36.1% logic, 63.9% route)
+
+--------------------------------------------------------------------------------
+Slack:                  -2.615ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               dut_b/pcie_top_inst/pcie_ep (CPU)
+  Destination:          completer/mem/gen_ldword[0].ldword (RAM)
+  Requirement:          4.000ns
+  Data Path Delay:      6.420ns (Levels of Logic = 4)
+  Clock Path Skew:      -0.120ns
+  Source Clock:         core_clk rising at 0.000ns
+  Destination Clock:    core_clk rising at 4.000ns
+  Clock Uncertainty:    0.075ns
+
+  Clock Uncertainty:          0.075ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.131ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path: dut_b/pcie_top_inst/pcie_ep to completer/mem/gen_ldword[0].ldword
+    Location               Delay type         Delay(ns)  Physical Resource
+                                                         Logical Resource(s)
+    ---------------------------------------------------  -------------------
+    PCIE_X0Y0.LLKRXVALIDN0 Tpcicko_LLK           1.527   dut_b/pcie_top_inst/pcie_ep
+                                                         dut_b/pcie_top_inst/pcie_ep
+    SLICE_X53Y24.D5        net (fanout=46)       0.980   llk_rx_valid_n<0>
+    SLICE_X53Y24.D         Tilo                  0.094   completer/I0/current_state_FFd17
+                                                         completer/I0/current_state_FFd11-In11
+    SLICE_X42Y17.B6        net (fanout=23)       1.288   completer/I0/current_state_not0000
+    SLICE_X42Y17.B         Tilo                  0.094   completer/I0/ram_write_address_internal<12>
+                                                         completer/I0/inc_ram_addr_counter25
+    SLICE_X43Y17.B5        net (fanout=31)       0.306   completer/I0/inc_ram_addr_counter
+    SLICE_X43Y17.B         Tilo                  0.094   completer/I0/stored_header3<15>
+                                                         completer/I0/ram_read_address<11>1
+    SLICE_X42Y17.C2        net (fanout=3)        0.802   completer/ram_read_address<11>
+    SLICE_X42Y17.C         Tilo                  0.094   completer/I0/ram_write_address_internal<12>
+                                                         completer/mem/Mshift_ldw_enb_shift0000_Result<0>1
+    RAMB36_X1Y2.ENBWRENL   net (fanout=4)        0.727   completer/mem/ldw_enb<0>
+    RAMB36_X1Y2.CLKBWRCLKL Trcck_ENB             0.414   completer/mem/gen_ldword[0].ldword
+                                                         completer/mem/gen_ldword[0].ldword
+    ---------------------------------------------------  ---------------------------
+    Total                                        6.420ns (2.317ns logic, 4.103ns route)
+                                                         (36.1% logic, 63.9% route)
+
+--------------------------------------------------------------------------------
+Slack:                  -2.603ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               dut_b/pcie_top_inst/pcie_ep (CPU)
+  Destination:          completer/mem/gen_ldword[1].ldword (RAM)
+  Requirement:          4.000ns
+  Data Path Delay:      6.406ns (Levels of Logic = 4)
+  Clock Path Skew:      -0.122ns
+  Source Clock:         core_clk rising at 0.000ns
+  Destination Clock:    core_clk rising at 4.000ns
+  Clock Uncertainty:    0.075ns
+
+  Clock Uncertainty:          0.075ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.131ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path: dut_b/pcie_top_inst/pcie_ep to completer/mem/gen_ldword[1].ldword
+    Location               Delay type         Delay(ns)  Physical Resource
+                                                         Logical Resource(s)
+    ---------------------------------------------------  -------------------
+    PCIE_X0Y0.LLKRXVALIDN1 Tpcicko_LLK           1.605   dut_b/pcie_top_inst/pcie_ep
+                                                         dut_b/pcie_top_inst/pcie_ep
+    SLICE_X53Y24.D6        net (fanout=45)       0.793   llk_rx_valid_n<1>
+    SLICE_X53Y24.D         Tilo                  0.094   completer/I0/current_state_FFd17
+                                                         completer/I0/current_state_FFd11-In11
+    SLICE_X42Y17.B6        net (fanout=23)       1.288   completer/I0/current_state_not0000
+    SLICE_X42Y17.B         Tilo                  0.094   completer/I0/ram_write_address_internal<12>
+                                                         completer/I0/inc_ram_addr_counter25
+    SLICE_X43Y17.C6        net (fanout=31)       0.296   completer/I0/inc_ram_addr_counter
+    SLICE_X43Y17.C         Tilo                  0.094   completer/I0/stored_header3<15>
+                                                         completer/I0/ram_read_address<13>1
+    SLICE_X42Y16.B2        net (fanout=3)        0.783   completer/ram_read_address<13>
+    SLICE_X42Y16.B         Tilo                  0.094   completer/I0/stored_header3<9>
+                                                         completer/mem/Mshift_ldw_enb_shift0000_Result<1>1
+    RAMB36_X1Y1.ENBU       net (fanout=4)        0.851   completer/mem/ldw_enb<1>
+    RAMB36_X1Y1.CLKBWRCLKU Trcck_ENB             0.414   completer/mem/gen_ldword[1].ldword
+                                                         completer/mem/gen_ldword[1].ldword
+    ---------------------------------------------------  ---------------------------
+    Total                                        6.406ns (2.395ns logic, 4.011ns route)
+                                                         (37.4% logic, 62.6% route)
+
+--------------------------------------------------------------------------------
+Slack:                  -2.602ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               dut_b/pcie_top_inst/pcie_ep (CPU)
+  Destination:          completer/mem/gen_ldword[0].ldword (RAM)
+  Requirement:          4.000ns
+  Data Path Delay:      6.420ns (Levels of Logic = 4)
+  Clock Path Skew:      -0.107ns
+  Source Clock:         core_clk rising at 0.000ns
+  Destination Clock:    core_clk rising at 4.000ns
+  Clock Uncertainty:    0.075ns
+
+  Clock Uncertainty:          0.075ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.131ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path: dut_b/pcie_top_inst/pcie_ep to completer/mem/gen_ldword[0].ldword
+    Location               Delay type         Delay(ns)  Physical Resource
+                                                         Logical Resource(s)
+    ---------------------------------------------------  -------------------
+    PCIE_X0Y0.LLKRXVALIDN0 Tpcicko_LLK           1.527   dut_b/pcie_top_inst/pcie_ep
+                                                         dut_b/pcie_top_inst/pcie_ep
+    SLICE_X53Y24.D5        net (fanout=46)       0.980   llk_rx_valid_n<0>
+    SLICE_X53Y24.D         Tilo                  0.094   completer/I0/current_state_FFd17
+                                                         completer/I0/current_state_FFd11-In11
+    SLICE_X42Y17.B6        net (fanout=23)       1.288   completer/I0/current_state_not0000
+    SLICE_X42Y17.B         Tilo                  0.094   completer/I0/ram_write_address_internal<12>
+                                                         completer/I0/inc_ram_addr_counter25
+    SLICE_X43Y17.B5        net (fanout=31)       0.306   completer/I0/inc_ram_addr_counter
+    SLICE_X43Y17.B         Tilo                  0.094   completer/I0/stored_header3<15>
+                                                         completer/I0/ram_read_address<11>1
+    SLICE_X42Y17.C2        net (fanout=3)        0.802   completer/ram_read_address<11>
+    SLICE_X42Y17.C         Tilo                  0.094   completer/I0/ram_write_address_internal<12>
+                                                         completer/mem/Mshift_ldw_enb_shift0000_Result<0>1
+    RAMB36_X1Y2.ENBU       net (fanout=4)        0.727   completer/mem/ldw_enb<0>
+    RAMB36_X1Y2.CLKBWRCLKU Trcck_ENB             0.414   completer/mem/gen_ldword[0].ldword
+                                                         completer/mem/gen_ldword[0].ldword
+    ---------------------------------------------------  ---------------------------
+    Total                                        6.420ns (2.317ns logic, 4.103ns route)
+                                                         (36.1% logic, 63.9% route)
+
+--------------------------------------------------------------------------------
+Slack:                  -2.592ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               dut_b/pcie_top_inst/pcie_ep (CPU)
+  Destination:          completer/mem/gen_ldword[1].ldword (RAM)
+  Requirement:          4.000ns
+  Data Path Delay:      6.406ns (Levels of Logic = 4)
+  Clock Path Skew:      -0.111ns
+  Source Clock:         core_clk rising at 0.000ns
+  Destination Clock:    core_clk rising at 4.000ns
+  Clock Uncertainty:    0.075ns
+
+  Clock Uncertainty:          0.075ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.131ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path: dut_b/pcie_top_inst/pcie_ep to completer/mem/gen_ldword[1].ldword
+    Location               Delay type         Delay(ns)  Physical Resource
+                                                         Logical Resource(s)
+    ---------------------------------------------------  -------------------
+    PCIE_X0Y0.LLKRXVALIDN1 Tpcicko_LLK           1.605   dut_b/pcie_top_inst/pcie_ep
+                                                         dut_b/pcie_top_inst/pcie_ep
+    SLICE_X53Y24.D6        net (fanout=45)       0.793   llk_rx_valid_n<1>
+    SLICE_X53Y24.D         Tilo                  0.094   completer/I0/current_state_FFd17
+                                                         completer/I0/current_state_FFd11-In11
+    SLICE_X42Y17.B6        net (fanout=23)       1.288   completer/I0/current_state_not0000
+    SLICE_X42Y17.B         Tilo                  0.094   completer/I0/ram_write_address_internal<12>
+                                                         completer/I0/inc_ram_addr_counter25
+    SLICE_X43Y17.C6        net (fanout=31)       0.296   completer/I0/inc_ram_addr_counter
+    SLICE_X43Y17.C         Tilo                  0.094   completer/I0/stored_header3<15>
+                                                         completer/I0/ram_read_address<13>1
+    SLICE_X42Y16.B2        net (fanout=3)        0.783   completer/ram_read_address<13>
+    SLICE_X42Y16.B         Tilo                  0.094   completer/I0/stored_header3<9>
+                                                         completer/mem/Mshift_ldw_enb_shift0000_Result<1>1
+    RAMB36_X1Y1.ENBWRENL   net (fanout=4)        0.851   completer/mem/ldw_enb<1>
+    RAMB36_X1Y1.CLKBWRCLKL Trcck_ENB             0.414   completer/mem/gen_ldword[1].ldword
+                                                         completer/mem/gen_ldword[1].ldword
+    ---------------------------------------------------  ---------------------------
+    Total                                        6.406ns (2.395ns logic, 4.011ns route)
+                                                         (37.4% logic, 62.6% route)
+
+--------------------------------------------------------------------------------
+Slack:                  -2.572ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               completer/I0/length_count_5 (FF)
+  Destination:          completer/I0/rx_request_r (FF)
+  Requirement:          4.000ns
+  Data Path Delay:      6.343ns (Levels of Logic = 8)
+  Clock Path Skew:      -0.154ns
+  Source Clock:         core_clk rising at 0.000ns
+  Destination Clock:    core_clk rising at 4.000ns
+  Clock Uncertainty:    0.075ns
+
+  Clock Uncertainty:          0.075ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.131ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path: completer/I0/length_count_5 to completer/I0/rx_request_r
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X46Y33.CQ      Tcko                  0.450   completer/I0/length_count<5>
+                                                       completer/I0/length_count_5
+    SLICE_X46Y34.A1      net (fanout=8)        0.900   completer/I0/length_count<5>
+    SLICE_X46Y34.A       Tilo                  0.094   completer/I0/max_payload_div4<7>
+                                                       completer/I0/length_in_bytes_cmp_gt00001_SW2
+    SLICE_X46Y32.D4      net (fanout=1)        0.534   N2184
+    SLICE_X46Y32.D       Tilo                  0.094   completer/I0/length_in_bytes_cmp_gt00002
+                                                       completer/I0/length_in_bytes_cmp_gt00001
+    SLICE_X47Y33.D6      net (fanout=20)       0.348   completer/I0/length_in_bytes_cmp_gt00002
+    SLICE_X47Y33.D       Tilo                  0.094   completer/I0/length_count<1>
+                                                       completer/I0/length_in_bytes<3>1
+    SLICE_X48Y32.BX      net (fanout=2)        0.599   completer/I0/length_in_bytes<3>
+    SLICE_X48Y32.COUT    Tbxcy                 0.361   completer/I0/transfer_size<3>
+                                                       completer/I0/Msub_words_remaining_cy<3>
+    SLICE_X48Y33.CIN     net (fanout=1)        0.000   completer/I0/Msub_words_remaining_cy<3>
+    SLICE_X48Y33.CMUX    Tcinc                 0.337   completer/I0/Msub_words_remaining_cy<7>
+                                                       completer/I0/Msub_words_remaining_cy<7>
+    SLICE_X49Y30.B1      net (fanout=3)        1.335   completer/I0/words_remaining<6>
+    SLICE_X49Y30.B       Tilo                  0.094   completer/I0/first_completion
+                                                       completer/I0/first_completion_mux00001
+    SLICE_X51Y27.A5      net (fanout=15)       0.618   completer/I0/N106
+    SLICE_X51Y27.A       Tilo                  0.094   N2297
+                                                       completer/I0/rx_request_r_mux0000105
+    SLICE_X49Y28.A5      net (fanout=1)        0.365   completer/I0/rx_request_r_mux0000_map29
+    SLICE_X49Y28.CLK     Tas                   0.026   completer/I0/rx_request_r
+                                                       completer/I0/rx_request_r_mux0000161
+                                                       completer/I0/rx_request_r
+    -------------------------------------------------  ---------------------------
+    Total                                      6.343ns (1.644ns logic, 4.699ns route)
+                                                       (25.9% logic, 74.1% route)
+
+--------------------------------------------------------------------------------
+Slack:                  -2.561ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               dut_b/pcie_top_inst/pcie_ep (CPU)
+  Destination:          completer/mem/gen_ldword[1].ldword (RAM)
+  Requirement:          4.000ns
+  Data Path Delay:      6.364ns (Levels of Logic = 4)
+  Clock Path Skew:      -0.122ns
+  Source Clock:         core_clk rising at 0.000ns
+  Destination Clock:    core_clk rising at 4.000ns
+  Clock Uncertainty:    0.075ns
+
+  Clock Uncertainty:          0.075ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.131ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path: dut_b/pcie_top_inst/pcie_ep to completer/mem/gen_ldword[1].ldword
+    Location               Delay type         Delay(ns)  Physical Resource
+                                                         Logical Resource(s)
+    ---------------------------------------------------  -------------------
+    PCIE_X0Y0.LLKRXVALIDN0 Tpcicko_LLK           1.527   dut_b/pcie_top_inst/pcie_ep
+                                                         dut_b/pcie_top_inst/pcie_ep
+    SLICE_X53Y24.D5        net (fanout=46)       0.980   llk_rx_valid_n<0>
+    SLICE_X53Y24.D         Tilo                  0.094   completer/I0/current_state_FFd17
+                                                         completer/I0/current_state_FFd11-In11
+    SLICE_X42Y17.B6        net (fanout=23)       1.288   completer/I0/current_state_not0000
+    SLICE_X42Y17.B         Tilo                  0.094   completer/I0/ram_write_address_internal<12>
+                                                         completer/I0/inc_ram_addr_counter25
+    SLICE_X42Y16.C6        net (fanout=31)       0.450   completer/I0/inc_ram_addr_counter
+    SLICE_X42Y16.C         Tilo                  0.094   completer/I0/stored_header3<9>
+                                                         completer/I0/ram_read_address<12>1
+    SLICE_X42Y16.B3        net (fanout=3)        0.478   completer/ram_read_address<12>
+    SLICE_X42Y16.B         Tilo                  0.094   completer/I0/stored_header3<9>
+                                                         completer/mem/Mshift_ldw_enb_shift0000_Result<1>1
+    RAMB36_X1Y1.ENBU       net (fanout=4)        0.851   completer/mem/ldw_enb<1>
+    RAMB36_X1Y1.CLKBWRCLKU Trcck_ENB             0.414   completer/mem/gen_ldword[1].ldword
+                                                         completer/mem/gen_ldword[1].ldword
+    ---------------------------------------------------  ---------------------------
+    Total                                        6.364ns (2.317ns logic, 4.047ns route)
+                                                         (36.4% logic, 63.6% route)
+
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET 
+"dut_b/pcie_top_inst/pcie_gt_wrapper_i/gt_tx_data_reg<0>" MAXDELAY = 1 ns;
+
+ 1 item analyzed, 0 timing errors detected.
+ Maximum net delay is   0.705ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET 
+"dut_b/pcie_top_inst/pcie_gt_wrapper_i/gt_tx_data_reg<1>" MAXDELAY = 1 ns;
+
+ 1 item analyzed, 0 timing errors detected.
+ Maximum net delay is   0.823ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET 
+"dut_b/pcie_top_inst/pcie_gt_wrapper_i/gt_tx_data_reg<2>" MAXDELAY = 1 ns;
+
+ 1 item analyzed, 0 timing errors detected.
+ Maximum net delay is   0.530ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET 
+"dut_b/pcie_top_inst/pcie_gt_wrapper_i/gt_tx_data_reg<3>" MAXDELAY = 1 ns;
+
+ 1 item analyzed, 0 timing errors detected.
+ Maximum net delay is   0.689ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET 
+"dut_b/pcie_top_inst/pcie_gt_wrapper_i/gt_tx_data_reg<4>" MAXDELAY = 1 ns;
+
+ 1 item analyzed, 0 timing errors detected.
+ Maximum net delay is   0.822ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET 
+"dut_b/pcie_top_inst/pcie_gt_wrapper_i/gt_tx_data_reg<5>" MAXDELAY = 1 ns;
+
+ 1 item analyzed, 0 timing errors detected.
+ Maximum net delay is   0.832ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET 
+"dut_b/pcie_top_inst/pcie_gt_wrapper_i/gt_tx_data_reg<6>" MAXDELAY = 1 ns;
+
+ 1 item analyzed, 0 timing errors detected.
+ Maximum net delay is   0.706ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET 
+"dut_b/pcie_top_inst/pcie_gt_wrapper_i/gt_tx_data_reg<7>" MAXDELAY = 1 ns;
+
+ 1 item analyzed, 0 timing errors detected.
+ Maximum net delay is   0.689ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET 
+"dut_b/pcie_top_inst/pcie_gt_wrapper_i/gt_tx_data_k_reg<0>" MAXDELAY = 1        
+ ns;
+
+ 1 item analyzed, 0 timing errors detected.
+ Maximum net delay is   0.837ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET 
+"dut_b/pcie_top_inst/pcie_gt_wrapper_i/gt_tx_elec_idle_reg<0>" MAXDELAY =       
+  1 ns;
+
+ 1 item analyzed, 0 timing errors detected.
+ Maximum net delay is   0.703ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET 
+"dut_b/pcie_top_inst/pcie_gt_wrapper_i/gt_tx_compliance_reg<0>" MAXDELAY =      
+   1 ns;
+
+ 1 item analyzed, 0 timing errors detected.
+ Maximum net delay is   0.832ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET 
+"dut_b/pcie_top_inst/pcie_gt_wrapper_i/gt_tx_detect_rx_loopback_reg<0>"         
+MAXDELAY = 1 ns;
+
+ 1 item analyzed, 0 timing errors detected.
+ Maximum net delay is   0.704ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET 
+"dut_b/pcie_top_inst/pcie_gt_wrapper_i/gt_tx_power_down_reg<0>" MAXDELAY =      
+   1 ns;
+
+ 1 item analyzed, 0 timing errors detected.
+ Maximum net delay is   0.680ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET 
+"dut_b/pcie_top_inst/pcie_gt_wrapper_i/gt_tx_power_down_reg<1>" MAXDELAY =      
+   1 ns;
+
+ 1 item analyzed, 0 timing errors detected.
+ Maximum net delay is   0.872ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET 
+"dut_b/pcie_top_inst/pcie_gt_wrapper_i/gt_tx_data_reg<8>" MAXDELAY = 1 ns;
+
+ 1 item analyzed, 0 timing errors detected.
+ Maximum net delay is   0.705ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET 
+"dut_b/pcie_top_inst/pcie_gt_wrapper_i/gt_tx_data_reg<9>" MAXDELAY = 1 ns;
+
+ 1 item analyzed, 0 timing errors detected.
+ Maximum net delay is   0.822ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET 
+"dut_b/pcie_top_inst/pcie_gt_wrapper_i/gt_tx_data_reg<10>" MAXDELAY = 1         
+ns;
+
+ 1 item analyzed, 0 timing errors detected.
+ Maximum net delay is   0.706ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET 
+"dut_b/pcie_top_inst/pcie_gt_wrapper_i/gt_tx_data_reg<11>" MAXDELAY = 1         
+ns;
+
+ 1 item analyzed, 0 timing errors detected.
+ Maximum net delay is   0.829ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET 
+"dut_b/pcie_top_inst/pcie_gt_wrapper_i/gt_tx_data_reg<12>" MAXDELAY = 1         
+ns;
+
+ 1 item analyzed, 0 timing errors detected.
+ Maximum net delay is   0.838ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET 
+"dut_b/pcie_top_inst/pcie_gt_wrapper_i/gt_tx_data_reg<13>" MAXDELAY = 1         
+ns;
+
+ 1 item analyzed, 0 timing errors detected.
+ Maximum net delay is   0.822ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET 
+"dut_b/pcie_top_inst/pcie_gt_wrapper_i/gt_tx_data_reg<14>" MAXDELAY = 1         
+ns;
+
+ 1 item analyzed, 0 timing errors detected.
+ Maximum net delay is   0.688ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET 
+"dut_b/pcie_top_inst/pcie_gt_wrapper_i/gt_tx_data_reg<15>" MAXDELAY = 1         
+ns;
+
+ 1 item analyzed, 0 timing errors detected.
+ Maximum net delay is   0.703ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET 
+"dut_b/pcie_top_inst/pcie_gt_wrapper_i/gt_tx_data_k_reg<1>" MAXDELAY = 1        
+ ns;
+
+ 1 item analyzed, 0 timing errors detected.
+ Maximum net delay is   0.825ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET 
+"dut_b/pcie_top_inst/pcie_gt_wrapper_i/gt_tx_elec_idle_reg<1>" MAXDELAY =       
+  1 ns;
+
+ 1 item analyzed, 0 timing errors detected.
+ Maximum net delay is   0.665ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET 
+"dut_b/pcie_top_inst/pcie_gt_wrapper_i/gt_tx_compliance_reg<1>" MAXDELAY =      
+   1 ns;
+
+ 1 item analyzed, 0 timing errors detected.
+ Maximum net delay is   0.856ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET 
+"dut_b/pcie_top_inst/pcie_gt_wrapper_i/gt_tx_detect_rx_loopback_reg<1>"         
+MAXDELAY = 1 ns;
+
+ 1 item analyzed, 0 timing errors detected.
+ Maximum net delay is   0.841ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET 
+"dut_b/pcie_top_inst/pcie_gt_wrapper_i/gt_tx_power_down_reg<2>" MAXDELAY =      
+   1 ns;
+
+ 1 item analyzed, 0 timing errors detected.
+ Maximum net delay is   0.507ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET 
+"dut_b/pcie_top_inst/pcie_gt_wrapper_i/gt_tx_power_down_reg<3>" MAXDELAY =      
+   1 ns;
+
+ 1 item analyzed, 0 timing errors detected.
+ Maximum net delay is   0.700ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET 
+"dut_b/pcie_top_inst/pcie_gt_wrapper_i/gt_tx_data_reg<16>" MAXDELAY = 1         
+ns;
+
+ 1 item analyzed, 0 timing errors detected.
+ Maximum net delay is   0.822ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET 
+"dut_b/pcie_top_inst/pcie_gt_wrapper_i/gt_tx_data_reg<17>" MAXDELAY = 1         
+ns;
+
+ 1 item analyzed, 0 timing errors detected.
+ Maximum net delay is   0.909ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET 
+"dut_b/pcie_top_inst/pcie_gt_wrapper_i/gt_tx_data_reg<18>" MAXDELAY = 1         
+ns;
+
+ 1 item analyzed, 0 timing errors detected.
+ Maximum net delay is   0.530ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET 
+"dut_b/pcie_top_inst/pcie_gt_wrapper_i/gt_tx_data_reg<19>" MAXDELAY = 1         
+ns;
+
+ 1 item analyzed, 0 timing errors detected.
+ Maximum net delay is   0.689ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET 
+"dut_b/pcie_top_inst/pcie_gt_wrapper_i/gt_tx_data_reg<20>" MAXDELAY = 1         
+ns;
+
+ 1 item analyzed, 0 timing errors detected.
+ Maximum net delay is   0.705ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET 
+"dut_b/pcie_top_inst/pcie_gt_wrapper_i/gt_tx_data_reg<21>" MAXDELAY = 1         
+ns;
+
+ 1 item analyzed, 0 timing errors detected.
+ Maximum net delay is   0.834ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET 
+"dut_b/pcie_top_inst/pcie_gt_wrapper_i/gt_tx_data_reg<22>" MAXDELAY = 1         
+ns;
+
+ 1 item analyzed, 0 timing errors detected.
+ Maximum net delay is   0.706ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET 
+"dut_b/pcie_top_inst/pcie_gt_wrapper_i/gt_tx_data_reg<23>" MAXDELAY = 1         
+ns;
+
+ 1 item analyzed, 0 timing errors detected.
+ Maximum net delay is   0.689ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET 
+"dut_b/pcie_top_inst/pcie_gt_wrapper_i/gt_tx_data_k_reg<2>" MAXDELAY = 1        
+ ns;
+
+ 1 item analyzed, 0 timing errors detected.
+ Maximum net delay is   0.820ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET 
+"dut_b/pcie_top_inst/pcie_gt_wrapper_i/gt_tx_elec_idle_reg<2>" MAXDELAY =       
+  1 ns;
+
+ 1 item analyzed, 0 timing errors detected.
+ Maximum net delay is   0.665ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET 
+"dut_b/pcie_top_inst/pcie_gt_wrapper_i/gt_tx_compliance_reg<2>" MAXDELAY =      
+   1 ns;
+
+ 1 item analyzed, 0 timing errors detected.
+ Maximum net delay is   0.665ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET 
+"dut_b/pcie_top_inst/pcie_gt_wrapper_i/gt_tx_detect_rx_loopback_reg<2>"         
+MAXDELAY = 1 ns;
+
+ 1 item analyzed, 0 timing errors detected.
+ Maximum net delay is   0.863ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET 
+"dut_b/pcie_top_inst/pcie_gt_wrapper_i/gt_tx_power_down_reg<4>" MAXDELAY =      
+   1 ns;
+
+ 1 item analyzed, 0 timing errors detected.
+ Maximum net delay is   0.683ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET 
+"dut_b/pcie_top_inst/pcie_gt_wrapper_i/gt_tx_power_down_reg<5>" MAXDELAY =      
+   1 ns;
+
+ 1 item analyzed, 0 timing errors detected.
+ Maximum net delay is   0.844ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET 
+"dut_b/pcie_top_inst/pcie_gt_wrapper_i/gt_tx_data_reg<24>" MAXDELAY = 1         
+ns;
+
+ 1 item analyzed, 0 timing errors detected.
+ Maximum net delay is   0.705ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET 
+"dut_b/pcie_top_inst/pcie_gt_wrapper_i/gt_tx_data_reg<25>" MAXDELAY = 1         
+ns;
+
+ 1 item analyzed, 0 timing errors detected.
+ Maximum net delay is   0.822ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET 
+"dut_b/pcie_top_inst/pcie_gt_wrapper_i/gt_tx_data_reg<26>" MAXDELAY = 1         
+ns;
+
+ 1 item analyzed, 0 timing errors detected.
+ Maximum net delay is   0.688ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET 
+"dut_b/pcie_top_inst/pcie_gt_wrapper_i/gt_tx_data_reg<27>" MAXDELAY = 1         
+ns;
+
+ 1 item analyzed, 0 timing errors detected.
+ Maximum net delay is   0.829ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET 
+"dut_b/pcie_top_inst/pcie_gt_wrapper_i/gt_tx_data_reg<28>" MAXDELAY = 1         
+ns;
+
+ 1 item analyzed, 0 timing errors detected.
+ Maximum net delay is   0.705ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET 
+"dut_b/pcie_top_inst/pcie_gt_wrapper_i/gt_tx_data_reg<29>" MAXDELAY = 1         
+ns;
+
+ 1 item analyzed, 0 timing errors detected.
+ Maximum net delay is   0.822ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET 
+"dut_b/pcie_top_inst/pcie_gt_wrapper_i/gt_tx_data_reg<30>" MAXDELAY = 1         
+ns;
+
+ 1 item analyzed, 0 timing errors detected.
+ Maximum net delay is   0.688ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET 
+"dut_b/pcie_top_inst/pcie_gt_wrapper_i/gt_tx_data_reg<31>" MAXDELAY = 1         
+ns;
+
+ 1 item analyzed, 0 timing errors detected.
+ Maximum net delay is   0.703ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET 
+"dut_b/pcie_top_inst/pcie_gt_wrapper_i/gt_tx_data_k_reg<3>" MAXDELAY = 1        
+ ns;
+
+ 1 item analyzed, 0 timing errors detected.
+ Maximum net delay is   0.507ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET 
+"dut_b/pcie_top_inst/pcie_gt_wrapper_i/gt_tx_elec_idle_reg<3>" MAXDELAY =       
+  1 ns;
+
+ 1 item analyzed, 0 timing errors detected.
+ Maximum net delay is   0.704ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET 
+"dut_b/pcie_top_inst/pcie_gt_wrapper_i/gt_tx_compliance_reg<3>" MAXDELAY =      
+   1 ns;
+
+ 1 item analyzed, 0 timing errors detected.
+ Maximum net delay is   0.858ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET 
+"dut_b/pcie_top_inst/pcie_gt_wrapper_i/gt_tx_detect_rx_loopback_reg<3>"         
+MAXDELAY = 1 ns;
+
+ 1 item analyzed, 0 timing errors detected.
+ Maximum net delay is   0.841ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET 
+"dut_b/pcie_top_inst/pcie_gt_wrapper_i/gt_tx_power_down_reg<6>" MAXDELAY =      
+   1 ns;
+
+ 1 item analyzed, 0 timing errors detected.
+ Maximum net delay is   0.507ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET 
+"dut_b/pcie_top_inst/pcie_gt_wrapper_i/gt_tx_power_down_reg<7>" MAXDELAY =      
+   1 ns;
+
+ 1 item analyzed, 0 timing errors detected.
+ Maximum net delay is   0.700ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET 
+"dut_b/pcie_top_inst/pcie_gt_wrapper_i/gt_tx_data_reg<32>" MAXDELAY = 1         
+ns;
+
+ 1 item analyzed, 0 timing errors detected.
+ Maximum net delay is   0.705ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET 
+"dut_b/pcie_top_inst/pcie_gt_wrapper_i/gt_tx_data_reg<33>" MAXDELAY = 1         
+ns;
+
+ 1 item analyzed, 0 timing errors detected.
+ Maximum net delay is   0.823ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET 
+"dut_b/pcie_top_inst/pcie_gt_wrapper_i/gt_tx_data_reg<34>" MAXDELAY = 1         
+ns;
+
+ 1 item analyzed, 0 timing errors detected.
+ Maximum net delay is   0.530ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET 
+"dut_b/pcie_top_inst/pcie_gt_wrapper_i/gt_tx_data_reg<35>" MAXDELAY = 1         
+ns;
+
+ 1 item analyzed, 0 timing errors detected.
+ Maximum net delay is   0.689ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET 
+"dut_b/pcie_top_inst/pcie_gt_wrapper_i/gt_tx_data_reg<36>" MAXDELAY = 1         
+ns;
+
+ 1 item analyzed, 0 timing errors detected.
+ Maximum net delay is   0.822ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET 
+"dut_b/pcie_top_inst/pcie_gt_wrapper_i/gt_tx_data_reg<37>" MAXDELAY = 1         
+ns;
+
+ 1 item analyzed, 0 timing errors detected.
+ Maximum net delay is   0.823ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET 
+"dut_b/pcie_top_inst/pcie_gt_wrapper_i/gt_tx_data_reg<38>" MAXDELAY = 1         
+ns;
+
+ 1 item analyzed, 0 timing errors detected.
+ Maximum net delay is   0.706ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET 
+"dut_b/pcie_top_inst/pcie_gt_wrapper_i/gt_tx_data_reg<39>" MAXDELAY = 1         
+ns;
+
+ 1 item analyzed, 0 timing errors detected.
+ Maximum net delay is   0.820ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET 
+"dut_b/pcie_top_inst/pcie_gt_wrapper_i/gt_tx_data_k_reg<4>" MAXDELAY = 1        
+ ns;
+
+ 1 item analyzed, 0 timing errors detected.
+ Maximum net delay is   0.665ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET 
+"dut_b/pcie_top_inst/pcie_gt_wrapper_i/gt_tx_elec_idle_reg<4>" MAXDELAY =       
+  1 ns;
+
+ 1 item analyzed, 0 timing errors detected.
+ Maximum net delay is   0.860ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET 
+"dut_b/pcie_top_inst/pcie_gt_wrapper_i/gt_tx_compliance_reg<4>" MAXDELAY =      
+   1 ns;
+
+ 1 item analyzed, 0 timing errors detected.
+ Maximum net delay is   0.703ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET 
+"dut_b/pcie_top_inst/pcie_gt_wrapper_i/gt_tx_detect_rx_loopback_reg<4>"         
+MAXDELAY = 1 ns;
+
+ 1 item analyzed, 0 timing errors detected.
+ Maximum net delay is   0.704ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET 
+"dut_b/pcie_top_inst/pcie_gt_wrapper_i/gt_tx_power_down_reg<8>" MAXDELAY =      
+   1 ns;
+
+ 1 item analyzed, 0 timing errors detected.
+ Maximum net delay is   0.680ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET 
+"dut_b/pcie_top_inst/pcie_gt_wrapper_i/gt_tx_power_down_reg<9>" MAXDELAY =      
+   1 ns;
+
+ 1 item analyzed, 0 timing errors detected.
+ Maximum net delay is   0.872ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET 
+"dut_b/pcie_top_inst/pcie_gt_wrapper_i/gt_tx_data_reg<40>" MAXDELAY = 1         
+ns;
+
+ 1 item analyzed, 0 timing errors detected.
+ Maximum net delay is   0.705ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET 
+"dut_b/pcie_top_inst/pcie_gt_wrapper_i/gt_tx_data_reg<41>" MAXDELAY = 1         
+ns;
+
+ 1 item analyzed, 0 timing errors detected.
+ Maximum net delay is   0.822ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET 
+"dut_b/pcie_top_inst/pcie_gt_wrapper_i/gt_tx_data_reg<42>" MAXDELAY = 1         
+ns;
+
+ 1 item analyzed, 0 timing errors detected.
+ Maximum net delay is   0.688ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET 
+"dut_b/pcie_top_inst/pcie_gt_wrapper_i/gt_tx_data_reg<43>" MAXDELAY = 1         
+ns;
+
+ 1 item analyzed, 0 timing errors detected.
+ Maximum net delay is   0.829ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET 
+"dut_b/pcie_top_inst/pcie_gt_wrapper_i/gt_tx_data_reg<44>" MAXDELAY = 1         
+ns;
+
+ 1 item analyzed, 0 timing errors detected.
+ Maximum net delay is   0.705ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET 
+"dut_b/pcie_top_inst/pcie_gt_wrapper_i/gt_tx_data_reg<45>" MAXDELAY = 1         
+ns;
+
+ 1 item analyzed, 0 timing errors detected.
+ Maximum net delay is   0.666ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET 
+"dut_b/pcie_top_inst/pcie_gt_wrapper_i/gt_tx_data_reg<46>" MAXDELAY = 1         
+ns;
+
+ 1 item analyzed, 0 timing errors detected.
+ Maximum net delay is   0.706ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET 
+"dut_b/pcie_top_inst/pcie_gt_wrapper_i/gt_tx_data_reg<47>" MAXDELAY = 1         
+ns;
+
+ 1 item analyzed, 0 timing errors detected.
+ Maximum net delay is   0.861ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET 
+"dut_b/pcie_top_inst/pcie_gt_wrapper_i/gt_tx_data_k_reg<5>" MAXDELAY = 1        
+ ns;
+
+ 1 item analyzed, 0 timing errors detected.
+ Maximum net delay is   0.825ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET 
+"dut_b/pcie_top_inst/pcie_gt_wrapper_i/gt_tx_elec_idle_reg<5>" MAXDELAY =       
+  1 ns;
+
+ 1 item analyzed, 0 timing errors detected.
+ Maximum net delay is   0.704ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET 
+"dut_b/pcie_top_inst/pcie_gt_wrapper_i/gt_tx_compliance_reg<5>" MAXDELAY =      
+   1 ns;
+
+ 1 item analyzed, 0 timing errors detected.
+ Maximum net delay is   0.665ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET 
+"dut_b/pcie_top_inst/pcie_gt_wrapper_i/gt_tx_detect_rx_loopback_reg<5>"         
+MAXDELAY = 1 ns;
+
+ 1 item analyzed, 0 timing errors detected.
+ Maximum net delay is   0.649ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET 
+"dut_b/pcie_top_inst/pcie_gt_wrapper_i/gt_tx_power_down_reg<10>" MAXDELAY       
+  = 1 ns;
+
+ 1 item analyzed, 0 timing errors detected.
+ Maximum net delay is   0.700ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET 
+"dut_b/pcie_top_inst/pcie_gt_wrapper_i/gt_tx_power_down_reg<11>" MAXDELAY       
+  = 1 ns;
+
+ 1 item analyzed, 0 timing errors detected.
+ Maximum net delay is   0.821ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET 
+"dut_b/pcie_top_inst/pcie_gt_wrapper_i/gt_tx_data_reg<48>" MAXDELAY = 1         
+ns;
+
+ 1 item analyzed, 0 timing errors detected.
+ Maximum net delay is   0.705ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET 
+"dut_b/pcie_top_inst/pcie_gt_wrapper_i/gt_tx_data_reg<49>" MAXDELAY = 1         
+ns;
+
+ 1 item analyzed, 0 timing errors detected.
+ Maximum net delay is   0.834ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET 
+"dut_b/pcie_top_inst/pcie_gt_wrapper_i/gt_tx_data_reg<50>" MAXDELAY = 1         
+ns;
+
+ 1 item analyzed, 0 timing errors detected.
+ Maximum net delay is   0.706ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET 
+"dut_b/pcie_top_inst/pcie_gt_wrapper_i/gt_tx_data_reg<51>" MAXDELAY = 1         
+ns;
+
+ 1 item analyzed, 0 timing errors detected.
+ Maximum net delay is   0.689ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET 
+"dut_b/pcie_top_inst/pcie_gt_wrapper_i/gt_tx_data_reg<52>" MAXDELAY = 1         
+ns;
+
+ 1 item analyzed, 0 timing errors detected.
+ Maximum net delay is   0.705ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET 
+"dut_b/pcie_top_inst/pcie_gt_wrapper_i/gt_tx_data_reg<53>" MAXDELAY = 1         
+ns;
+
+ 1 item analyzed, 0 timing errors detected.
+ Maximum net delay is   0.834ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET 
+"dut_b/pcie_top_inst/pcie_gt_wrapper_i/gt_tx_data_reg<54>" MAXDELAY = 1         
+ns;
+
+ 1 item analyzed, 0 timing errors detected.
+ Maximum net delay is   0.706ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET 
+"dut_b/pcie_top_inst/pcie_gt_wrapper_i/gt_tx_data_reg<55>" MAXDELAY = 1         
+ns;
+
+ 1 item analyzed, 0 timing errors detected.
+ Maximum net delay is   0.689ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET 
+"dut_b/pcie_top_inst/pcie_gt_wrapper_i/gt_tx_data_k_reg<6>" MAXDELAY = 1        
+ ns;
+
+ 1 item analyzed, 0 timing errors detected.
+ Maximum net delay is   0.820ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET 
+"dut_b/pcie_top_inst/pcie_gt_wrapper_i/gt_tx_elec_idle_reg<6>" MAXDELAY =       
+  1 ns;
+
+ 1 item analyzed, 0 timing errors detected.
+ Maximum net delay is   0.665ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET 
+"dut_b/pcie_top_inst/pcie_gt_wrapper_i/gt_tx_compliance_reg<6>" MAXDELAY =      
+   1 ns;
+
+ 1 item analyzed, 0 timing errors detected.
+ Maximum net delay is   0.664ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET 
+"dut_b/pcie_top_inst/pcie_gt_wrapper_i/gt_tx_detect_rx_loopback_reg<6>"         
+MAXDELAY = 1 ns;
+
+ 1 item analyzed, 0 timing errors detected.
+ Maximum net delay is   0.820ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET 
+"dut_b/pcie_top_inst/pcie_gt_wrapper_i/gt_tx_power_down_reg<12>" MAXDELAY       
+  = 1 ns;
+
+ 1 item analyzed, 0 timing errors detected.
+ Maximum net delay is   0.712ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET 
+"dut_b/pcie_top_inst/pcie_gt_wrapper_i/gt_tx_power_down_reg<13>" MAXDELAY       
+  = 1 ns;
+
+ 1 item analyzed, 0 timing errors detected.
+ Maximum net delay is   0.872ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET 
+"dut_b/pcie_top_inst/pcie_gt_wrapper_i/gt_tx_data_reg<56>" MAXDELAY = 1         
+ns;
+
+ 1 item analyzed, 0 timing errors detected.
+ Maximum net delay is   0.829ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET 
+"dut_b/pcie_top_inst/pcie_gt_wrapper_i/gt_tx_data_reg<57>" MAXDELAY = 1         
+ns;
+
+ 1 item analyzed, 0 timing errors detected.
+ Maximum net delay is   0.666ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET 
+"dut_b/pcie_top_inst/pcie_gt_wrapper_i/gt_tx_data_reg<58>" MAXDELAY = 1         
+ns;
+
+ 1 item analyzed, 0 timing errors detected.
+ Maximum net delay is   0.706ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET 
+"dut_b/pcie_top_inst/pcie_gt_wrapper_i/gt_tx_data_reg<59>" MAXDELAY = 1         
+ns;
+
+ 1 item analyzed, 0 timing errors detected.
+ Maximum net delay is   0.981ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET 
+"dut_b/pcie_top_inst/pcie_gt_wrapper_i/gt_tx_data_reg<60>" MAXDELAY = 1         
+ns;
+
+ 1 item analyzed, 0 timing errors detected.
+ Maximum net delay is   0.705ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET 
+"dut_b/pcie_top_inst/pcie_gt_wrapper_i/gt_tx_data_reg<61>" MAXDELAY = 1         
+ns;
+
+ 1 item analyzed, 0 timing errors detected.
+ Maximum net delay is   0.822ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET 
+"dut_b/pcie_top_inst/pcie_gt_wrapper_i/gt_tx_data_reg<62>" MAXDELAY = 1         
+ns;
+
+ 1 item analyzed, 0 timing errors detected.
+ Maximum net delay is   0.688ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET 
+"dut_b/pcie_top_inst/pcie_gt_wrapper_i/gt_tx_data_reg<63>" MAXDELAY = 1         
+ns;
+
+ 1 item analyzed, 0 timing errors detected.
+ Maximum net delay is   0.703ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET 
+"dut_b/pcie_top_inst/pcie_gt_wrapper_i/gt_tx_data_k_reg<7>" MAXDELAY = 1        
+ ns;
+
+ 1 item analyzed, 0 timing errors detected.
+ Maximum net delay is   0.687ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET 
+"dut_b/pcie_top_inst/pcie_gt_wrapper_i/gt_tx_elec_idle_reg<7>" MAXDELAY =       
+  1 ns;
+
+ 1 item analyzed, 0 timing errors detected.
+ Maximum net delay is   0.681ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET 
+"dut_b/pcie_top_inst/pcie_gt_wrapper_i/gt_tx_compliance_reg<7>" MAXDELAY =      
+   1 ns;
+
+ 1 item analyzed, 0 timing errors detected.
+ Maximum net delay is   0.862ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET 
+"dut_b/pcie_top_inst/pcie_gt_wrapper_i/gt_tx_detect_rx_loopback_reg<7>"         
+MAXDELAY = 1 ns;
+
+ 1 item analyzed, 0 timing errors detected.
+ Maximum net delay is   0.847ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET 
+"dut_b/pcie_top_inst/pcie_gt_wrapper_i/gt_tx_power_down_reg<14>" MAXDELAY       
+  = 1 ns;
+
+ 1 item analyzed, 0 timing errors detected.
+ Maximum net delay is   0.507ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET 
+"dut_b/pcie_top_inst/pcie_gt_wrapper_i/gt_tx_power_down_reg<15>" MAXDELAY       
+  = 1 ns;
+
+ 1 item analyzed, 0 timing errors detected.
+ Maximum net delay is   0.700ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: Unconstrained period analysis for net "core_clk" 
+
+ 1184 items analyzed, 0 timing errors detected. (0 setup errors, 0 hold errors)
+ Minimum period is   8.007ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: Unconstrained OFFSET OUT AFTER analysis for clock "core_clk" 
+
+ 1 item analyzed, 0 timing errors detected.
+ Maximum allowable offset is  13.937ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: Unconstrained period analysis for net "refclk_out_bufg" 
+
+ 6 items analyzed, 0 timing errors detected. (0 setup errors, 0 hold errors)
+ Minimum period is   1.448ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: Unconstrained OFFSET IN BEFORE analysis for clock 
+"refclk_out_bufg" 
+
+ 2 items analyzed, 0 timing errors detected.
+ Minimum allowable offset is   1.170ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: Unconstrained path analysis 
+
+ 2095 items analyzed, 0 timing errors detected. (0 setup errors, 0 hold errors)
+ Maximum delay is   8.209ns.
+--------------------------------------------------------------------------------
+
+
+1 constraint not met.
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Setup/Hold to clock REFCLK_N
+------------+------------+------------+------------------+--------+
+            |  Setup to  |  Hold to   |                  | Clock  |
+Source      | clk (edge) | clk (edge) |Internal Clock(s) | Phase  |
+------------+------------+------------+------------------+--------+
+GTPRESET_N  |    0.176(R)|    1.990(R)|refclk_out_bufg   |   0.000|
+RST_N       |    1.170(R)|    1.090(R)|refclk_out_bufg   |   0.000|
+------------+------------+------------+------------------+--------+
+
+Setup/Hold to clock REFCLK_P
+------------+------------+------------+------------------+--------+
+            |  Setup to  |  Hold to   |                  | Clock  |
+Source      | clk (edge) | clk (edge) |Internal Clock(s) | Phase  |
+------------+------------+------------+------------------+--------+
+GTPRESET_N  |    0.176(R)|    1.990(R)|refclk_out_bufg   |   0.000|
+RST_N       |    1.170(R)|    1.090(R)|refclk_out_bufg   |   0.000|
+------------+------------+------------+------------------+--------+
+
+Clock REFCLK_N to Pad
+------------+------------+------------------+--------+
+            | clk (edge) |                  | Clock  |
+Destination |   to PAD   |Internal Clock(s) | Phase  |
+------------+------------+------------------+--------+
+LINKUP      |   13.937(R)|core_clk          |   0.000|
+------------+------------+------------------+--------+
+
+Clock REFCLK_P to Pad
+------------+------------+------------------+--------+
+            | clk (edge) |                  | Clock  |
+Destination |   to PAD   |Internal Clock(s) | Phase  |
+------------+------------+------------------+--------+
+LINKUP      |   13.937(R)|core_clk          |   0.000|
+------------+------------+------------------+--------+
+
+Clock to Setup on destination clock REFCLK_N
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+REFCLK_N       |    8.007|         |    0.812|         |
+REFCLK_P       |    8.007|         |    0.812|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock REFCLK_P
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+REFCLK_N       |    8.007|         |    0.812|         |
+REFCLK_P       |    8.007|         |    0.812|         |
+---------------+---------+---------+---------+---------+
+
+Pad to Pad
+---------------+---------------+---------+
+Source Pad     |Destination Pad|  Delay  |
+---------------+---------------+---------+
+REFCLK_N       |CORECLK        |    8.171|
+REFCLK_N       |REFCLKOUT      |    8.069|
+REFCLK_N       |USERCLK        |    8.209|
+REFCLK_P       |CORECLK        |    8.171|
+REFCLK_P       |REFCLKOUT      |    8.069|
+REFCLK_P       |USERCLK        |    8.209|
+---------------+---------------+---------+
+
+
+Timing summary:
+---------------
+
+Timing errors: 886  Score: 937868
+
+Constraints cover 127425 paths, 112 nets, and 5308 connections
+
+Design statistics:
+   Minimum period:   8.007ns   (Maximum frequency: 124.891MHz)
+   Maximum combinational path delay:   8.209ns
+   Maximum net delay:   0.981ns
+   Minimum input required time before clock:   1.170ns
+   Maximum output delay after clock:  13.937ns
+
+
+Analysis completed Fri Feb 23 10:46:54 2007 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 336 MB
+
+
+

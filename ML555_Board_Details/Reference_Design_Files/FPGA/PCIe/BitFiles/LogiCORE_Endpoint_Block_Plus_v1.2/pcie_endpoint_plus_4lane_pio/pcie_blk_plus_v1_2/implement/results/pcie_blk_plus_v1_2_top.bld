@@ -1,0 +1,64 @@
+Release 9.1.01i ngdbuild J.32
+Copyright (c) 1995-2007 Xilinx, Inc.  All rights reserved.
+
+Command Line: ngdbuild -verbose -uc
+../../example_design/xilinx_pci_exp_blk_plus_4_lane_ep-XC5VLX50T-FF1136-1_ES_ML5
+55.ucf pcie_blk_plus_v1_2_top.ngc -sd ../../../
+
+Reading NGO file
+"/group/LogiCORE_Endpoint_Block_
+Plus_v1.2/pcie_endpoint_plus_4lane_pio/pcie_blk_plus_v1_2/implement/results/pcie
+_blk_plus_v1_2_top.ngc" ...
+Loading design module "../../../pcie_blk_plus_v1_2.ngc"...
+
+Applying constraints in
+"../../example_design/xilinx_pci_exp_blk_plus_4_lane_ep-XC5VLX50T-FF1136-1_ES_ML
+555.ucf" to the design...
+INFO:coreutil - License for component <pcie_blk_plus_v1> allows you to use this
+   component, but does not give you access to source code implementing this
+   component.
+
+   The license for this core was generated for Xilinx-internal-users on February
+   7, 2007. It is the responsibility of the Licensee of this core to adhere to
+   the site restriction and other terms of the Xilinx Core Site License
+   Agreement when using this core.
+
+
+INFO:coreutil - License for component <pcie_blk_plus_v1> allows you to use this
+   component, but does not give you access to source code implementing this
+   component.
+
+   The license for this core was generated for Xilinx-internal-users on February
+   7, 2007. It is the responsibility of the Licensee of this core to adhere to
+   the site restriction and other terms of the Xilinx Core Site License
+   Agreement when using this core.
+
+
+
+Checking timing specifications ...
+INFO:XdmHelpers:851 - TNM "MGTCLK", used in period specification "TS_MGTCLK",
+   was traced into PLL_ADV instance
+   "ep/BU2/U0/pcie_ep0/pcie_blk/clocking_i/use_pll.pll_adv_i". The following new
+   TNM groups and period specifications were generated at the PLL_ADV output(s):
+   CLKOUT0: TS_ep_BU2_U0_pcie_ep0_pcie_blk_clocking_i_clkout0=PERIOD
+ep_BU2_U0_pcie_ep0_pcie_blk_clocking_i_clkout0 TS_MGTCLK*2.5 HIGH 50%
+   CLKOUT1: TS_ep_BU2_U0_pcie_ep0_pcie_blk_clocking_i_clkout1=PERIOD
+ep_BU2_U0_pcie_ep0_pcie_blk_clocking_i_clkout1 TS_MGTCLK*1.25 HIGH 50%
+Checking expanded design ...
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+NGDBUILD Design Results Summary:
+  Number of errors:     0
+  Number of warnings:   0
+
+Total memory usage is 70696 kilobytes
+
+Writing NGD file "pcie_blk_plus_v1_2_top.ngd" ...
+
+Writing NGDBUILD log file "pcie_blk_plus_v1_2_top.bld"...

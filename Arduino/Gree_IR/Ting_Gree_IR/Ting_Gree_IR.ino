@@ -1,14 +1,19 @@
 #include <IRremote.h>
 #include <SoftwareSerial.h>
+#include <Servo.h> 
 
 int Led = 2;
 int potpin = 0;
 int IR_send = 3;
 //********************    IR    *******************//
 IRsend irsend;
+Servo myservo; 
 SoftwareSerial mySerial(10, 11);
 
 unsigned char temp = 0;
+String inString = "";
+int Ting_num;
+int pos = 0;    // 用于存储舵机位置的变量
 
 void sendpresumable()
 {
@@ -82,24 +87,125 @@ void gree_close()
 
 //********************  main loop  *****************//
 void setup() {
-  mySerial.begin(115200);
+  mySerial.begin(9600);
   Serial.begin(9600);
   pinMode(Led,OUTPUT);
   pinMode(IR_send, OUTPUT); 
+  myservo.attach(9);  // 舵机控制信号引脚 
 }
 void loop() {
   if ( Serial.available()){
-   switch (Serial_getRX())
+    Ting_num = Serial_getRX();
+  }
+  else if (mySerial.available()){
+    Ting_num = mySerial_getRX();
+  }
+  else 
+    Ting_num = 0;
+  if(Ting_num != 0){
+   Serial.println(Ting_num);
+   switch (Ting_num)
     {
       case 3:      //打开空调
+        pos = 120;
+        myservo.write(pos);
+        delay(500);
         gree_open();
-        delay(10);
+        delay(500);
         Serial.println("gree open");
+        pos = 0;
+        myservo.write(pos);
         break;
       case 4:      //关闭空调
+        pos = 120;
+        myservo.write(pos);
+        delay(500);
         gree_close();
-        delay(10);
+        delay(500);
         Serial.println("gree close");
+        pos = 0;
+        myservo.write(pos);
+        break;
+      case 5:      //电视开
+        irsend.sendRC6(0x1000C, 20); //电视开关
+        delay(100);
+        break;
+      case 6:      //电视关
+        irsend.sendRC6(0x1000C, 20); //电视开关
+        delay(100);
+        break;
+      case 7:      //向上
+        irsend.sendNEC(0xFF629D, 32); //向上
+        delay(100);
+        break;
+      case 8:      //向下
+        irsend.sendNEC(0xFF6897, 32); //向下
+        delay(100);
+        break;
+      case 9:      //向左
+        irsend.sendNEC(0xFFE21D, 32); //向左
+        delay(100);
+        break;
+      case 10:      //向右
+        irsend.sendNEC(0xFFA857, 32); //向右
+        delay(100);
+        break;
+      case 11:      //音量高
+        irsend.sendNEC(0xFF28D7, 32); //音量高
+        delay(100);
+        break;
+      case 12:      //音量低
+        irsend.sendNEC(0xFF08F7, 32); //音量低
+        delay(100);
+        break;
+      case 13:      //确定
+        irsend.sendNEC(0xFFAA55, 32); //确定
+        delay(100);
+        break;
+      case 14:      //退出
+        irsend.sendNEC(0xFF02FD, 32); //退出
+        delay(100);
+        break;
+      case 15:      //亮度高
+        irsend.sendRC6(0x10076, 20); //亮度高
+        delay(500);
+        irsend.sendRC6(0x1005B, 20); 
+        delay(500);
+        irsend.sendRC6(0x10059, 20);
+        delay(500);
+        irsend.sendRC6(0x10059, 20);
+        delay(500);
+        irsend.sendRC6(0x1005C, 20);
+        delay(500);
+        irsend.sendRC6(0x10058, 20);
+        delay(500);
+        irsend.sendRC6(0x58, 20);
+        delay(100);
+        break;
+      case 16:      //亮度低
+        irsend.sendRC6(0x10076, 20); //亮度低
+        delay(500);
+        irsend.sendRC6(0x1005B, 20); 
+        delay(500);
+        irsend.sendRC6(0x10059, 20);
+        delay(500);
+        irsend.sendRC6(0x10059, 20);
+        delay(500);
+        irsend.sendRC6(0x1005C, 20);
+        delay(500);
+        irsend.sendRC6(0x10059, 20);
+        delay(500);
+        irsend.sendRC6(0x10059, 20);
+        delay(500);
+        break;
+      case 17:      //打开机顶盒
+        irsend.sendNEC(0xFF18E7, 32); //机顶盒开关
+        delay(100);
+        Serial.println("STB open");
+        break;
+      case 18:      //关闭机顶盒
+        irsend.sendNEC(0xFF18E7, 32); //机顶盒开关
+        delay(100);
         break;
       case 19:
         int val;
@@ -109,68 +215,39 @@ void loop() {
         Serial.println(dat);
         delay(100);
         break;
+      default: break;
      }
      delay(10);
   }
-  else if(mySerial.available()>0){
-   switch (mySerial_getRX())
-    {
-      case 3:      //打开空调
-        gree_open();
-        delay(10);
-        Serial.println("gree open");
-        break;
-      case 4:      //关闭空调
-        gree_close();
-        delay(10);
-        Serial.println("gree close");
-        break;
-      case 19:
-        int val;
-        int dat;
-        val = analogRead(potpin);
-        dat = (125*val)>>8;
-        Serial.println(dat);
-        delay(100);
-        break;
-     }
-   delay(10);
- }
   delay(100);
 }
 
 int Serial_getRX(){
+ inString = "";
  int num = 0;
- while(true){
-   Serial.readBytes(&temp,1);
- 
-   //使用串口发送数值时，使用println（）方式，会将ASC码的13和10作为换行符号发出去，
-   //这里也作为数据传输完成的标志，当发现13时，将后一个字符10读出来，则意味着传输结束。
-   
-   if(temp == 13){
-     Serial.readBytes(&temp,1);
-     break;
-   }
- 
-   num = 10*num + (temp-'0');//print（）时串口会传送数字的ASC码字符号，需要用这个办法恢复数字
+ while (Serial.available() > 0) {
+  int inChar = Serial.read();
+  if (isDigit(inChar)) {
+   inString += (char)inChar;
+  }
+  if (inChar == '\n') {
+    num = inString.toInt();
+  }
  }
  return num;
 }
 
 int mySerial_getRX(){
+ inString = "";
  int num = 0;
- while(true){
-   mySerial.readBytes(&temp,1);
- 
-   //使用串口发送数值时，使用println（）方式，会将ASC码的13和10作为换行符号发出去，
-   //这里也作为数据传输完成的标志，当发现13时，将后一个字符10读出来，则意味着传输结束。
-   
-   if(temp == 13){
-     mySerial.readBytes(&temp,1);
-     break;
-   }
- 
-   num = 10*num + (temp-'0');//print（）时串口会传送数字的ASC码字符号，需要用这个办法恢复数字
+ while (mySerial.available() > 0) {
+  int inChar = mySerial.read();
+  if (isDigit(inChar)) {
+   inString += (char)inChar;
+  }
+  if (inChar == '\n') {
+    num = inString.toInt();
+  }
  }
  return num;
 }

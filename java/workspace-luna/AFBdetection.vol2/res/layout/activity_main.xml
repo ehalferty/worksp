@@ -1,0 +1,68 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" 
+    android:background="@drawable/main_bg">
+    
+    <RelativeLayout 
+        android:layout_width="fill_parent" 
+        android:layout_height="0dp" 
+        android:layout_weight="1"
+        android:background="#3f3f3f">
+        <TextView 
+            android:id="@+id/titletext" 
+            android:layout_width="wrap_content" 
+            android:layout_height="wrap_content" 
+            android:layout_centerHorizontal="true" 
+            android:layout_centerVertical="true" 
+            android:textSize="30sp"
+            android:textColor="#ffffff" 
+            android:text="AFB1 Detection" />
+    </RelativeLayout> 
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="10"> 
+        <LinearLayout 
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content" 
+          android:orientation="vertical"
+          android:layout_centerHorizontal="true"
+          android:layout_centerVertical="true" > 
+        
+          <Button
+            android:id="@+id/Btntakepicture"
+            android:layout_width="250dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:textSize="27sp"
+            android:text="New Test" />
+
+          <Button
+            android:id="@+id/Btnhistory"
+            android:layout_width="250dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:textSize="27sp"
+            android:text="History" />
+
+          <Button
+            android:id="@+id/Btnhelp"
+            android:layout_width="250dp"
+            android:layout_height="60dp"    
+            android:layout_gravity="center"
+            android:textSize="27sp"
+            android:text="Instructions" />
+
+          <Button
+           android:id="@+id/Btnquit"
+           android:layout_width="250dp"
+           android:layout_height="60dp"
+           android:layout_gravity="center"
+           android:textSize="27sp"
+           android:text="Quit" />
+        </LinearLayout>
+    </RelativeLayout>
+    
+</LinearLayout>

@@ -89,7 +89,7 @@ try:
             tem.insert_one(data)
         if flag == 1:
             deltaminutes, date = autoctr.datedelta_minutes()
-            if deltaminutes >= 20:
+            if deltaminutes >= 30:
                 flag = 0
                 autoctr.Arse.send('4\r\n')
                 time.sleep(1)

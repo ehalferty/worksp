@@ -1,0 +1,163 @@
+//! **************************************************************************
+// Written by: Map 1.1 on Fri Feb 23 11:07:53 2007
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "CORECLK" LOCATE = SITE "L9" LEVEL 1;
+COMP "REFCLK_N" LOCATE = SITE "Y3" LEVEL 1;
+COMP "REFCLK_P" LOCATE = SITE "Y4" LEVEL 1;
+COMP "USERCLK" LOCATE = SITE "E12" LEVEL 1;
+COMP "GTPRESET_N" LOCATE = SITE "AF21" LEVEL 1;
+COMP "REFCLKOUT" LOCATE = SITE "H17" LEVEL 1;
+COMP "RST_N" LOCATE = SITE "AF20" LEVEL 1;
+COMP "TXCLKOUT" LOCATE = SITE "M8" LEVEL 1;
+COMP "LINKUP" LOCATE = SITE "H8" LEVEL 1;
+COMP "PLLLKDETOUT" LOCATE = SITE "K8" LEVEL 1;
+COMP "CLKLOCK" LOCATE = SITE "G8" LEVEL 1;
+COMP "completer/mem/gen_hdword[0].hdword" LOCATE = SITE "RAMB36_X1Y4" LEVEL 1;
+COMP "completer/mem/gen_ldword[0].ldword" LOCATE = SITE "RAMB36_X1Y2" LEVEL 1;
+COMP "completer/mem/gen_hdword[1].hdword" LOCATE = SITE "RAMB36_X1Y3" LEVEL 1;
+COMP "completer/mem/gen_ldword[1].ldword" LOCATE = SITE "RAMB36_X1Y1" LEVEL 1;
+COMP "dut_b/pcie_top_inst/pcie_gt_wrapper_i/GTPD[0].GTP_i" LOCATE = SITE
+        "GTP_DUAL_X0Y2" LEVEL 1;
+COMP "dut_b/pcie_top_inst/pcie_clocking_i/use_pll.pll_adv_i" LOCATE = SITE
+        "PLL_ADV_X0Y2" LEVEL 1;
+COMP "dut_b/pcie_top_inst/pcie_gt_wrapper_i/GTPD[2].GTP_i" LOCATE = SITE
+        "GTP_DUAL_X0Y1" LEVEL 1;
+COMP "dut_b/pcie_top_inst/pcie_gt_wrapper_i/gt_tx_data_reg<24>" LOCATE = SITE
+        "SLICE_X58Y20" LEVEL 1;
+COMP "dut_b/pcie_top_inst/pcie_gt_wrapper_i/gt_tx_data_reg<28>" LOCATE = SITE
+        "SLICE_X58Y21" LEVEL 1;
+COMP "dut_b/pcie_top_inst/pcie_gt_wrapper_i/gt_tx_data_reg<20>" LOCATE = SITE
+        "SLICE_X58Y38" LEVEL 1;
+COMP "dut_b/pcie_top_inst/pcie_gt_wrapper_i/gt_tx_data_reg<16>" LOCATE = SITE
+        "SLICE_X58Y39" LEVEL 1;
+COMP "dut_b/pcie_top_inst/pcie_gt_wrapper_i/gt_tx_data_reg<8>" LOCATE = SITE
+        "SLICE_X58Y40" LEVEL 1;
+COMP "dut_b/pcie_top_inst/pcie_gt_wrapper_i/gt_tx_data_reg<12>" LOCATE = SITE
+        "SLICE_X58Y41" LEVEL 1;
+COMP "dut_b/pcie_top_inst/pcie_gt_wrapper_i/gt_tx_data_reg<4>" LOCATE = SITE
+        "SLICE_X58Y58" LEVEL 1;
+COMP "dut_b/pcie_top_inst/pcie_gt_wrapper_i/gt_tx_data_reg<0>" LOCATE = SITE
+        "SLICE_X58Y59" LEVEL 1;
+COMP "dut_b/pcie_top_inst/pcie_gt_wrapper_i/gt_tx_data_k_reg<3>" LOCATE = SITE
+        "SLICE_X59Y20" LEVEL 1;
+COMP "dut_b/pcie_top_inst/pcie_gt_wrapper_i/gt_tx_power_down_reg<6>" LOCATE =
+        SITE "SLICE_X59Y21" LEVEL 1;
+COMP "dut_b/pcie_top_inst/pcie_gt_wrapper_i/gt_tx_compliance_reg<2>" LOCATE =
+        SITE "SLICE_X59Y38" LEVEL 1;
+COMP "dut_b/pcie_top_inst/pcie_gt_wrapper_i/gt_tx_detect_rx_loopback_reg<2>"
+        LOCATE = SITE "SLICE_X59Y39" LEVEL 1;
+COMP "dut_b/pcie_top_inst/pcie_gt_wrapper_i/gt_tx_elec_idle_reg<1>" LOCATE =
+        SITE "SLICE_X59Y40" LEVEL 1;
+COMP "dut_b/pcie_top_inst/pcie_gt_wrapper_i/gt_tx_power_down_reg<2>" LOCATE =
+        SITE "SLICE_X59Y41" LEVEL 1;
+COMP "dut_b/pcie_top_inst/pcie_gt_wrapper_i/gt_tx_compliance_reg<0>" LOCATE =
+        SITE "SLICE_X59Y58" LEVEL 1;
+COMP "dut_b/pcie_top_inst/pcie_gt_wrapper_i/gt_tx_power_down_reg<0>" LOCATE =
+        SITE "SLICE_X59Y59" LEVEL 1;
+NET "user_clk" PERIOD = 8 ns HIGH 50%;
+NET "core_clk" PERIOD = 4 ns HIGH 50%;
+NET "dut_b/pcie_top_inst/pcie_gt_wrapper_i/gt_tx_data_reg<0>" MAXDELAY = 1 ns;
+NET "dut_b/pcie_top_inst/pcie_gt_wrapper_i/gt_tx_data_reg<1>" MAXDELAY = 1 ns;
+NET "dut_b/pcie_top_inst/pcie_gt_wrapper_i/gt_tx_data_reg<2>" MAXDELAY = 1 ns;
+NET "dut_b/pcie_top_inst/pcie_gt_wrapper_i/gt_tx_data_reg<3>" MAXDELAY = 1 ns;
+NET "dut_b/pcie_top_inst/pcie_gt_wrapper_i/gt_tx_data_reg<4>" MAXDELAY = 1 ns;
+NET "dut_b/pcie_top_inst/pcie_gt_wrapper_i/gt_tx_data_reg<5>" MAXDELAY = 1 ns;
+NET "dut_b/pcie_top_inst/pcie_gt_wrapper_i/gt_tx_data_reg<6>" MAXDELAY = 1 ns;
+NET "dut_b/pcie_top_inst/pcie_gt_wrapper_i/gt_tx_data_reg<7>" MAXDELAY = 1 ns;
+NET "dut_b/pcie_top_inst/pcie_gt_wrapper_i/gt_tx_data_k_reg<0>" MAXDELAY = 1
+        ns;
+NET "dut_b/pcie_top_inst/pcie_gt_wrapper_i/gt_tx_elec_idle_reg<0>" MAXDELAY =
+        1 ns;
+NET "dut_b/pcie_top_inst/pcie_gt_wrapper_i/gt_tx_compliance_reg<0>" MAXDELAY =
+        1 ns;
+NET "dut_b/pcie_top_inst/pcie_gt_wrapper_i/gt_tx_detect_rx_loopback_reg<0>"
+        MAXDELAY = 1 ns;
+NET "dut_b/pcie_top_inst/pcie_gt_wrapper_i/gt_tx_power_down_reg<0>" MAXDELAY =
+        1 ns;
+NET "dut_b/pcie_top_inst/pcie_gt_wrapper_i/gt_tx_power_down_reg<1>" MAXDELAY =
+        1 ns;
+NET "dut_b/pcie_top_inst/pcie_gt_wrapper_i/gt_tx_data_reg<8>" MAXDELAY = 1 ns;
+NET "dut_b/pcie_top_inst/pcie_gt_wrapper_i/gt_tx_data_reg<9>" MAXDELAY = 1 ns;
+NET "dut_b/pcie_top_inst/pcie_gt_wrapper_i/gt_tx_data_reg<10>" MAXDELAY = 1
+        ns;
+NET "dut_b/pcie_top_inst/pcie_gt_wrapper_i/gt_tx_data_reg<11>" MAXDELAY = 1
+        ns;
+NET "dut_b/pcie_top_inst/pcie_gt_wrapper_i/gt_tx_data_reg<12>" MAXDELAY = 1
+        ns;
+NET "dut_b/pcie_top_inst/pcie_gt_wrapper_i/gt_tx_data_reg<13>" MAXDELAY = 1
+        ns;
+NET "dut_b/pcie_top_inst/pcie_gt_wrapper_i/gt_tx_data_reg<14>" MAXDELAY = 1
+        ns;
+NET "dut_b/pcie_top_inst/pcie_gt_wrapper_i/gt_tx_data_reg<15>" MAXDELAY = 1
+        ns;
+NET "dut_b/pcie_top_inst/pcie_gt_wrapper_i/gt_tx_data_k_reg<1>" MAXDELAY = 1
+        ns;
+NET "dut_b/pcie_top_inst/pcie_gt_wrapper_i/gt_tx_elec_idle_reg<1>" MAXDELAY =
+        1 ns;
+NET "dut_b/pcie_top_inst/pcie_gt_wrapper_i/gt_tx_compliance_reg<1>" MAXDELAY =
+        1 ns;
+NET "dut_b/pcie_top_inst/pcie_gt_wrapper_i/gt_tx_detect_rx_loopback_reg<1>"
+        MAXDELAY = 1 ns;
+NET "dut_b/pcie_top_inst/pcie_gt_wrapper_i/gt_tx_power_down_reg<2>" MAXDELAY =
+        1 ns;
+NET "dut_b/pcie_top_inst/pcie_gt_wrapper_i/gt_tx_power_down_reg<3>" MAXDELAY =
+        1 ns;
+NET "dut_b/pcie_top_inst/pcie_gt_wrapper_i/gt_tx_data_reg<16>" MAXDELAY = 1
+        ns;
+NET "dut_b/pcie_top_inst/pcie_gt_wrapper_i/gt_tx_data_reg<17>" MAXDELAY = 1
+        ns;
+NET "dut_b/pcie_top_inst/pcie_gt_wrapper_i/gt_tx_data_reg<18>" MAXDELAY = 1
+        ns;
+NET "dut_b/pcie_top_inst/pcie_gt_wrapper_i/gt_tx_data_reg<19>" MAXDELAY = 1
+        ns;
+NET "dut_b/pcie_top_inst/pcie_gt_wrapper_i/gt_tx_data_reg<20>" MAXDELAY = 1
+        ns;
+NET "dut_b/pcie_top_inst/pcie_gt_wrapper_i/gt_tx_data_reg<21>" MAXDELAY = 1
+        ns;
+NET "dut_b/pcie_top_inst/pcie_gt_wrapper_i/gt_tx_data_reg<22>" MAXDELAY = 1
+        ns;
+NET "dut_b/pcie_top_inst/pcie_gt_wrapper_i/gt_tx_data_reg<23>" MAXDELAY = 1
+        ns;
+NET "dut_b/pcie_top_inst/pcie_gt_wrapper_i/gt_tx_data_k_reg<2>" MAXDELAY = 1
+        ns;
+NET "dut_b/pcie_top_inst/pcie_gt_wrapper_i/gt_tx_elec_idle_reg<2>" MAXDELAY =
+        1 ns;
+NET "dut_b/pcie_top_inst/pcie_gt_wrapper_i/gt_tx_compliance_reg<2>" MAXDELAY =
+        1 ns;
+NET "dut_b/pcie_top_inst/pcie_gt_wrapper_i/gt_tx_detect_rx_loopback_reg<2>"
+        MAXDELAY = 1 ns;
+NET "dut_b/pcie_top_inst/pcie_gt_wrapper_i/gt_tx_power_down_reg<4>" MAXDELAY =
+        1 ns;
+NET "dut_b/pcie_top_inst/pcie_gt_wrapper_i/gt_tx_power_down_reg<5>" MAXDELAY =
+        1 ns;
+NET "dut_b/pcie_top_inst/pcie_gt_wrapper_i/gt_tx_data_reg<24>" MAXDELAY = 1
+        ns;
+NET "dut_b/pcie_top_inst/pcie_gt_wrapper_i/gt_tx_data_reg<25>" MAXDELAY = 1
+        ns;
+NET "dut_b/pcie_top_inst/pcie_gt_wrapper_i/gt_tx_data_reg<26>" MAXDELAY = 1
+        ns;
+NET "dut_b/pcie_top_inst/pcie_gt_wrapper_i/gt_tx_data_reg<27>" MAXDELAY = 1
+        ns;
+NET "dut_b/pcie_top_inst/pcie_gt_wrapper_i/gt_tx_data_reg<28>" MAXDELAY = 1
+        ns;
+NET "dut_b/pcie_top_inst/pcie_gt_wrapper_i/gt_tx_data_reg<29>" MAXDELAY = 1
+        ns;
+NET "dut_b/pcie_top_inst/pcie_gt_wrapper_i/gt_tx_data_reg<30>" MAXDELAY = 1
+        ns;
+NET "dut_b/pcie_top_inst/pcie_gt_wrapper_i/gt_tx_data_reg<31>" MAXDELAY = 1
+        ns;
+NET "dut_b/pcie_top_inst/pcie_gt_wrapper_i/gt_tx_data_k_reg<3>" MAXDELAY = 1
+        ns;
+NET "dut_b/pcie_top_inst/pcie_gt_wrapper_i/gt_tx_elec_idle_reg<3>" MAXDELAY =
+        1 ns;
+NET "dut_b/pcie_top_inst/pcie_gt_wrapper_i/gt_tx_compliance_reg<3>" MAXDELAY =
+        1 ns;
+NET "dut_b/pcie_top_inst/pcie_gt_wrapper_i/gt_tx_detect_rx_loopback_reg<3>"
+        MAXDELAY = 1 ns;
+NET "dut_b/pcie_top_inst/pcie_gt_wrapper_i/gt_tx_power_down_reg<6>" MAXDELAY =
+        1 ns;
+NET "dut_b/pcie_top_inst/pcie_gt_wrapper_i/gt_tx_power_down_reg<7>" MAXDELAY =
+        1 ns;
+SCHEMATIC END;

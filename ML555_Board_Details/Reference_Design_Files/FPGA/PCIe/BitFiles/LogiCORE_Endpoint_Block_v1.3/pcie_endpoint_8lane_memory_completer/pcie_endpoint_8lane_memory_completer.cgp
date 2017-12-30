@@ -1,0 +1,20 @@
+# Date: Fri Feb 23 14:08:47 2007
+SET addpads = False
+SET asysymbol = False
+SET busformat = BusFormatAngleBracketNotRipped
+SET createndf = False
+SET designentry = Verilog
+SET device = xc5vlx50t
+SET devicefamily = virtex5
+SET flowvendor = Other
+SET formalverification = False
+SET foundationsym = False
+SET implementationfiletype = Ngc
+SET package = ff1136
+SET removerpms = False
+SET simulationfiles = Behavioral
+SET speedgrade = -1
+SET verilogsim = True
+SET vhdlsim = False
+SET workingdirectory = /group/LogiCORE_Endpoint_Block_v1.3/pcie_endpoint_8lane_memory_completer/tmp
+

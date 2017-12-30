@@ -1,0 +1,18 @@
+PROMGEN: Xilinx Prom Generator I.33
+Copyright (c) 1995-2006 Xilinx, Inc.  All rights reserved.
+
+promgen -w -p mcs -c FF -o "C:/Documents and Settings/klund/Desktop//ML555_PCI_PCIX.mcs" -ver 0 "C:/Documents and Settings/klund/Desktop/pci32_v4_1_ml555.bit" -ver 1 "C:/Documents and Settings/klund/Desktop/pcix_v6_1_ml555.bit" -x xcf32p 
+
+PROM C:/Documents and Settings/klund/Desktop//ML555_PCI_PCIX.prm map: Thu Sep 28 09:39:57 2006
+
+Calculating PROM checksum with fill value ff
+
+Format        Mcs86 (32-bit)
+Size          4096K
+PROM start    0000:0000
+PROM end      003f:ffff
+PROM checksum 0aa23711
+
+        Addr1        Addr2                     Date File(s)
+    0000:0000    001a:cd7f     Sep 14 10:25:02 2006 C:/Documents and Settings/klund/Desktop/pci32_v4_1_ml555.bit
+    0020:0000    003a:cd7f     Sep 14 10:24:48 2006 C:/Documents and Settings/klund/Desktop/pcix_v6_1_ml555.bit

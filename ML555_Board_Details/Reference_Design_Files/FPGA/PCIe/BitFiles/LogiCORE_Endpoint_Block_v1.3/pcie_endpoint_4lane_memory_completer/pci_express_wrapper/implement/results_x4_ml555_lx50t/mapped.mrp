@@ -1,0 +1,418 @@
+Release 9.1.01i Map J.32
+Xilinx Mapping Report File for Design 'mem_ep_app_top'
+
+Design Information
+------------------
+Command Line   : map -p xc5vlx50t-1-ff1136 -logic_opt off -ol high -o mapped.ncd
+mem_ep_app_top.ngd mapped.pcf 
+Target Device  : xc5vlx50t
+Target Package : ff1136
+Target Speed   : -1
+Mapper Version : virtex5 -- $Revision: 1.36 $
+Mapped Date    : Fri Feb 23 11:03:43 2007
+
+Design Summary
+--------------
+Number of errors:      0
+Number of warnings:    4
+Slice Logic Utilization:
+  Number of Slice Registers:                   693 out of  28,800    2%
+    Number used as Flip Flops:                 689
+    Number used as Latches:                      4
+  Number of Slice LUTs:                        598 out of  28,800    2%
+    Number used as logic:                      591 out of  28,800    2%
+      Number using O6 output only:             564
+      Number using O5 output only:              21
+      Number using O5 and O6:                    6
+    Number used as Memory:                       5 out of   7,680    1%
+      Number used as Shift Register:             5
+        Number using O6 output only:             5
+    Number used as exclusive route-thru:         2
+  Number of route-thrus:                        23 out of  57,600    1%
+    Number using O6 output only:                23
+
+Slice Logic Distribution:
+  Number of occupied Slices:                   440 out of   7,200    6%
+  Number of LUT Flip Flop pairs used:        1,031
+    Number with an unused Flip Flop:           338 out of   1,031   32%
+    Number with an unused LUT:                 433 out of   1,031   41%
+    Number of fully used LUT-FF pairs:         260 out of   1,031   25%
+    Number of unique control sets:              28
+
+  A LUT Flip Flop pair for this architecture represents one LUT paired with
+  one Flip Flop within a slice.  A control set is a unique combination of
+  clock, reset, set, and enable signals for a registered element.
+  The Slice Logic Distribution report is not meaningful if the design is
+  over-mapped for a non-slice resource or if Placement fails.
+
+IO Utilization:
+  Number of bonded IOBs:                         9 out of     480    1%
+
+Specific Feature Utilization:
+  Number of BlockRAM/FIFO:                       7 out of      60   11%
+    Number using BlockRAM only:                  7
+    Total primitives used:
+      Number of 36k BlockRAM used:               7
+    Total Memory used (KB):                    252 out of   2,160   11%
+  Number of BUFG/BUFGCTRLs:                      5 out of      32   15%
+    Number used as BUFGs:                        5
+  Number of BUFDSs:                              1 out of       6   16%
+  Number of GTP_DUALs:                           2 out of       6   33%
+  Number of PCIEs:                               1 out of       1  100%
+  Number of PLL_ADVs:                            1 out of       6   16%
+
+  Number of RPM macros:            1
+Total equivalent gate count for design:  927,901
+Additional JTAG gate count for IOBs:  1,296
+Peak Memory Usage:  435 MB
+Total REAL time to MAP completion:  5 mins 4 secs 
+Total CPU time to MAP completion:   5 mins 3 secs 
+
+Table of Contents
+-----------------
+Section 1 - Errors
+Section 2 - Warnings
+Section 3 - Informational
+Section 4 - Removed Logic Summary
+Section 5 - Removed Logic
+Section 6 - IOB Properties
+Section 7 - RPMs
+Section 8 - Guide Report
+Section 9 - Area Group and Partition Summary
+Section 10 - Modular Design Summary
+Section 11 - Timing Report
+Section 12 - Configuration String Information
+Section 13 - Control Set Information
+
+Section 1 - Errors
+------------------
+
+Section 2 - Warnings
+--------------------
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   dut_b/pcie_top_inst/pcie_gt_wrapper_i/icdrreset<0> is sourced by a
+   combinatorial pin. This is not good design practice. Use the CE pin to
+   control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   dut_b/pcie_top_inst/pcie_gt_wrapper_i/icdrreset<2> is sourced by a
+   combinatorial pin. This is not good design practice. Use the CE pin to
+   control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   dut_b/pcie_top_inst/pcie_gt_wrapper_i/icdrreset<1> is sourced by a
+   combinatorial pin. This is not good design practice. Use the CE pin to
+   control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   dut_b/pcie_top_inst/pcie_gt_wrapper_i/icdrreset<3> is sourced by a
+   combinatorial pin. This is not good design practice. Use the CE pin to
+   control the loading of data into the flip-flop.
+
+Section 3 - Informational
+-------------------------
+INFO:MapLib:562 - No environment variables are currently set.
+INFO:LIT:244 - All of the single ended outputs in this design are using slew
+   rate limited output drivers. The delay on speed critical single ended outputs
+   can be dramatically reduced by designating them as fast outputs in the
+   schematic.
+INFO:Pack:1716 - Initializing temperature to 85.000 Celsius. (default - Range:
+   0.000 to 85.000 Celsius)
+INFO:Pack:1720 - Initializing voltage to 0.950 Volts. (default - Range: 0.950 to
+   1.050 Volts)
+INFO:Pack:1650 - Map created a placed design.
+
+Section 4 - Removed Logic Summary
+---------------------------------
+   4 block(s) removed
+   2 block(s) optimized away
+   4 signal(s) removed
+
+Section 5 - Removed Logic
+-------------------------
+
+The trimmed logic reported below is either:
+   1. part of a cycle
+   2. part of disabled logic
+   3. a side-effect of other trimmed logic
+
+The signal "completer/I0/ram_write_address_internal_mux0000<13>" is unused and
+has been removed.
+ Unused block "completer/I0/ram_write_address_internal_mux0000<13>1" (ROM)
+removed.
+  The signal "completer/I0/stored_header3<13>" is unused and has been removed.
+   Unused block "completer/I0/stored_header3_13" (FF) removed.
+The signal "completer/ram_read_address<10>" is unused and has been removed.
+ Unused block "completer/I0/ram_read_address<10>1" (ROM) removed.
+The signal "completer/I0/ram_write_address_internal<10>" is unused and has been
+removed.
+ Unused block "completer/I0/ram_write_address_internal_10" (FF) removed.
+
+Optimized Block(s):
+TYPE 		BLOCK
+GND 		XST_GND
+VCC 		XST_VCC
+
+To enable printing of redundant blocks removed and signals merged, set the
+detailed map report option and rerun map.
+
+Section 6 - IOB Properties
+--------------------------
+
++----------------------------------------------------------------------------------------------------------------------------------------+
+| IOB Name                           | Type             | Direction | IO Standard | Drive    | Slew | Reg (s)      | Resistor | IOB      |
+|                                    |                  |           |             | Strength | Rate |              |          | Delay    |
++----------------------------------------------------------------------------------------------------------------------------------------+
+| CLKLOCK                            | IOB              | OUTPUT    | LVCMOS25    | 12       | SLOW |              |          |          |
+| CORECLK                            | IOB              | OUTPUT    | LVCMOS25    | 12       | SLOW |              |          |          |
+| GTPRESET_N                         | IOB              | INPUT     | LVCMOS25    |          |      |              | PULLUP   |          |
+| LINKUP                             | IOB              | OUTPUT    | LVCMOS25    | 12       | SLOW |              |          |          |
+| PLLLKDETOUT                        | IOB              | OUTPUT    | LVCMOS25    | 12       | SLOW |              |          |          |
+| REFCLKOUT                          | IOB              | OUTPUT    | LVCMOS25    | 12       | SLOW |              |          |          |
+| RST_N                              | IOB              | INPUT     | LVCMOS25    |          |      |              | PULLUP   |          |
+| TXCLKOUT                           | IOB              | OUTPUT    | LVCMOS25    | 12       | SLOW |              |          |          |
+| USERCLK                            | IOB              | OUTPUT    | LVCMOS25    | 12       | SLOW |              |          |          |
++----------------------------------------------------------------------------------------------------------------------------------------+
+
+Section 7 - RPMs
+----------------
+hset                                    
+
+Section 8 - Guide Report
+------------------------
+Guide not run on this design.
+
+Section 9 - Area Group and Partition Summary
+--------------------------------------------
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+Area Group Information
+----------------------
+
+  No area groups were found in this design.
+
+
+Section 10 - Modular Design Summary
+-----------------------------------
+Modular Design not used for this design.
+
+Section 11 - Timing Report
+--------------------------
+INFO:Timing:3284 - This timing report was generated using estimated delay 
+   information.  For accurate numbers, please refer to the post Place and Route 
+   timing report.
+Asterisk (*) preceding a constraint indicates it was not met.
+   This may be due to a setup or hold violation.
+
+------------------------------------------------------------------------------------------------------
+  Constraint                                |  Check  | Worst Case |  Best Case | Timing |   Timing   
+                                            |         |    Slack   | Achievable | Errors |    Score   
+------------------------------------------------------------------------------------------------------
+* NET "user_clk" PERIOD = 8 ns HIGH 50%     | SETUP   |     0.027ns|     7.973ns|       0|           0
+                                            | HOLD    |    -1.614ns|            |     172|      145654
+------------------------------------------------------------------------------------------------------
+* NET "core_clk" PERIOD = 4 ns HIGH 50%     | SETUP   |     0.557ns|     3.443ns|       0|           0
+                                            | HOLD    |    -1.095ns|            |     269|      188148
+------------------------------------------------------------------------------------------------------
+  NET "dut_b/pcie_top_inst/pcie_gt_wrapper_ | MAXDELAY|     1.000ns|     0.000ns|       0|           0
+  i/gt_tx_data_reg<16>" MAXDELAY = 1 ns     |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "dut_b/pcie_top_inst/pcie_gt_wrapper_ | MAXDELAY|     1.000ns|     0.000ns|       0|           0
+  i/gt_tx_data_reg<17>" MAXDELAY = 1 ns     |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "dut_b/pcie_top_inst/pcie_gt_wrapper_ | MAXDELAY|     1.000ns|     0.000ns|       0|           0
+  i/gt_tx_data_reg<18>" MAXDELAY = 1 ns     |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "dut_b/pcie_top_inst/pcie_gt_wrapper_ | MAXDELAY|     1.000ns|     0.000ns|       0|           0
+  i/gt_tx_data_reg<19>" MAXDELAY = 1 ns     |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "dut_b/pcie_top_inst/pcie_gt_wrapper_ | MAXDELAY|     1.000ns|     0.000ns|       0|           0
+  i/gt_tx_data_reg<20>" MAXDELAY = 1 ns     |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "dut_b/pcie_top_inst/pcie_gt_wrapper_ | MAXDELAY|     1.000ns|     0.000ns|       0|           0
+  i/gt_tx_data_reg<21>" MAXDELAY = 1 ns     |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "dut_b/pcie_top_inst/pcie_gt_wrapper_ | MAXDELAY|     1.000ns|     0.000ns|       0|           0
+  i/gt_tx_data_reg<22>" MAXDELAY = 1 ns     |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "dut_b/pcie_top_inst/pcie_gt_wrapper_ | MAXDELAY|     1.000ns|     0.000ns|       0|           0
+  i/gt_tx_data_reg<23>" MAXDELAY = 1 ns     |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "dut_b/pcie_top_inst/pcie_gt_wrapper_ | MAXDELAY|     1.000ns|     0.000ns|       0|           0
+  i/gt_tx_data_k_reg<2>" MAXDELAY = 1 ns    |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "dut_b/pcie_top_inst/pcie_gt_wrapper_ | MAXDELAY|     1.000ns|     0.000ns|       0|           0
+  i/gt_tx_elec_idle_reg<2>" MAXDELAY = 1 ns |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "dut_b/pcie_top_inst/pcie_gt_wrapper_ | MAXDELAY|     1.000ns|     0.000ns|       0|           0
+  i/gt_tx_compliance_reg<2>" MAXDELAY = 1 n |         |            |            |        |            
+  s                                         |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "dut_b/pcie_top_inst/pcie_gt_wrapper_ | MAXDELAY|     1.000ns|     0.000ns|       0|           0
+  i/gt_tx_detect_rx_loopback_reg<2>" MAXDEL |         |            |            |        |            
+  AY = 1 ns                                 |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "dut_b/pcie_top_inst/pcie_gt_wrapper_ | MAXDELAY|     1.000ns|     0.000ns|       0|           0
+  i/gt_tx_power_down_reg<4>" MAXDELAY = 1 n |         |            |            |        |            
+  s                                         |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "dut_b/pcie_top_inst/pcie_gt_wrapper_ | MAXDELAY|     1.000ns|     0.000ns|       0|           0
+  i/gt_tx_power_down_reg<5>" MAXDELAY = 1 n |         |            |            |        |            
+  s                                         |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "dut_b/pcie_top_inst/pcie_gt_wrapper_ | MAXDELAY|     1.000ns|     0.000ns|       0|           0
+  i/gt_tx_data_reg<24>" MAXDELAY = 1 ns     |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "dut_b/pcie_top_inst/pcie_gt_wrapper_ | MAXDELAY|     1.000ns|     0.000ns|       0|           0
+  i/gt_tx_data_reg<25>" MAXDELAY = 1 ns     |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "dut_b/pcie_top_inst/pcie_gt_wrapper_ | MAXDELAY|     1.000ns|     0.000ns|       0|           0
+  i/gt_tx_data_reg<26>" MAXDELAY = 1 ns     |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "dut_b/pcie_top_inst/pcie_gt_wrapper_ | MAXDELAY|     1.000ns|     0.000ns|       0|           0
+  i/gt_tx_data_reg<27>" MAXDELAY = 1 ns     |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "dut_b/pcie_top_inst/pcie_gt_wrapper_ | MAXDELAY|     1.000ns|     0.000ns|       0|           0
+  i/gt_tx_data_reg<28>" MAXDELAY = 1 ns     |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "dut_b/pcie_top_inst/pcie_gt_wrapper_ | MAXDELAY|     1.000ns|     0.000ns|       0|           0
+  i/gt_tx_data_reg<29>" MAXDELAY = 1 ns     |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "dut_b/pcie_top_inst/pcie_gt_wrapper_ | MAXDELAY|     1.000ns|     0.000ns|       0|           0
+  i/gt_tx_data_reg<30>" MAXDELAY = 1 ns     |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "dut_b/pcie_top_inst/pcie_gt_wrapper_ | MAXDELAY|     1.000ns|     0.000ns|       0|           0
+  i/gt_tx_data_reg<31>" MAXDELAY = 1 ns     |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "dut_b/pcie_top_inst/pcie_gt_wrapper_ | MAXDELAY|     1.000ns|     0.000ns|       0|           0
+  i/gt_tx_data_k_reg<3>" MAXDELAY = 1 ns    |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "dut_b/pcie_top_inst/pcie_gt_wrapper_ | MAXDELAY|     1.000ns|     0.000ns|       0|           0
+  i/gt_tx_elec_idle_reg<3>" MAXDELAY = 1 ns |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "dut_b/pcie_top_inst/pcie_gt_wrapper_ | MAXDELAY|     1.000ns|     0.000ns|       0|           0
+  i/gt_tx_compliance_reg<3>" MAXDELAY = 1 n |         |            |            |        |            
+  s                                         |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "dut_b/pcie_top_inst/pcie_gt_wrapper_ | MAXDELAY|     1.000ns|     0.000ns|       0|           0
+  i/gt_tx_detect_rx_loopback_reg<3>" MAXDEL |         |            |            |        |            
+  AY = 1 ns                                 |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "dut_b/pcie_top_inst/pcie_gt_wrapper_ | MAXDELAY|     1.000ns|     0.000ns|       0|           0
+  i/gt_tx_power_down_reg<6>" MAXDELAY = 1 n |         |            |            |        |            
+  s                                         |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "dut_b/pcie_top_inst/pcie_gt_wrapper_ | MAXDELAY|     1.000ns|     0.000ns|       0|           0
+  i/gt_tx_power_down_reg<7>" MAXDELAY = 1 n |         |            |            |        |            
+  s                                         |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "dut_b/pcie_top_inst/pcie_gt_wrapper_ | MAXDELAY|     1.000ns|     0.000ns|       0|           0
+  i/gt_tx_data_reg<0>" MAXDELAY = 1 ns      |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "dut_b/pcie_top_inst/pcie_gt_wrapper_ | MAXDELAY|     1.000ns|     0.000ns|       0|           0
+  i/gt_tx_data_reg<1>" MAXDELAY = 1 ns      |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "dut_b/pcie_top_inst/pcie_gt_wrapper_ | MAXDELAY|     1.000ns|     0.000ns|       0|           0
+  i/gt_tx_data_reg<2>" MAXDELAY = 1 ns      |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "dut_b/pcie_top_inst/pcie_gt_wrapper_ | MAXDELAY|     1.000ns|     0.000ns|       0|           0
+  i/gt_tx_data_reg<3>" MAXDELAY = 1 ns      |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "dut_b/pcie_top_inst/pcie_gt_wrapper_ | MAXDELAY|     1.000ns|     0.000ns|       0|           0
+  i/gt_tx_data_reg<4>" MAXDELAY = 1 ns      |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "dut_b/pcie_top_inst/pcie_gt_wrapper_ | MAXDELAY|     1.000ns|     0.000ns|       0|           0
+  i/gt_tx_data_reg<5>" MAXDELAY = 1 ns      |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "dut_b/pcie_top_inst/pcie_gt_wrapper_ | MAXDELAY|     1.000ns|     0.000ns|       0|           0
+  i/gt_tx_data_reg<6>" MAXDELAY = 1 ns      |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "dut_b/pcie_top_inst/pcie_gt_wrapper_ | MAXDELAY|     1.000ns|     0.000ns|       0|           0
+  i/gt_tx_data_reg<7>" MAXDELAY = 1 ns      |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "dut_b/pcie_top_inst/pcie_gt_wrapper_ | MAXDELAY|     1.000ns|     0.000ns|       0|           0
+  i/gt_tx_data_k_reg<0>" MAXDELAY = 1 ns    |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "dut_b/pcie_top_inst/pcie_gt_wrapper_ | MAXDELAY|     1.000ns|     0.000ns|       0|           0
+  i/gt_tx_elec_idle_reg<0>" MAXDELAY = 1 ns |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "dut_b/pcie_top_inst/pcie_gt_wrapper_ | MAXDELAY|     1.000ns|     0.000ns|       0|           0
+  i/gt_tx_compliance_reg<0>" MAXDELAY = 1 n |         |            |            |        |            
+  s                                         |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "dut_b/pcie_top_inst/pcie_gt_wrapper_ | MAXDELAY|     1.000ns|     0.000ns|       0|           0
+  i/gt_tx_detect_rx_loopback_reg<0>" MAXDEL |         |            |            |        |            
+  AY = 1 ns                                 |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "dut_b/pcie_top_inst/pcie_gt_wrapper_ | MAXDELAY|     1.000ns|     0.000ns|       0|           0
+  i/gt_tx_power_down_reg<0>" MAXDELAY = 1 n |         |            |            |        |            
+  s                                         |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "dut_b/pcie_top_inst/pcie_gt_wrapper_ | MAXDELAY|     1.000ns|     0.000ns|       0|           0
+  i/gt_tx_power_down_reg<1>" MAXDELAY = 1 n |         |            |            |        |            
+  s                                         |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "dut_b/pcie_top_inst/pcie_gt_wrapper_ | MAXDELAY|     1.000ns|     0.000ns|       0|           0
+  i/gt_tx_data_reg<8>" MAXDELAY = 1 ns      |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "dut_b/pcie_top_inst/pcie_gt_wrapper_ | MAXDELAY|     1.000ns|     0.000ns|       0|           0
+  i/gt_tx_data_reg<9>" MAXDELAY = 1 ns      |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "dut_b/pcie_top_inst/pcie_gt_wrapper_ | MAXDELAY|     1.000ns|     0.000ns|       0|           0
+  i/gt_tx_data_reg<10>" MAXDELAY = 1 ns     |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "dut_b/pcie_top_inst/pcie_gt_wrapper_ | MAXDELAY|     1.000ns|     0.000ns|       0|           0
+  i/gt_tx_data_reg<11>" MAXDELAY = 1 ns     |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "dut_b/pcie_top_inst/pcie_gt_wrapper_ | MAXDELAY|     1.000ns|     0.000ns|       0|           0
+  i/gt_tx_data_reg<12>" MAXDELAY = 1 ns     |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "dut_b/pcie_top_inst/pcie_gt_wrapper_ | MAXDELAY|     1.000ns|     0.000ns|       0|           0
+  i/gt_tx_data_reg<13>" MAXDELAY = 1 ns     |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "dut_b/pcie_top_inst/pcie_gt_wrapper_ | MAXDELAY|     1.000ns|     0.000ns|       0|           0
+  i/gt_tx_data_reg<14>" MAXDELAY = 1 ns     |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "dut_b/pcie_top_inst/pcie_gt_wrapper_ | MAXDELAY|     1.000ns|     0.000ns|       0|           0
+  i/gt_tx_data_reg<15>" MAXDELAY = 1 ns     |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "dut_b/pcie_top_inst/pcie_gt_wrapper_ | MAXDELAY|     1.000ns|     0.000ns|       0|           0
+  i/gt_tx_data_k_reg<1>" MAXDELAY = 1 ns    |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "dut_b/pcie_top_inst/pcie_gt_wrapper_ | MAXDELAY|     1.000ns|     0.000ns|       0|           0
+  i/gt_tx_elec_idle_reg<1>" MAXDELAY = 1 ns |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "dut_b/pcie_top_inst/pcie_gt_wrapper_ | MAXDELAY|     1.000ns|     0.000ns|       0|           0
+  i/gt_tx_compliance_reg<1>" MAXDELAY = 1 n |         |            |            |        |            
+  s                                         |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "dut_b/pcie_top_inst/pcie_gt_wrapper_ | MAXDELAY|     1.000ns|     0.000ns|       0|           0
+  i/gt_tx_detect_rx_loopback_reg<1>" MAXDEL |         |            |            |        |            
+  AY = 1 ns                                 |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "dut_b/pcie_top_inst/pcie_gt_wrapper_ | MAXDELAY|     1.000ns|     0.000ns|       0|           0
+  i/gt_tx_power_down_reg<2>" MAXDELAY = 1 n |         |            |            |        |            
+  s                                         |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "dut_b/pcie_top_inst/pcie_gt_wrapper_ | MAXDELAY|     1.000ns|     0.000ns|       0|           0
+  i/gt_tx_power_down_reg<3>" MAXDELAY = 1 n |         |            |            |        |            
+  s                                         |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  Pin to Pin Skew Constraint                | MAXDELAY| 2106523.782ns| 2106523.837ns|       0|           0
+------------------------------------------------------------------------------------------------------
+
+
+2 constraints not met.
+
+
+
+Section 12 - Configuration String Details
+-----------------------------------------
+Use the "-detail" map option to print out Configuration Strings
+
+Section 13 - Control Set Information
+------------------------------------
+Use the "-detail" map option to print out Control Set Information.

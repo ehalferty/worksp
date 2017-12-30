@@ -1,0 +1,2 @@
+INDEX VERSION 1.127+E:\worksp\java\workspace-luna\.metadata\.plugins\org.eclipse.jdt.core
+2131546830.index

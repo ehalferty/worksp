@@ -1,0 +1,319 @@
+
+PCI Express Endpoint Block Core Release Notes v1.3
+
+Contents:
+
+1) Introduction
+
+2) Notes for current v1.2 users 
+
+3) Known Limitations
+
+4) Directory Structure
+
+5) Design Hierarchy
+
+6) Simulation
+
+7) Implementation
+
+8) Software Driver
+
+9) GTP Pinout Instructions
+
+10) Supported Parts and Packages
+
+11) Timing Notes 
+
+12) Answer Records
+
+**************************************************************
+
+Introduction
+------------
+
+The PCI Express Endpoint Block Core delivers a highly user configurable
+solution including wrappers, simulation testbenches and scripts for synthesis
+to enable the user to quickly get started on building a PCI Express solution.
+It delivers wrappers that hide the complexity of using and connecting the 
+Virtex5 PCIe Endpoint Block with GTP Transceivers, block RAMS and additional
+clock and reset logic. Users can further build their application by integrating
+the wrappers into their designs.Users are further provided with an example design
+in the form of a simple memory application. Along with the out of box simulation
+testbenches, scripts and smartmodels (provided through Xilinx ISE software),
+the customer can quickly see a working simulation of the core they created using
+the GUI. To complete the flow, a set of scripts and ucf files are provided to 
+generate bitstreams of the example design which integrates the generated core.
+The bitstreams are targeted for Xilinx Development Boards ML523/ML523 and ML555. 
+But, they serve as an example and starting point for users developing their own boards
+to build PCI Express Solutions with  Virtex5 LXT devices. The ucf files specifically
+contain information on the optimal choice of GTP Transceivers for different lane widths.
+
+Notes for current v1.2 users
+----------------------------
+1. File pcie_top.v and pcie_gt_wrapper.v  have changed from v1.2. Please
+regenerate the core if using ISE Software 9.1 or later. Current .xco file can
+be used to regenerate the core
+   Key Changes
+   a) New pin LLKCONTREQN added to pcie_ep primitive. Refer to UG197 v1.1 for
+   details
+   b) Parameter declarations and type conversions added to enable synplify
+   support
+   c) Additional black box files added to enable synplify support (verilog
+   only) 
+2.Additional GTP pinout options available for each device/package
+combination. Instructions on using these options provided at the end of this document
+3. Designs will continue to be targeted towards ES Silicon (forward compatible with production
+silicon)
+
+The PCI Express Endpoint Block Core delivers a highly user configurable
+Known limitations
+------------------
+
+1. Limited VCS testing 
+2. No Synplicity Support for multi-lane verilog designs 
+3. Example Design: Maximum frequency of operation of the user application: 125 MHz.
+4. Example Design: No split transactions. Completer cannot break a read request into two or more separate completions.
+5. Example Design: Can only process packets in VC0 or VC1 and only on a single traffic class based on the mapping
+6. Example Design: Does not support 64 bit memory access without further modification to logic associated with completer_mem_block.
+7. Example Design: Endpoint does not initiate traffic without further modifications to the code.
+
+
+Directory Structure
+-------------------
+
+-<top_level_dir_name> (this is the component name specified by the user in the coregen GUI.  Default is pci_express_wrapper)
+
+    - src : Source files required to create a design using the PCIe endpoint block
+    - example_design: Design files which implements a back memory and completer design for PCIe endpoint block
+    - test_bench: Design files which implement a downstream port and enable demonstration of the following functionality:
+        - Link training
+        - Memory Reads/Writes
+    - implement: Implementation scripts to generate a bit file for the example design
+    - simulation: Simulation scripts to run simulations 
+
+
+Design Hierarchy 
+----------------
+All the modules listed below can be found in src, example_design or test_bench directories.
+
+-tb - Top-Level Memory Endpoint Design testbench.  Consists of an memory
+endpoint example design, wrappers for the PCIe Endpoint Block and a limited downstream port model.
+    -mem_ep_app_top  - top level file for memory endpoint design.
+        -<component name as specified in GUI>  - top level PCIe wrapper (default is pcie_express_wrapper)
+            -pcie_top_wrapper - wrapper for the pcie hard core and other modules
+                -pcie_clocking - clock module
+                -pcie_reset_logic - reset module 
+                -PCI_EP (unisims library element) - PCI Express Endpoint Block hard core
+                -pcie_mim_wrapper - Memory block wrapper
+                    -bram_common - Memory
+                        -RAMB36 (unisims library element)
+                -pcie_gt_wrapper - GTP wrapper
+                    -GTP_DUAL (unisims library element)
+                -pcie_blk_cf_mgmt - module to poll bar register through the management interface
+                -pcie_bar_decoder - Bar decoder 
+                    - pcie_cmm_decoder
+        -completer_mem_block_top - completion block top level wrapper
+            -completer_mem_block_machine - completion logic 
+            -completer_mem_block - completion memory
+                -RAMB36 (unisims library element)
+    -pcie_top_ne - top level wrapper for the downstream port
+        -pcie_ne - downstream port
+    -pcie_internal (unisims library element)
+        -pcie_mim_wrapper - Memory block wrapper.
+            -bram_common - Memory of the endpoint.
+                -RAMB36 (unisims library element)
+        -pcie_gt_wrapper - GTP wrapper.
+            -GTP_DUAL (unisims library element)
+
+Note: Additional black box files added for synplify support (verilog only).
+VHDL does not require these files
+
+Simulation
+-----------
+
+   With Modelsim
+   -------------
+To run functional simulation on the design, change directory to simulation/function.
+
+The simulation directory has the following files:
+    - simulate_mti.do : Compiles and loads the files required for simulation with modelsim
+    - wave.do : Allows setting signals that need to should show up in the wave form once the simulation starts 
+
+Before you run the simulation, make sure the following are setup correctly:
+
+    1. The library paths for UNISIMS_VER, SIMPRIMS_VER, XILINXCORELIB_VER, UNISIMS, SIMPRIMS, XILINXCORELIB are set correctly in the modelsim.ini file.
+    2. Smartmodel simulation is enabled in modelsim.ini file.  (See Xilinx answer 22214) 
+    3. Variables LMC_HOME and XILINX are set 
+
+To run a simulation, 
+
+    1. Open a modelsim window (vsim)
+    2. At the command prompt VSIM > run command "do simulate_mti.do"
+    or
+    1  vsim -do simulate_mti.do
+
+   With NCsim
+   ----------
+The simulation directory has the following files:
+    - simulate_ncsim.sh : Compiles and loads the files required for simulation with ncsim
+
+Before you run the simulation, make sure the following are setup correctly:
+
+    1. The library paths for UNISIMS_VER, SIMPRIMS_VER, XILINXCORELIB_VER, UNISIMS, SIMPRIMS, XILINXCORELIB are set correctly in the cds.lib and hdl.var files.
+    2. Smartmodel are installed.   (See the simulation and synthesis section in ISE software manuals for smartmodels installation in NCsim)
+    3. Variables LMC_HOME and XILINX are set 
+
+To run a simulation, 
+
+    1. At the shell prompt run command "bash simulate_ncsim.sh"
+
+Implement 
+---------
+
+To implement the design, change directory to implement.
+
+The implement directory has the following files:
+     - implement.sh -board <ml555 or ml523 or ml525> : script for generating the bit file based on the mem_ep_top design.
+        Automatically runs xst or synplify, ngdbuild, map, par, trce and bitgen for the given board.
+        Defaults to ml555 if unspecified.
+     - mem_ep_app_top.scr : contains arguments for running xst specific to this design, as generated by coregen.
+
+To implement the design, type
+
+   > ./implement.sh -board <ml555 or ml523 or ml525>
+
+On the Windows Operating System, run implement.bat -board <ml555 or ml523 or ml525>
+
+
+Software Driver
+---------------
+
+The SW requirements are also fairly simple. A Windows XP device driver and a memory test 
+application have been created to demonstrate the example design. Please contact Xilinx for 
+the device driver and MET application SW.
+
+
+GTP Pinout Instructions
+-----------------------
+A default GTP pinout is provided in the ucf file whenver a core is generated.
+The pinout reflects optimum locations for the GTP by always picking GTPs
+adjacent to the PCIe Block. As an additional option, a range of 6 GTP Tiles
+are provided for each device which the user can pick from inorder to suit
+their board requirements. The following recommendations need to be followed
+while picking the GTP locations in order to meet timing on the designs
+
+1. Always pick the GTP locations next to the PCIe Block.
+   lx50t : X0Y1, X0Y2
+   lx110t: X0Y2, X0Y3
+   lx330t: X0Y4, X0Y5
+   Not choosing the GTPs next to PCIe Block for PCIe requirements, will make
+   these GTPs harder to route to for other applications
+2. Assign Lane numbers in ascending order starting with the top most GTP as
+lane 0. In typical endpoint add-in cards, the positioning of the FPGA makes
+this choice the most efficient for board routing purposes.  
+
+3. If the GTP locations picked are different than the default locations
+provided in the ucf, the user needs to modify the pcie_gt_wrapper.v(hd) and the
+ucf file
+   pcie_gt_wrapper.v(hd) notes
+   ---------------------------
+   a) Every GTP has a pipelining stage in both TX and RX paths to help with
+   timing closure. These registers are also constrained  to particular
+   locations close to the respective GTPs to achieve timing closure
+   b) For each device, there is a range of slice locations which are
+   associated with each GTP for ideal timing placement. They are listed below.
+   The "NOT RECOMMENDED" disclaimer is based on risk in achieving timing
+   closure. Inorder to use any of the "NOT RECOMMENDED" GTPs, the user should
+   be prepared to use a -2 part or faster OR add more pipelining registers
+   with location constraints to achieve timing closure
+   All listings for 50t,110t are for 1136 package and 330t is for 1738
+   package. 
+
+|-------|-------------------|-----------------------|----------------------|
+|       |        50t        |         110t          |        330t          |
+|-------|-------------------|-----------------------|----------------------|
+|GTP    |                   |                       |                      |
+|-------|-------------------|-----------------------|----------------------|
+|       |   MGT122          |    MG126              |    MGT134            |
+|X0Y0 0 |   X58Y18-X59Y19   |    X106Y18-X107Y19    |    NOT RECOMMENDED   |
+|X0Y0 1 |   X58Y0-X59Y1     |    X106Y0-X107Y1      |    NOT RECOMMENDED   |
+|-------|-------------------|-----------------------|----------------------|
+|       |                   |                       |                      |
+|       |   MGT118          |    MGT122             |    MGT130            |
+|X0Y1 0 |   X58Y38-X59Y39   |    X106Y38-X107Y39    |    NOT RECOMMENDED   |
+|X0Y1 1 |   X58Y20-X59Y21   |    X106Y20-X107Y21    |    NOT RECOMMENDED   |
+|-------|-------------------|-----------------------|----------------------|
+|       |                   |                       |                      |
+|       |   MGT114          |    MGT118             |    MGT126            |
+|X0Y2 0 |   X58Y58-X59Y59   |    X106Y58-X107Y59    |    X214Y58-X215Y59   |
+|X0Y2 1 |   X58Y40-X59Y41   |    X106Y40-X107Y41    |    X214Y40-X215Y41   |
+|-------|-------------------|-----------------------|----------------------|
+|       |                   |                       |                      |
+|       |   MGT112          |    MGT114             |    MGT122            |
+|X0Y3 0 |   X58Y78-X59Y79   |    X106Y78-X107Y79    |    X214Y78-X215Y79   |
+|X0Y3 1 |   X58Y60-X59Y61   |    X106Y60-X107Y61    |    X214Y60-X215Y61   |
+|-------|-------------------|-----------------------|----------------------|
+|       |                   |                       |                      |
+|       |   MGT116          |    MGT112             |    MGT118            |
+|X0Y4 0 |   X58Y98-X59Y99   |    X106Y98-X107Y99    |    X214Y98-X215Y99   |
+|X0Y4 1 |   X58Y80-X59Y81   |    X106Y80-X107Y81    |    X214Y80-X215Y81   |
+|-------|-------------------|-----------------------|----------------------|
+|       |                   |                       |                      |
+|       |   MGT120          |    MGT116             |    MGT114            |
+|X0Y5 0 |   X58Y118-X59Y119 |    X106Y118-X107Y119  |    X214Y118-X215Y119 |
+|X0Y5 1 |   X58Y100-X59Y101 |    X106Y100-X107Y101  |    X214Y100-X215Y101 |
+|-------|-------------------|-----------------------|----------------------|
+|       |                   |                       |                      |
+|       |                   |    MGT120             |    MGT112            |
+|X0Y6 0 |   NOT APPLICABLE  |    NOT RECOMMENDED    |    X214Y138-X215Y139 |
+|X0Y6 1 |   NOT APPLICABLE  |    NOT RECOMMENDED    |    X214Y120-X215Y121 |
+|-------|-------------------|-----------------------|----------------------|
+|       |                   |                       |                      |
+|       |                   |    MGT124             |    MGT116            |
+|X0Y7 0 |   NOT APPLICABLE  |    NOT RECOMMENDED    |    X214Y158-X215Y159 |
+|X0Y7 1 |   NOT APPLICABLE  |    NOT RECOMMENDED    |    X214Y140-X215Y141 |
+|---------------------------|-----------------------|----------------------|         
+
+   c) Pick the GTP locations. For each GTP picked, check the location
+   constraints for the associated Lane in the pcie_gt_wrapper.v. Modify the
+   location constraints based on the recommended slice ranges provided above
+   d) As an alternate solution, one can use the RocketIO GTP Wizard to pick
+   GTPs and generate wrappers in order to get information on the appropriate
+   slice locations for pipeline registers for each GTP. 
+   
+
+   ucf changes
+   -----------
+   a) Modify the GTP location constraint based on the GTPs chosen
+   b) Modify the REFCLK location constraint such that the REFCLK arrives at
+   the GTP which has been assigned to Lane 0. Example on a 50t device if 
+   GTP X0Y3 is assigned to lane0 then the refclk pins should be MGTREFCLKP_112(P4)
+   MGTREFCLKN_112(P3).For REFCLK pin locations on various GTPs, refer to Virtex-5 
+   RocketIO GTP Transceiver User Guide (UG196)
+
+
+Supported parts and packages
+----------------------------
+
+The wizard supports the following part and package combinations
+
+Part: xc5vlx50t,  Package ff1136
+Part: xc5vlx110t, Package ff1136
+Part: xc5vlx330t, Package ff1738
+Part: xc5vsx50t,  Package ff1136
+
+For any other combination the ucf file generated should be edited appropriately 
+
+Timing Notes
+------------
+User designs with user_clk of 250 Mhz might require additional effort in terms of
+tool options/location constraints/code modifications to meet timing. Key signals that are expected
+to have large fanout and hence pose potential timing issues are llk_tx_dst_rdy_n and 
+llk_rx_src_last_req_n 
+
+Answer Record link
+------------------
+The following is the AR link for issues found in 9.1 IP update 1:
+http://www.xilinx.com/xlnx/xil_ans_display.jsp?getPagePath=24307
+

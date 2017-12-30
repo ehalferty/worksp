@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">AFB1DET</string>
+    <string name="action_settings">Settings</string>
+    <string name="app_desc">PM Labs - AFB1 Detection.</string>
+    <string name="helpText">Optoelectrical molecular diagnostics and materials Laboratory - AFB1 DET. \nInstruction:\n  1.Make every strip of reaction zone aligned with red strip frame in preview interface;\n  2.Press the snap button to capture the image of strips;\n  3.Press anlyse button to display the results.</string> 
+    <string name="stripLabel01">I(s)</string> 
+    <string name="stripLabel02">ODR</string> 
+    <string name="strip1Label">S1:</string> 
+    <string name="strip2Label">S2:</string> 
+    <string name="strip3Label">S3:</string> 
+    <string name="strip4Label">S4:</string> 
+    <string name="strip5Label">S5:</string> 
+    <string name="strip6Label">S6:</string> 
+    <string name="strip7Label">S7:</string> 
+    <string name="strip8Label">S8:</string> 
+    <string name="strip9Label">S9:</string> 
+    <string name="strip10Label">S10:</string> 
+    <string name="strip11Label">S11:</string> 
+    <string name="IB">Bg:</string> 
+    <string name="fitequation">Eq:</string> 
+    <string name="fitR">R:</string> 
+    <string name="Concentration1">Con1:</string> 
+    <string name="Concentration2">Con2:</string>
+    <string name="Concentration3">Con3:</string>
+    <string name="title_activity_capture">CaptureActivity</string> 
+    <string name="title_activity_result">ResultActivity</string> 
+    <string name="title_activity_history">HistoryActivity</string> 
+    <string name="title_activity_help">HelpActivity</string>
+</resources>

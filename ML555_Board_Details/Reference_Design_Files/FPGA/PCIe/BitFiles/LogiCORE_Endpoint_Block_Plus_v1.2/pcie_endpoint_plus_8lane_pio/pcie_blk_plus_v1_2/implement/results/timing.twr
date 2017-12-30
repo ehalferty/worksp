@@ -1,0 +1,533 @@
+Number of Timing Constraints that were not applied: 6
+
+Asterisk (*) preceding a constraint indicates it was not met.
+   This may be due to a setup or hold violation.
+
+------------------------------------------------------------------------------------------------------
+  Constraint                                |  Check  | Worst Case |  Best Case | Timing |   Timing   
+                                            |         |    Slack   | Achievable | Errors |    Score   
+------------------------------------------------------------------------------------------------------
+* PERIOD analysis for net "ep/BU2/U0/pcie_e | SETUP   |     0.029ns|     7.971ns|       0|           0
+  p0/pcie_blk/clocking_i/clkout1" derived f | HOLD    |    -0.747ns|            |      77|       22256
+  rom  NET "sys_clk_c" PERIOD = 10 ns HIGH  |         |            |            |        |            
+  50%                                       |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+* PERIOD analysis for net "ep/BU2/U0/pcie_e | SETUP   |     0.003ns|     3.997ns|       0|           0
+  p0/pcie_blk/clocking_i/clkout0" derived f | HOLD    |    -0.642ns|            |      67|       17283
+  rom  NET "sys_clk_c" PERIOD = 10 ns HIGH  |         |            |            |        |            
+  50%                                       |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "ep/BU2/U0/pcie_ep0/pcie_blk/pcie_gt_ | MAXDELAY|     0.001ns|     0.999ns|       0|           0
+  wrapper_i/gt_tx_data_reg<38>"         MAX |         |            |            |        |            
+  DELAY = 1 ns                              |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "ep/BU2/U0/pcie_ep0/pcie_blk/pcie_gt_ | MAXDELAY|     0.003ns|     0.997ns|       0|           0
+  wrapper_i/gt_power_down_reg<9>"         M |         |            |            |        |            
+  AXDELAY = 1 ns                            |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "ep/BU2/U0/pcie_ep0/pcie_blk/pcie_gt_ | MAXDELAY|     0.011ns|     0.989ns|       0|           0
+  wrapper_i/gt_power_down_reg<4>"         M |         |            |            |        |            
+  AXDELAY = 1 ns                            |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "ep/BU2/U0/pcie_ep0/pcie_blk/pcie_gt_ | MAXDELAY|     0.012ns|     0.988ns|       0|           0
+  wrapper_i/gt_power_down_reg<15>"          |         |            |            |        |            
+  MAXDELAY = 1 ns                           |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "ep/BU2/U0/pcie_ep0/pcie_blk/pcie_gt_ | MAXDELAY|     0.015ns|     0.985ns|       0|           0
+  wrapper_i/gt_power_down_reg<2>"         M |         |            |            |        |            
+  AXDELAY = 1 ns                            |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "ep/BU2/U0/pcie_ep0/pcie_blk/pcie_gt_ | MAXDELAY|     0.015ns|     0.985ns|       0|           0
+  wrapper_i/gt_power_down_reg<6>"         M |         |            |            |        |            
+  AXDELAY = 1 ns                            |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "ep/BU2/U0/pcie_ep0/pcie_blk/pcie_gt_ | MAXDELAY|     0.020ns|     0.980ns|       0|           0
+  wrapper_i/gt_tx_compliance_reg<4>"        |         |            |            |        |            
+    MAXDELAY = 1 ns                         |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "ep/BU2/U0/pcie_ep0/pcie_blk/pcie_gt_ | MAXDELAY|     0.020ns|     0.980ns|       0|           0
+  wrapper_i/gt_tx_data_reg<42>"         MAX |         |            |            |        |            
+  DELAY = 1 ns                              |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "ep/BU2/U0/pcie_ep0/pcie_blk/pcie_gt_ | MAXDELAY|     0.023ns|     0.977ns|       0|           0
+  wrapper_i/gt_tx_elec_idle_reg<4>"         |         |            |            |        |            
+   MAXDELAY = 1 ns                          |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "ep/BU2/U0/pcie_ep0/pcie_blk/pcie_gt_ | MAXDELAY|     0.032ns|     0.968ns|       0|           0
+  wrapper_i/gt_tx_data_reg<35>"         MAX |         |            |            |        |            
+  DELAY = 1 ns                              |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "ep/BU2/U0/pcie_ep0/pcie_blk/pcie_gt_ | MAXDELAY|     0.038ns|     0.962ns|       0|           0
+  wrapper_i/gt_tx_data_reg<32>"         MAX |         |            |            |        |            
+  DELAY = 1 ns                              |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "ep/BU2/U0/pcie_ep0/pcie_blk/pcie_gt_ | MAXDELAY|     0.056ns|     0.944ns|       0|           0
+  wrapper_i/gt_rx_polarity_reg<6>"          |         |            |            |        |            
+  MAXDELAY = 1 ns                           |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "ep/BU2/U0/pcie_ep0/pcie_blk/pcie_gt_ | MAXDELAY|     0.057ns|     0.943ns|       0|           0
+  wrapper_i/gt_tx_data_reg<34>"         MAX |         |            |            |        |            
+  DELAY = 1 ns                              |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "ep/BU2/U0/pcie_ep0/pcie_blk/pcie_gt_ | MAXDELAY|     0.074ns|     0.926ns|       0|           0
+  wrapper_i/gt_rx_polarity_reg<0>"          |         |            |            |        |            
+  MAXDELAY = 1 ns                           |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "ep/BU2/U0/pcie_ep0/pcie_blk/pcie_gt_ | MAXDELAY|     0.075ns|     0.925ns|       0|           0
+  wrapper_i/gt_tx_data_reg<56>"         MAX |         |            |            |        |            
+  DELAY = 1 ns                              |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "ep/BU2/U0/pcie_ep0/pcie_blk/pcie_gt_ | MAXDELAY|     0.087ns|     0.913ns|       0|           0
+  wrapper_i/gt_power_down_reg<14>"          |         |            |            |        |            
+  MAXDELAY = 1 ns                           |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "ep/BU2/U0/pcie_ep0/pcie_blk/pcie_gt_ | MAXDELAY|     0.088ns|     0.912ns|       0|           0
+  wrapper_i/gt_rx_polarity_reg<1>"          |         |            |            |        |            
+  MAXDELAY = 1 ns                           |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "ep/BU2/U0/pcie_ep0/pcie_blk/pcie_gt_ | MAXDELAY|     0.091ns|     0.909ns|       0|           0
+  wrapper_i/gt_tx_data_reg<5>" MAXDELAY     |         |            |            |        |            
+       = 1 ns                               |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "ep/BU2/U0/pcie_ep0/pcie_blk/pcie_gt_ | MAXDELAY|     0.105ns|     0.895ns|       0|           0
+  wrapper_i/gt_tx_data_k_reg<4>"         MA |         |            |            |        |            
+  XDELAY = 1 ns                             |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "ep/BU2/U0/pcie_ep0/pcie_blk/pcie_gt_ | MAXDELAY|     0.107ns|     0.893ns|       0|           0
+  wrapper_i/gt_tx_compliance_reg<7>"        |         |            |            |        |            
+    MAXDELAY = 1 ns                         |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "ep/BU2/U0/pcie_ep0/pcie_blk/pcie_gt_ | MAXDELAY|     0.112ns|     0.888ns|       0|           0
+  wrapper_i/gt_power_down_reg<13>"          |         |            |            |        |            
+  MAXDELAY = 1 ns                           |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "ep/BU2/U0/pcie_ep0/pcie_blk/pcie_gt_ | MAXDELAY|     0.117ns|     0.883ns|       0|           0
+  wrapper_i/gt_power_down_reg<5>"         M |         |            |            |        |            
+  AXDELAY = 1 ns                            |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "ep/BU2/U0/pcie_ep0/pcie_blk/pcie_gt_ | MAXDELAY|     0.117ns|     0.883ns|       0|           0
+  wrapper_i/gt_power_down_reg<7>"         M |         |            |            |        |            
+  AXDELAY = 1 ns                            |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "ep/BU2/U0/pcie_ep0/pcie_blk/pcie_gt_ | MAXDELAY|     0.117ns|     0.883ns|       0|           0
+  wrapper_i/gt_rx_polarity_reg<4>"          |         |            |            |        |            
+  MAXDELAY = 1 ns                           |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "ep/BU2/U0/pcie_ep0/pcie_blk/pcie_gt_ | MAXDELAY|     0.117ns|     0.883ns|       0|           0
+  wrapper_i/gt_power_down_reg<3>"         M |         |            |            |        |            
+  AXDELAY = 1 ns                            |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "ep/BU2/U0/pcie_ep0/pcie_blk/pcie_gt_ | MAXDELAY|     0.119ns|     0.881ns|       0|           0
+  wrapper_i/gt_power_down_reg<0>"         M |         |            |            |        |            
+  AXDELAY = 1 ns                            |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET         "ep/BU2/U0/pcie_ep0/pcie_blk/ | MAXDELAY|     0.119ns|     0.881ns|       0|           0
+  pcie_gt_wrapper_i/gt_tx_detect_rx_loopbac |         |            |            |        |            
+  k_reg<7>"         MAXDELAY = 1 ns         |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET         "ep/BU2/U0/pcie_ep0/pcie_blk/ | MAXDELAY|     0.127ns|     0.873ns|       0|           0
+  pcie_gt_wrapper_i/gt_tx_detect_rx_loopbac |         |            |            |        |            
+  k_reg<3>"         MAXDELAY = 1 ns         |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET         "ep/BU2/U0/pcie_ep0/pcie_blk/ | MAXDELAY|     0.127ns|     0.873ns|       0|           0
+  pcie_gt_wrapper_i/gt_tx_detect_rx_loopbac |         |            |            |        |            
+  k_reg<1>"         MAXDELAY = 1 ns         |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "ep/BU2/U0/pcie_ep0/pcie_blk/pcie_gt_ | MAXDELAY|     0.130ns|     0.870ns|       0|           0
+  wrapper_i/gt_tx_data_reg<39>"         MAX |         |            |            |        |            
+  DELAY = 1 ns                              |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "ep/BU2/U0/pcie_ep0/pcie_blk/pcie_gt_ | MAXDELAY|     0.133ns|     0.867ns|       0|           0
+  wrapper_i/gt_tx_data_k_reg<1>"         MA |         |            |            |        |            
+  XDELAY = 1 ns                             |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "ep/BU2/U0/pcie_ep0/pcie_blk/pcie_gt_ | MAXDELAY|     0.137ns|     0.863ns|       0|           0
+  wrapper_i/gt_tx_data_reg<6>" MAXDELAY     |         |            |            |        |            
+       = 1 ns                               |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "ep/BU2/U0/pcie_ep0/pcie_blk/pcie_gt_ | MAXDELAY|     0.138ns|     0.862ns|       0|           0
+  wrapper_i/gt_tx_data_reg<47>"         MAX |         |            |            |        |            
+  DELAY = 1 ns                              |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "ep/BU2/U0/pcie_ep0/pcie_blk/pcie_gt_ | MAXDELAY|     0.138ns|     0.862ns|       0|           0
+  wrapper_i/gt_power_down_reg<12>"          |         |            |            |        |            
+  MAXDELAY = 1 ns                           |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "ep/BU2/U0/pcie_ep0/pcie_blk/pcie_gt_ | MAXDELAY|     0.139ns|     0.861ns|       0|           0
+  wrapper_i/gt_tx_data_reg<31>"         MAX |         |            |            |        |            
+  DELAY = 1 ns                              |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "ep/BU2/U0/pcie_ep0/pcie_blk/pcie_gt_ | MAXDELAY|     0.141ns|     0.859ns|       0|           0
+  wrapper_i/gt_tx_data_reg<57>"         MAX |         |            |            |        |            
+  DELAY = 1 ns                              |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "ep/BU2/U0/pcie_ep0/pcie_blk/pcie_gt_ | MAXDELAY|     0.142ns|     0.858ns|       0|           0
+  wrapper_i/gt_tx_data_reg<37>"         MAX |         |            |            |        |            
+  DELAY = 1 ns                              |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "ep/BU2/U0/pcie_ep0/pcie_blk/pcie_gt_ | MAXDELAY|     0.142ns|     0.858ns|       0|           0
+  wrapper_i/gt_tx_data_reg<44>"         MAX |         |            |            |        |            
+  DELAY = 1 ns                              |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "ep/BU2/U0/pcie_ep0/pcie_blk/pcie_gt_ | MAXDELAY|     0.143ns|     0.857ns|       0|           0
+  wrapper_i/gt_tx_data_reg<46>"         MAX |         |            |            |        |            
+  DELAY = 1 ns                              |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "ep/BU2/U0/pcie_ep0/pcie_blk/pcie_gt_ | MAXDELAY|     0.143ns|     0.857ns|       0|           0
+  wrapper_i/gt_rx_polarity_reg<5>"          |         |            |            |        |            
+  MAXDELAY = 1 ns                           |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "ep/BU2/U0/pcie_ep0/pcie_blk/pcie_gt_ | MAXDELAY|     0.143ns|     0.857ns|       0|           0
+  wrapper_i/gt_tx_data_reg<16>"         MAX |         |            |            |        |            
+  DELAY = 1 ns                              |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "ep/BU2/U0/pcie_ep0/pcie_blk/pcie_gt_ | MAXDELAY|     0.143ns|     0.857ns|       0|           0
+  wrapper_i/gt_rx_polarity_reg<3>"          |         |            |            |        |            
+  MAXDELAY = 1 ns                           |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "ep/BU2/U0/pcie_ep0/pcie_blk/pcie_gt_ | MAXDELAY|     0.143ns|     0.857ns|       0|           0
+  wrapper_i/gt_tx_data_reg<30>"         MAX |         |            |            |        |            
+  DELAY = 1 ns                              |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "ep/BU2/U0/pcie_ep0/pcie_blk/pcie_gt_ | MAXDELAY|     0.143ns|     0.857ns|       0|           0
+  wrapper_i/gt_power_down_reg<11>"          |         |            |            |        |            
+  MAXDELAY = 1 ns                           |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "ep/BU2/U0/pcie_ep0/pcie_blk/pcie_gt_ | MAXDELAY|     0.144ns|     0.856ns|       0|           0
+  wrapper_i/gt_tx_data_reg<4>" MAXDELAY     |         |            |            |        |            
+       = 1 ns                               |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "ep/BU2/U0/pcie_ep0/pcie_blk/pcie_gt_ | MAXDELAY|     0.144ns|     0.856ns|       0|           0
+  wrapper_i/gt_tx_data_k_reg<7>"         MA |         |            |            |        |            
+  XDELAY = 1 ns                             |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "ep/BU2/U0/pcie_ep0/pcie_blk/pcie_gt_ | MAXDELAY|     0.146ns|     0.854ns|       0|           0
+  wrapper_i/gt_tx_data_reg<24>"         MAX |         |            |            |        |            
+  DELAY = 1 ns                              |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "ep/BU2/U0/pcie_ep0/pcie_blk/pcie_gt_ | MAXDELAY|     0.146ns|     0.854ns|       0|           0
+  wrapper_i/gt_tx_data_reg<33>"         MAX |         |            |            |        |            
+  DELAY = 1 ns                              |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "ep/BU2/U0/pcie_ep0/pcie_blk/pcie_gt_ | MAXDELAY|     0.148ns|     0.852ns|       0|           0
+  wrapper_i/gt_power_down_reg<10>"          |         |            |            |        |            
+  MAXDELAY = 1 ns                           |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "ep/BU2/U0/pcie_ep0/pcie_blk/pcie_gt_ | MAXDELAY|     0.148ns|     0.852ns|       0|           0
+  wrapper_i/gt_tx_data_reg<23>"         MAX |         |            |            |        |            
+  DELAY = 1 ns                              |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "ep/BU2/U0/pcie_ep0/pcie_blk/pcie_gt_ | MAXDELAY|     0.151ns|     0.849ns|       0|           0
+  wrapper_i/gt_power_down_reg<8>"         M |         |            |            |        |            
+  AXDELAY = 1 ns                            |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "ep/BU2/U0/pcie_ep0/pcie_blk/pcie_gt_ | MAXDELAY|     0.156ns|     0.844ns|       0|           0
+  wrapper_i/gt_tx_data_k_reg<3>"         MA |         |            |            |        |            
+  XDELAY = 1 ns                             |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "ep/BU2/U0/pcie_ep0/pcie_blk/pcie_gt_ | MAXDELAY|     0.157ns|     0.843ns|       0|           0
+  wrapper_i/gt_tx_elec_idle_reg<0>"         |         |            |            |        |            
+   MAXDELAY = 1 ns                          |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "ep/BU2/U0/pcie_ep0/pcie_blk/pcie_gt_ | MAXDELAY|     0.158ns|     0.842ns|       0|           0
+  wrapper_i/gt_tx_data_reg<21>"         MAX |         |            |            |        |            
+  DELAY = 1 ns                              |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "ep/BU2/U0/pcie_ep0/pcie_blk/pcie_gt_ | MAXDELAY|     0.159ns|     0.841ns|       0|           0
+  wrapper_i/gt_tx_data_reg<43>"         MAX |         |            |            |        |            
+  DELAY = 1 ns                              |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "ep/BU2/U0/pcie_ep0/pcie_blk/pcie_gt_ | MAXDELAY|     0.160ns|     0.840ns|       0|           0
+  wrapper_i/gt_tx_data_reg<9>" MAXDELAY     |         |            |            |        |            
+       = 1 ns                               |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "ep/BU2/U0/pcie_ep0/pcie_blk/pcie_gt_ | MAXDELAY|     0.162ns|     0.838ns|       0|           0
+  wrapper_i/gt_tx_data_reg<7>" MAXDELAY     |         |            |            |        |            
+       = 1 ns                               |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "ep/BU2/U0/pcie_ep0/pcie_blk/pcie_gt_ | MAXDELAY|     0.162ns|     0.838ns|       0|           0
+  wrapper_i/gt_tx_data_reg<54>"         MAX |         |            |            |        |            
+  DELAY = 1 ns                              |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "ep/BU2/U0/pcie_ep0/pcie_blk/pcie_gt_ | MAXDELAY|     0.163ns|     0.837ns|       0|           0
+  wrapper_i/gt_tx_data_reg<60>"         MAX |         |            |            |        |            
+  DELAY = 1 ns                              |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "ep/BU2/U0/pcie_ep0/pcie_blk/pcie_gt_ | MAXDELAY|     0.164ns|     0.836ns|       0|           0
+  wrapper_i/gt_tx_data_reg<52>"         MAX |         |            |            |        |            
+  DELAY = 1 ns                              |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "ep/BU2/U0/pcie_ep0/pcie_blk/pcie_gt_ | MAXDELAY|     0.166ns|     0.834ns|       0|           0
+  wrapper_i/gt_tx_data_reg<59>"         MAX |         |            |            |        |            
+  DELAY = 1 ns                              |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "ep/BU2/U0/pcie_ep0/pcie_blk/pcie_gt_ | MAXDELAY|     0.167ns|     0.833ns|       0|           0
+  wrapper_i/gt_tx_data_reg<22>"         MAX |         |            |            |        |            
+  DELAY = 1 ns                              |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET         "ep/BU2/U0/pcie_ep0/pcie_blk/ | MAXDELAY|     0.168ns|     0.832ns|       0|           0
+  pcie_gt_wrapper_i/gt_tx_detect_rx_loopbac |         |            |            |        |            
+  k_reg<4>"         MAXDELAY = 1 ns         |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "ep/BU2/U0/pcie_ep0/pcie_blk/pcie_gt_ | MAXDELAY|     0.169ns|     0.831ns|       0|           0
+  wrapper_i/gt_tx_elec_idle_reg<7>"         |         |            |            |        |            
+   MAXDELAY = 1 ns                          |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "ep/BU2/U0/pcie_ep0/pcie_blk/pcie_gt_ | MAXDELAY|     0.172ns|     0.828ns|       0|           0
+  wrapper_i/gt_tx_compliance_reg<3>"        |         |            |            |        |            
+    MAXDELAY = 1 ns                         |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "ep/BU2/U0/pcie_ep0/pcie_blk/pcie_gt_ | MAXDELAY|     0.173ns|     0.827ns|       0|           0
+  wrapper_i/gt_tx_compliance_reg<2>"        |         |            |            |        |            
+    MAXDELAY = 1 ns                         |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET         "ep/BU2/U0/pcie_ep0/pcie_blk/ | MAXDELAY|     0.175ns|     0.825ns|       0|           0
+  pcie_gt_wrapper_i/gt_tx_detect_rx_loopbac |         |            |            |        |            
+  k_reg<0>"         MAXDELAY = 1 ns         |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "ep/BU2/U0/pcie_ep0/pcie_blk/pcie_gt_ | MAXDELAY|     0.176ns|     0.824ns|       0|           0
+  wrapper_i/gt_tx_data_reg<28>"         MAX |         |            |            |        |            
+  DELAY = 1 ns                              |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "ep/BU2/U0/pcie_ep0/pcie_blk/pcie_gt_ | MAXDELAY|     0.177ns|     0.823ns|       0|           0
+  wrapper_i/gt_tx_data_reg<62>"         MAX |         |            |            |        |            
+  DELAY = 1 ns                              |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "ep/BU2/U0/pcie_ep0/pcie_blk/pcie_gt_ | MAXDELAY|     0.178ns|     0.822ns|       0|           0
+  wrapper_i/gt_tx_data_reg<8>" MAXDELAY     |         |            |            |        |            
+       = 1 ns                               |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "ep/BU2/U0/pcie_ep0/pcie_blk/pcie_gt_ | MAXDELAY|     0.180ns|     0.820ns|       0|           0
+  wrapper_i/gt_tx_data_reg<19>"         MAX |         |            |            |        |            
+  DELAY = 1 ns                              |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "ep/BU2/U0/pcie_ep0/pcie_blk/pcie_gt_ | MAXDELAY|     0.180ns|     0.820ns|       0|           0
+  wrapper_i/gt_tx_compliance_reg<0>"        |         |            |            |        |            
+    MAXDELAY = 1 ns                         |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "ep/BU2/U0/pcie_ep0/pcie_blk/pcie_gt_ | MAXDELAY|     0.180ns|     0.820ns|       0|           0
+  wrapper_i/gt_tx_data_k_reg<6>"         MA |         |            |            |        |            
+  XDELAY = 1 ns                             |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "ep/BU2/U0/pcie_ep0/pcie_blk/pcie_gt_ | MAXDELAY|     0.185ns|     0.815ns|       0|           0
+  wrapper_i/gt_tx_data_reg<55>"         MAX |         |            |            |        |            
+  DELAY = 1 ns                              |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "ep/BU2/U0/pcie_ep0/pcie_blk/pcie_gt_ | MAXDELAY|     0.249ns|     0.751ns|       0|           0
+  wrapper_i/gt_tx_data_reg<63>"         MAX |         |            |            |        |            
+  DELAY = 1 ns                              |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "ep/BU2/U0/pcie_ep0/pcie_blk/pcie_gt_ | MAXDELAY|     0.249ns|     0.751ns|       0|           0
+  wrapper_i/gt_tx_data_reg<18>"         MAX |         |            |            |        |            
+  DELAY = 1 ns                              |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "ep/BU2/U0/pcie_ep0/pcie_blk/pcie_gt_ | MAXDELAY|     0.249ns|     0.751ns|       0|           0
+  wrapper_i/gt_tx_data_reg<61>"         MAX |         |            |            |        |            
+  DELAY = 1 ns                              |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "ep/BU2/U0/pcie_ep0/pcie_blk/pcie_gt_ | MAXDELAY|     0.269ns|     0.731ns|       0|           0
+  wrapper_i/gt_power_down_reg<1>"         M |         |            |            |        |            
+  AXDELAY = 1 ns                            |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "ep/BU2/U0/pcie_ep0/pcie_blk/pcie_gt_ | MAXDELAY|     0.277ns|     0.723ns|       0|           0
+  wrapper_i/gt_tx_data_reg<36>"         MAX |         |            |            |        |            
+  DELAY = 1 ns                              |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "ep/BU2/U0/pcie_ep0/pcie_blk/pcie_gt_ | MAXDELAY|     0.294ns|     0.706ns|       0|           0
+  wrapper_i/gt_tx_elec_idle_reg<5>"         |         |            |            |        |            
+   MAXDELAY = 1 ns                          |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "ep/BU2/U0/pcie_ep0/pcie_blk/pcie_gt_ | MAXDELAY|     0.294ns|     0.706ns|       0|           0
+  wrapper_i/gt_tx_data_reg<26>"         MAX |         |            |            |        |            
+  DELAY = 1 ns                              |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "ep/BU2/U0/pcie_ep0/pcie_blk/pcie_gt_ | MAXDELAY|     0.295ns|     0.705ns|       0|           0
+  wrapper_i/gt_tx_data_reg<1>" MAXDELAY     |         |            |            |        |            
+       = 1 ns                               |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "ep/BU2/U0/pcie_ep0/pcie_blk/pcie_gt_ | MAXDELAY|     0.295ns|     0.705ns|       0|           0
+  wrapper_i/gt_tx_data_reg<49>"         MAX |         |            |            |        |            
+  DELAY = 1 ns                              |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "ep/BU2/U0/pcie_ep0/pcie_blk/pcie_gt_ | MAXDELAY|     0.296ns|     0.704ns|       0|           0
+  wrapper_i/gt_tx_data_reg<15>"         MAX |         |            |            |        |            
+  DELAY = 1 ns                              |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "ep/BU2/U0/pcie_ep0/pcie_blk/pcie_gt_ | MAXDELAY|     0.297ns|     0.703ns|       0|           0
+  wrapper_i/gt_tx_data_reg<12>"         MAX |         |            |            |        |            
+  DELAY = 1 ns                              |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "ep/BU2/U0/pcie_ep0/pcie_blk/pcie_gt_ | MAXDELAY|     0.297ns|     0.703ns|       0|           0
+  wrapper_i/gt_tx_compliance_reg<5>"        |         |            |            |        |            
+    MAXDELAY = 1 ns                         |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "ep/BU2/U0/pcie_ep0/pcie_blk/pcie_gt_ | MAXDELAY|     0.298ns|     0.702ns|       0|           0
+  wrapper_i/gt_tx_elec_idle_reg<2>"         |         |            |            |        |            
+   MAXDELAY = 1 ns                          |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "ep/BU2/U0/pcie_ep0/pcie_blk/pcie_gt_ | MAXDELAY|     0.298ns|     0.702ns|       0|           0
+  wrapper_i/gt_tx_data_reg<50>"         MAX |         |            |            |        |            
+  DELAY = 1 ns                              |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "ep/BU2/U0/pcie_ep0/pcie_blk/pcie_gt_ | MAXDELAY|     0.299ns|     0.701ns|       0|           0
+  wrapper_i/gt_tx_data_reg<25>"         MAX |         |            |            |        |            
+  DELAY = 1 ns                              |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "ep/BU2/U0/pcie_ep0/pcie_blk/pcie_gt_ | MAXDELAY|     0.299ns|     0.701ns|       0|           0
+  wrapper_i/gt_tx_data_reg<45>"         MAX |         |            |            |        |            
+  DELAY = 1 ns                              |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "ep/BU2/U0/pcie_ep0/pcie_blk/pcie_gt_ | MAXDELAY|     0.300ns|     0.700ns|       0|           0
+  wrapper_i/gt_tx_elec_idle_reg<6>"         |         |            |            |        |            
+   MAXDELAY = 1 ns                          |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "ep/BU2/U0/pcie_ep0/pcie_blk/pcie_gt_ | MAXDELAY|     0.300ns|     0.700ns|       0|           0
+  wrapper_i/gt_tx_data_reg<29>"         MAX |         |            |            |        |            
+  DELAY = 1 ns                              |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET         "ep/BU2/U0/pcie_ep0/pcie_blk/ | MAXDELAY|     0.309ns|     0.691ns|       0|           0
+  pcie_gt_wrapper_i/gt_tx_detect_rx_loopbac |         |            |            |        |            
+  k_reg<2>"         MAXDELAY = 1 ns         |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "ep/BU2/U0/pcie_ep0/pcie_blk/pcie_gt_ | MAXDELAY|     0.309ns|     0.691ns|       0|           0
+  wrapper_i/gt_tx_data_reg<2>" MAXDELAY     |         |            |            |        |            
+       = 1 ns                               |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "ep/BU2/U0/pcie_ep0/pcie_blk/pcie_gt_ | MAXDELAY|     0.311ns|     0.689ns|       0|           0
+  wrapper_i/gt_rx_polarity_reg<7>"          |         |            |            |        |            
+  MAXDELAY = 1 ns                           |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "ep/BU2/U0/pcie_ep0/pcie_blk/pcie_gt_ | MAXDELAY|     0.313ns|     0.687ns|       0|           0
+  wrapper_i/gt_tx_data_reg<40>"         MAX |         |            |            |        |            
+  DELAY = 1 ns                              |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "ep/BU2/U0/pcie_ep0/pcie_blk/pcie_gt_ | MAXDELAY|     0.314ns|     0.686ns|       0|           0
+  wrapper_i/gt_tx_data_k_reg<2>"         MA |         |            |            |        |            
+  XDELAY = 1 ns                             |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "ep/BU2/U0/pcie_ep0/pcie_blk/pcie_gt_ | MAXDELAY|     0.314ns|     0.686ns|       0|           0
+  wrapper_i/gt_rx_polarity_reg<2>"          |         |            |            |        |            
+  MAXDELAY = 1 ns                           |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "ep/BU2/U0/pcie_ep0/pcie_blk/pcie_gt_ | MAXDELAY|     0.314ns|     0.686ns|       0|           0
+  wrapper_i/gt_tx_data_reg<14>"         MAX |         |            |            |        |            
+  DELAY = 1 ns                              |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "ep/BU2/U0/pcie_ep0/pcie_blk/pcie_gt_ | MAXDELAY|     0.314ns|     0.686ns|       0|           0
+  wrapper_i/gt_tx_data_reg<48>"         MAX |         |            |            |        |            
+  DELAY = 1 ns                              |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "ep/BU2/U0/pcie_ep0/pcie_blk/pcie_gt_ | MAXDELAY|     0.316ns|     0.684ns|       0|           0
+  wrapper_i/gt_tx_data_reg<53>"         MAX |         |            |            |        |            
+  DELAY = 1 ns                              |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "ep/BU2/U0/pcie_ep0/pcie_blk/pcie_gt_ | MAXDELAY|     0.316ns|     0.684ns|       0|           0
+  wrapper_i/gt_tx_compliance_reg<1>"        |         |            |            |        |            
+    MAXDELAY = 1 ns                         |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "ep/BU2/U0/pcie_ep0/pcie_blk/pcie_gt_ | MAXDELAY|     0.317ns|     0.683ns|       0|           0
+  wrapper_i/gt_tx_data_reg<58>"         MAX |         |            |            |        |            
+  DELAY = 1 ns                              |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "ep/BU2/U0/pcie_ep0/pcie_blk/pcie_gt_ | MAXDELAY|     0.319ns|     0.681ns|       0|           0
+  wrapper_i/gt_tx_elec_idle_reg<3>"         |         |            |            |        |            
+   MAXDELAY = 1 ns                          |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "ep/BU2/U0/pcie_ep0/pcie_blk/pcie_gt_ | MAXDELAY|     0.319ns|     0.681ns|       0|           0
+  wrapper_i/gt_tx_data_reg<0>" MAXDELAY     |         |            |            |        |            
+       = 1 ns                               |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "ep/BU2/U0/pcie_ep0/pcie_blk/pcie_gt_ | MAXDELAY|     0.322ns|     0.678ns|       0|           0
+  wrapper_i/gt_tx_elec_idle_reg<1>"         |         |            |            |        |            
+   MAXDELAY = 1 ns                          |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "ep/BU2/U0/pcie_ep0/pcie_blk/pcie_gt_ | MAXDELAY|     0.335ns|     0.665ns|       0|           0
+  wrapper_i/gt_tx_data_reg<13>"         MAX |         |            |            |        |            
+  DELAY = 1 ns                              |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "ep/BU2/U0/pcie_ep0/pcie_blk/pcie_gt_ | MAXDELAY|     0.335ns|     0.665ns|       0|           0
+  wrapper_i/gt_tx_data_reg<17>"         MAX |         |            |            |        |            
+  DELAY = 1 ns                              |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "ep/BU2/U0/pcie_ep0/pcie_blk/pcie_gt_ | MAXDELAY|     0.335ns|     0.665ns|       0|           0
+  wrapper_i/gt_tx_data_k_reg<0>"         MA |         |            |            |        |            
+  XDELAY = 1 ns                             |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "ep/BU2/U0/pcie_ep0/pcie_blk/pcie_gt_ | MAXDELAY|     0.336ns|     0.664ns|       0|           0
+  wrapper_i/gt_tx_data_reg<20>"         MAX |         |            |            |        |            
+  DELAY = 1 ns                              |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "ep/BU2/U0/pcie_ep0/pcie_blk/pcie_gt_ | MAXDELAY|     0.337ns|     0.663ns|       0|           0
+  wrapper_i/gt_tx_data_reg<41>"         MAX |         |            |            |        |            
+  DELAY = 1 ns                              |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "ep/BU2/U0/pcie_ep0/pcie_blk/pcie_gt_ | MAXDELAY|     0.341ns|     0.659ns|       0|           0
+  wrapper_i/gt_tx_data_reg<3>" MAXDELAY     |         |            |            |        |            
+       = 1 ns                               |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "ep/BU2/U0/pcie_ep0/pcie_blk/pcie_gt_ | MAXDELAY|     0.341ns|     0.659ns|       0|           0
+  wrapper_i/gt_tx_data_reg<51>"         MAX |         |            |            |        |            
+  DELAY = 1 ns                              |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "ep/BU2/U0/pcie_ep0/pcie_blk/pcie_gt_ | MAXDELAY|     0.344ns|     0.656ns|       0|           0
+  wrapper_i/gt_tx_data_reg<10>"         MAX |         |            |            |        |            
+  DELAY = 1 ns                              |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "ep/BU2/U0/pcie_ep0/pcie_blk/pcie_gt_ | MAXDELAY|     0.351ns|     0.649ns|       0|           0
+  wrapper_i/gt_tx_data_reg<11>"         MAX |         |            |            |        |            
+  DELAY = 1 ns                              |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET         "ep/BU2/U0/pcie_ep0/pcie_blk/ | MAXDELAY|     0.467ns|     0.533ns|       0|           0
+  pcie_gt_wrapper_i/gt_tx_detect_rx_loopbac |         |            |            |        |            
+  k_reg<5>"         MAXDELAY = 1 ns         |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "ep/BU2/U0/pcie_ep0/pcie_blk/pcie_gt_ | MAXDELAY|     0.467ns|     0.533ns|       0|           0
+  wrapper_i/gt_tx_compliance_reg<6>"        |         |            |            |        |            
+    MAXDELAY = 1 ns                         |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "ep/BU2/U0/pcie_ep0/pcie_blk/pcie_gt_ | MAXDELAY|     0.469ns|     0.531ns|       0|           0
+  wrapper_i/gt_tx_data_reg<27>"         MAX |         |            |            |        |            
+  DELAY = 1 ns                              |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "ep/BU2/U0/pcie_ep0/pcie_blk/pcie_gt_ | MAXDELAY|     0.470ns|     0.530ns|       0|           0
+  wrapper_i/gt_tx_data_k_reg<5>"         MA |         |            |            |        |            
+  XDELAY = 1 ns                             |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET         "ep/BU2/U0/pcie_ep0/pcie_blk/ | MAXDELAY|     0.492ns|     0.508ns|       0|           0
+  pcie_gt_wrapper_i/gt_tx_detect_rx_loopbac |         |            |            |        |            
+  k_reg<6>"         MAXDELAY = 1 ns         |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  Pin to Pin Skew Constraint                | MAXDELAY| 2106523.567ns| 2106523.837ns|       0|           0
+------------------------------------------------------------------------------------------------------
+  PERIOD analysis for net "ep/BU2/U0/pcie_e | N/A     |         N/A|         N/A|     N/A|         N/A
+  p0/pcie_blk/clocking_i/clkout0" derived f |         |            |            |        |            
+  rom  NET "sys_clk_c" PERIOD = 10 ns HIGH  |         |            |            |        |            
+  50%                                       |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  PERIOD analysis for net "ep/BU2/U0/pcie_e | N/A     |         N/A|         N/A|     N/A|         N/A
+  p0/pcie_blk/clocking_i/clkout1" derived f |         |            |            |        |            
+  rom  NET "sys_clk_c" PERIOD = 10 ns HIGH  |         |            |            |        |            
+  50%                                       |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  TS_MGTCLK = PERIOD TIMEGRP "MGTCLK" 100 M | N/A     |         N/A|         N/A|     N/A|         N/A
+  Hz HIGH 50%                               |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  TS_ep_BU2_U0_pcie_ep0_pcie_blk_clocking_i | N/A     |         N/A|         N/A|     N/A|         N/A
+  _clkout0 = PERIOD TIMEGRP         "ep_BU2 |         |            |            |        |            
+  _U0_pcie_ep0_pcie_blk_clocking_i_clkout0" |         |            |            |        |            
+   TS_MGTCLK * 2.5 HIGH         50%         |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  TS_ep_BU2_U0_pcie_ep0_pcie_blk_clocking_i | N/A     |         N/A|         N/A|     N/A|         N/A
+  _clkout1 = PERIOD TIMEGRP         "ep_BU2 |         |            |            |        |            
+  _U0_pcie_ep0_pcie_blk_clocking_i_clkout1" |         |            |            |        |            
+   TS_MGTCLK * 1.25 HIGH         50%        |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "sys_clk_c" PERIOD = 10 ns HIGH 50%   | N/A     |         N/A|         N/A|     N/A|         N/A
+------------------------------------------------------------------------------------------------------
+
+
+2 constraints not met.
+INFO:Timing:2761 - N/A entries in the Constraints list may indicate that the 
+   constraint does not cover any paths or that it has no requested value.
+
+

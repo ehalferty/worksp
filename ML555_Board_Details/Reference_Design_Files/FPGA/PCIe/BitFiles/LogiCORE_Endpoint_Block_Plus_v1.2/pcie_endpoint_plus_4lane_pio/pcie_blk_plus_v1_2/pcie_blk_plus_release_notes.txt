@@ -1,0 +1,188 @@
+COPYRIGHT (c) 2006, 2007 XILINX, INC.
+ALL RIGHTS RESERVED
+
+Core name            : PCI Express Endpoint Block Plus LogiCORE
+Version              : 1.2
+Release Date         : February 15, 2007
+File Name            : pcie_blk_plus_release_notes.txt
+
+Revision History
+
+Date     By            Version      Change Description
+===============================================================================
+02/2007  Xilinx, Inc.  1.2          9.1i SP2 - IP Update 1
+===============================================================================
+
+INTRODUCTION
+
+RELEASE NOTES
+
+  1. System Requirements
+  1. Enhancements
+  2. Bugs Fixed
+  3. Known Issues
+
+TECHNICAL SUPPORT
+
+========================================================================
+
+INTRODUCTION
+============
+
+This document contains release notes for the PCI Express Endpoint Block
+Plus LogiCORE (hereafter referred to as "the core"),
+including enhancements, resolved issues and outstanding known issues.
+
+
+To obtain the latest updates and documentation for this core, please visit the
+PCI Express Endpoint Block Plus LogiCORE Lounge. The lounge is
+accessible from the "Access Lounge" button on the cores product page:
+
+http://www.xilinx.com/xlnx/xebiz/designResources/ip_product_details.jsp?key=V5_PCI_Express_Block_Plus
+
+For information on how to set up and use the core, please refer to the PCI
+Express Endpoint Block Plus Getting Started User Guide.  More comprehensive user
+information is available in the PCI Express Endpoint Block Plus User Guide.
+
+
+RELEASE NOTES for the PCI Express Endpoint Block Plus v1.2
+=================================================================
+
+1. System Requirements
+
+   - Platform Support information for this core version is described in the
+     release notes AR for ISE 9.1i IP Update 1:
+     http://www.xilinx.com/xlnx/xil_ans_display.jsp?getPagePath=24307
+
+   - Special requirements for this core version:
+     ISE 9.1i Service Pack 2
+
+2. Enhancements
+
+   - Improved Timing Closure
+   - Addition of trn_rcpl_streaming_n input to support Continuous Request of
+     Completion TLPs on the PCIe Express Block receive interface. This enables
+     upstream Memory Read transmission without the need for data rate
+     limiting. Please refer to the PCI Express Endpoint Block Plus User Guide
+     for more information.
+
+3. Bugs Fixed
+
+   - Core trn_reset_n is not a function of sys_reset_n
+      o CR 432068
+
+      On hard reset (sys_reset_n) the user application was not reset via
+      trn_reset_n. trn_reset_n is now asserted with sys_reset_n.
+
+   - Default reference clock frequency should be 100 MHz
+      o CR 431681
+
+      CORE Generator GUI defaulted to 250 MHz reference clock frequency. It
+      now defaults to 100 MHz.
+
+   - BAR4 mismatch between core and GUI setting
+      o CR 429604
+
+      CORE Generator GUI incorrectly indicated that BAR4 was disabled by
+      default. However, the default range was set to FFFF_0000. The default
+      is now 0000_0000 (disabled) for the core and the GUI.
+
+   - Timing Closure
+      o CR 427414
+
+      8 Lane and 4 Lane cores with interface clock frequency selection of 250
+      MHz do not reliably meet timing. Several additional LOC constraints have
+      been added to the UCF files.
+
+4. Known Issues
+
+    4.0  General Comments
+
+      - Simulation and Implementation support for ISE 9.1i SP2
+
+    4.1  Functional Issues
+
+      - PCI Ordering Rules compliance
+        o CR 431927
+
+        TLPs read from the core's receive interface may not follow PCI
+        ordering rules.
+
+        Impact : TLPs may be received out-of-order
+
+        Workaround : None. A future release of the core will address this
+        issue.
+
+    4.2  Implementation Issues
+
+      - Timing Closure for LX330T
+        o CR 434241
+
+        8 Lane, 4 Lane and 1 Lane cores that use the LX330T UCF file do not meet
+        timing when run with the default CORE Generator settings.
+
+        Impact : Designs using using the LX330T UCF file may require the use of
+        Multi-Pass Place and Route (MPPR) to meet timing.
+
+        Workaround : Designers should attempt advanced timing closure methods as
+        discussed in the Timing Closure section below. A future release of tools
+        and/or the core will address this issue.
+
+      - Speed file and design changes
+
+        The design files present in this release are based on timing parameters
+        from, and intended for use with, the speed files shipped with ISE 9.1
+        SP2. As more device characterization data is collected, Xilinx may
+        update the speed files to more closely model device operation.
+
+        Xilinx reserves the right to modify the design files, including The core
+        pin-out, in order to maintain full compliance after speed files updates
+        occur. To the full extent possible, Xilinx will incorporate such
+        modifications without using pin-out changes in an effort to provide
+        "transparent" design file updates.
+
+
+       - Timing Closure
+
+        In order to obtain timing closure, designers may be required to use
+        multiple PAR seeds and/or floorplanning. Using Multi-Pass Place and
+        Route (MPPR), designers can try multiple cost tables in order to meet
+        timing. Please see the Development System Reference Guide in the
+        Software Manuals found at: http://www.xilinx.com/support/library.htm for
+        more information on using MPPR. Designers may also have to floorplan and
+        add advanced placement constraints for both their design and the
+        core to meet timing.
+
+        - Xilinx warnings
+
+        The Xilinx tools may issue various warnings, however no errors should
+        occur.
+
+OTHER GENERAL INFORMATION
+=========================
+
+- Answer Record
+
+For the most up to date list of known issues with the core, please refer to
+Answer Record 24307:
+
+   http://www.xilinx.com/xlnx/xil_ans_display.jsp?getPagePath=24307
+
+
+TECHNICAL SUPPORT
+=================
+
+The most efficient method for obtaining technical support for this core is to
+create a WebCase on the http://www.xilinx.com/support website. Questions are
+routed to a team of engineers with specific expertise in using the core. Xilinx
+will provide technical support for use of this product when used according to
+the guidelines described in the PCI Express Endpoint Block Plus User Guide and
+the PCI Express Endpoint Block Plus Getting Started User Guide. Xilinx cannot
+guarantee timing, functionality, or support of this product for designs that do
+not follow these guidelines.
+
+
+
+
+
+

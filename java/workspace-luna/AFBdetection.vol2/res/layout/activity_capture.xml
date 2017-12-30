@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" 
+    android:background="#ffffff">
+    <RelativeLayout 
+        android:layout_width="fill_parent" 
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#3f3f3f">
+        <TextView 
+            android:id="@+id/capturetext" 
+            android:layout_width="wrap_content" 
+            android:layout_height="wrap_content" 
+            android:layout_centerHorizontal="true" 
+            android:layout_centerVertical="true" 
+            android:textSize="30sp"
+            android:textColor="#ffffff" 
+            android:text="Capture" /> 
+        <Button
+            android:id="@+id/backButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:text="Back"
+            android:textSize="18sp" /> 
+    </RelativeLayout>
+    
+    <FrameLayout 
+        android:id="@+id/frameLayout1"
+        android:layout_width="wrap_content" 
+        android:layout_height="wrap_content"> 
+        <com.example.afb1detection.DrawImageView 
+           android:id="@+id/drawIV" 
+           android:layout_width="fill_parent" 
+           android:layout_height="fill_parent" 
+           android:background="@android:color/transparent" />        
+    </FrameLayout>
+    
+    <LinearLayout 
+        android:layout_width="fill_parent"         
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center" >
+        <Button
+            android:id="@+id/captureButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:text="Capture"
+            android:textSize="18sp" />
+        <Button
+            android:id="@+id/analyseButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:text="Analyse"
+            android:textSize="18sp" />       
+    </LinearLayout>
+    
+</LinearLayout>

@@ -1,0 +1,71 @@
+(------------------------------------------------------------)
+(                                                            )
+(                    NC DRILL LOG FILE                       )
+(                                                            )
+(        Drawing    : xil017_.brd                            )
+(        Date/Time  : Tue Oct 31 15:56:35 2006               )
+(                                                            )
+(------------------------------------------------------------)
+
+
+
+ Processing NC Parameters file ...
+
+ NC PARAMETERS
+ -------------
+
+ FORMAT   		2.5
+ MACHINE-OFFSET		x:0.000000	y:0.000000
+ FEEDRATE		1
+ COORDINATES		ABSOLUTE
+ OUTPUT-UNITS		ENGLISH
+ TOOL-ORDER		INCREASING
+ REPEAT-CODES		YES
+ SUPPRESS-LEAD-ZEROES	NO
+ SUPPRESS-TRAIL-ZEROES	NO
+ SUPPRESS-EQUAL		NO
+ TOOL-SELECT		NO
+ HEADER			none
+ LEADER			12
+ CODE			ASCII
+ SEPARATE		NO
+ OPTIMIZE_DRILLING	NO
+ ENHANCED_EXCELLON	NO
+ SCALE			1.000000
+
+
+
+ Drill files being output to directory '' ...
+
+
+
+     'ncdrill-1-16.tap' created for holes connecting TOP and BOTTOM
+     --------------------------------------------------------------
+
+           Num     Size      +/- Tolerance     Plating   Quantity
+
+            1.   6.0000    3.0000/  3.0000      PLATED         67
+            2.   8.0000    3.0000/  3.0000      PLATED        929
+            3.  12.0000    3.0000/  3.0000      PLATED       2071
+            4.  34.0000    3.0000/  3.0000      PLATED          2
+            5.  37.0000    3.0000/  3.0000      PLATED         22
+            6.  41.0000    3.0000/  3.0000      PLATED         34
+            7.  42.0000    3.0000/  3.0000      PLATED          3
+            8.  47.0000    3.0000/  3.0000      PLATED        182
+            9.  52.0000    3.0000/  3.0000      PLATED         78
+           10.  55.0000    3.0000/  3.0000      PLATED          6
+           11.  57.0000    3.0000/  3.0000      PLATED         15
+           12.  59.0000    3.0000/  3.0000      PLATED          2
+           13.  91.0000    3.0000/  3.0000      PLATED          2
+           14.  33.0000    2.0000/  2.0000  NON_PLATED          2
+           15.  40.0000    2.0000/  2.0000  NON_PLATED          6
+           16.  44.0000    2.0000/  2.0000  NON_PLATED          1
+           17.  61.0000    2.0000/  2.0000  NON_PLATED          4
+           18.  63.0000    2.0000/  2.0000  NON_PLATED          9
+           19. 116.0000    2.0000/  2.0000  NON_PLATED          2
+           20. 144.0000    2.0000/  2.0000  NON_PLATED          2
+
+     ---- Total holes:                                       3439
+
+     ---- Total head travel:              189.24 feet (57.68 meters)
+

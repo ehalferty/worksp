@@ -1,0 +1,56 @@
+###############################################################################
+## Update for ML555 Rev3 circuit board assembly
+## 
+## Need to drive SATA_MGT_CLKSEL to select Clock Mux source (125MHz or ICS_2) 
+## This is a new control output on Rev3 board pin H15 (was J16)
+##    SATA_MGT_CLKSEL = 0 (125MHz)
+##    SATA_MGT_CLKSEL = 1 (ICS_2)
+################################################################################
+
+NET "clk" TNM_NET = "clk";
+TIMESPEC "TS_clk" = PERIOD "clk"  30.83 ns HIGH 50 %;
+
+#NET "PLL_IN_P_1" TNM_NET = "PLL_IN_P_1";
+#TIMESPEC "TS_PLL_IN_P_1" = PERIOD "PLL_IN_P_1"  1.25 ns HIGH 50 %;
+#
+#NET "PLL_IN_P_2" TNM_NET = "PLL_IN_P_2";
+#TIMESPEC "TS_PLL_IN_P_2" = PERIOD "PLL_IN_P_2"  1.25 ns HIGH 50 %;
+#
+
+
+NET "clk"  LOC = "L19"; ##33 MHz clock for system
+
+NET "SATA_MGT_CLKSEL"  LOC = "H15";   ## was J16 on R2; 
+
+NET "PLL_IN_P_1"  LOC = "H19"; ## ICS_1 Clock in source (P side)
+NET "PLL_IN_N_1"  LOC = "H20"; ## ICS_1 Clock in source (N side)
+NET "PLL_IN_P_2"  LOC = "J20"; ## ICS_2 Clock in source (P side)
+NET "PLL_IN_N_2"  LOC = "J21"; ## ICS_2 Clock in source (N side)
+
+NET "PLL_out_P_1" LOC = "H17" ; ## SMA output (J10) of PLL from FPGA
+NET "PLL_out_P_2" LOC = "H18" ; ## SMA output (J11) of PLL from FPGA
+
+# Pin out for ICS_2 control ports
+NET  PLOAD_2   LOC  =  AM33 ; 
+NET  STROBE_2  LOC  =  AL34 ; 
+NET  SDATA_2   LOC  =  AK32 ; 
+NET  SCLOCK_2  LOC  =  AJ32 ; 
+
+# Pin out for ICS_1 control ports
+#
+NET  PLOAD_1   LOC  =  AP32 ; 
+NET  STROBE_1  LOC  =  AN33 ; 
+NET  SDATA_1   LOC  =  AN34 ; 
+NET  SCLOCK_1  LOC  =  AM32 ;
+
+
+#LED (Changed LOCS/updated for Rev2 ML555)
+NET  LED_3  LOC  =  G10 ; 
+NET  LED_2  LOC  =  G8 ; 
+NET  LED_1  LOC  =  H8 ;
+
+# PUSHBUTTON (Changed LOCS/updated for Rev2 ML555)
+NET  Pushbutton_3   LOC  =  AF21 ;  
+NET  Pushbutton_2   LOC  =  AF20 ; 
+NET  Pushbutton_1   LOC  =  AF14 ; 
+

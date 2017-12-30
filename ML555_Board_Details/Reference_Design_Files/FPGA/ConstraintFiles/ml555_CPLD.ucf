@@ -1,0 +1,58 @@
+###################################################################################
+## 
+##  ML555 CoolRunner-II XC2C32-VQ44 CPLD Design Constraint File
+##
+###################################################################################
+##  This constraint file contains all I/O's connected to the XC2C32 CPLD on the
+##  ML555 excluding the JTAG I/O. User's should make a backup of this file before 
+##  modifying constraints for application specific design implementations.
+## 
+##  Notes:
+##  1. Constraints are listed by pin number versus alphabetically. 
+##  2. Signal names match the ML555 schematic names.
+##  3. Connector P2 provides 3 inputs to the CPLD for user applications.
+##  4. See UG201 "SelectMAP Interface" section for information on connectivity
+##     between the XC5VLX50T FPGA, XC2C32 CPLD and the XCF32PF PlatformFlash.
+##  5. Add ICS874003=02 outputs on pins 14, 16, 18, 19 and 20.
+##     Change CPLD_SPARE(3:1) pins were CPLD_SPARE(10:8) on prior rev board
+##     Move PB_SW_B from pin 12 to pin 18 (input only CPLD pin 18)
+##    (9/12/2006 update)
+###################################################################################
+
+##NET  CPLD_CLK_33MHZ       LOC  = "1" ; # 33MHz clock input from clock buffer  
+NET  FLASH_IMAGE0_SELECT  LOC  = "2" ; # CPLD input: P3 header pin 2 (on board pullup)
+NET  FLASH_IMAGE1_SELECT  LOC  = "3" ; # CPLD input: P3 header pin 4 (on board pullup)
+
+NET  FPGA_DONE         LOC  = "5";   # DONE output from FPGA pin M15
+NET  FPGA_BUSY_B       LOC  = "6";   # BUSY* input from FPGA pin AD15
+NET  PROG_SW_B         LOC  = "8";   # CPLD input from SW6 (on board pullup)
+NET  ICS_FSEL2         LOC  = "12" ; # ICS874003-02 FSEL2 input 
+NET  MAN_AUTO          LOC  = "13" ; # P3 header pin 6 (on board pullup)
+NET  ICS_MR            LOC  = "14" ; # ICS874003-02 MR (master reset) 
+NET  ICS_OEA           LOC  = "16" ; # ICS874003-02 OEA (output enable) 
+NET  PB_SW_B           LOC  = "18" ; # Pushbutton (reset) SW7 (on board pullup)								  
+NET  ICS_FSEL1         LOC  = "19" ; # ICS874003-02 FSEL1 input
+NET  ICS_FSEL0         LOC  = "20" ; # ICS874003-02 FSEL0 input 
+##NET  CPLD_SPARE1       LOC  = "21" ; # I/O connected to FPGA pin D11
+##NET  CPLD_SPARE2       LOC  = "22" ; # I/O connected to FPGA pin D16
+NET  FPGA_CS_B         LOC  = "23" ; # CPLD output CS* to FPGA pin N22 
+NET  INIT_B            LOC  = "27" ; # CPLD I/O INIT* to FPGA pin N14   
+NET  PROG_B            LOC  = "28" ; # CPLD output PROG* to FPGA pin M22
+##NET  WIDE              LOC  = "29" ; # PCI/PCI-X reconfiguration to FPGA pin L10
+##NET  EDGE_RST_I_B      LOC  = "30" ; # PCI bus RESET* input from P1-A15 (active low)
+##NET  FORCE             LOC  = "31" ; # PCI/PCI-X reconfiguration to FPGA pin L11 
+##NET  RTR               LOC  = "32" ; # PCI/PCI-X reconfiguration to FPGA pin B13
+##NET  PCIW_EN           LOC  = "33" ; # PCI/PCI-X reconfiguration to FPGA pin C13
+NET  FPGA_RDWR_B       LOC  = "34";  # CPLD output RD/WR* to FPGA pin N23
+##NET  CPLD_SPARE3       LOC  = "36" ; # I/O connected to FPGA pin C16 
+
+ 
+##NET  PCIE_RST          LOC  = "37" ; # PCI Express RESET input from P13-A11 (active low)
+
+NET  FLASH_CE1_B       LOC  = "38" ; # Rev=02 ML555 select 2nd Platform Flash device
+NET  FLASH_SEL<0>      LOC  = "39" ; # CPLD output to PlatformFlash REV_SEL0 input
+NET  FLASH_SEL<1>      LOC  = "40" ; # CPLD output to PlatformFlash REV_SEL1 input
+NET  BUSY_TO_FLASH_B   LOC  = "41";  # CPLD output to PlatformFlash BUSY* input
+NET  FLASH_CE_B        LOC  = "42";  # CPLD output to PlatformFlash CE* input
+NET  FLASH_CF_B        LOC  = "43";  # CPLD output to PlatformFlash CF* input
+NET  FLASH_OE_RESET_B  LOC  = "44";  # CPLD output to PlatformFlash OE/RESET* input

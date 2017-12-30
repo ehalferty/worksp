@@ -1,0 +1,279 @@
+##############################################
+### UCF file for ml523 lx50t 4 lane  ###
+##############################################
+# Begin specs common to all board/chip
+# 
+# All text below this line and before
+# the end statement will appear in all 
+# generate ucf files
+# 
+#######################################
+
+# Timing specifications common to all board/chip 
+
+NET "core_clk"          PERIOD = 4ns;
+NET "user_clk"          PERIOD = 8ns;
+
+# PLL specification 
+
+INST "*/pcie_clocking_i/use_pll.pll_adv_i" LOC = PLL_ADV_X0Y2;
+
+# DCM specification 
+
+# INST "*dcm_i"         LOC = DCM_ADV_X0Y5;
+
+# end specs common to all board/chip
+
+#######################################
+# Begin ML523 specific pin assignments
+#
+# All text below this line and before
+# the end statement will appear in all ucf 
+# files generated with $board=ml523
+#
+#######################################
+
+# Clock pins for ML523
+
+NET "REFCLK_P"          LOC = Y4;
+NET "REFCLK_N"          LOC = Y3;
+
+# HEADER PINS for ML523
+
+# 250 MHz TXCLKOUT0 from the GTP used for Lane0 
+NET "TXCLKOUT"          LOC = T33; 
+
+# REFCLKOUT from the GTP used for Lane0. The frequency is equal to the
+# frequency of reference clock selected
+NET "REFCLKOUT"         LOC = R33; 
+
+# PLLLKDET from the GTP used for Lane0. Indicates if the GTP PLL is locked 
+NET "PLLLKDETOUT"       LOC = R34;
+
+# 250 Mhz Clock
+NET "CORECLK"           LOC = R32;
+
+# Frequency of the USERCLK depends on the CLK RATIO selected. 
+# 1:1 - 250 Mhz ; 1:2 - 125 Mhz ; 1:4 - 62.5 Mhz
+NET "USERCLK"           LOC = AH34;
+
+
+# LEDs
+
+# Indicates that the PCIe endpoint has successfully completed link training 
+# with the downstream port connected to it
+NET "LINKUP"            LOC = AE27;  
+
+# Indicates  the PLL used to generate the core clk and user clk is locked
+NET "CLKLOCK"           LOC = AE26;
+
+
+# PUSH BUTTONS  
+
+# Reset to the PCIe block
+NET RST_N               LOC = AF14;
+NET RST_N PULLUP;
+
+# Reset to the GTP_DUAL tile
+NET GTPRESET_N          LOC = AE22;
+NET GTPRESET_N PULLUP;
+                    
+
+# end ML523 specific pin assignments
+
+#######################################
+# Begin specification for 4 lane
+#
+# All text below this line and before
+# the end statement will appear in all ucf 
+# files generated with lanes = 4
+#
+#######################################
+
+INST  "*/GTPD?2*GTP_i"  CHAN_BOND_LEVEL_0  = 1;
+INST  "*/GTPD?2*GTP_i"  CHAN_BOND_LEVEL_1  = 0;
+INST  "*/GTPD?2*GTP_i"  CHAN_BOND_MODE_0   = "SLAVE";  
+INST  "*/GTPD?2*GTP_i"  CHAN_BOND_MODE_1   = "SLAVE"; 
+INST  "*/GTPD?0*GTP_i"  CHAN_BOND_LEVEL_0  = 3;
+INST  "*/GTPD?0*GTP_i"  CHAN_BOND_LEVEL_1  = 2;
+INST  "*/GTPD?0*GTP_i"  CHAN_BOND_MODE_0   = "MASTER";
+INST  "*/GTPD?0*GTP_i"  CHAN_BOND_MODE_1   = "SLAVE"; 
+
+# end specification for 4 lane
+
+##################################################
+# RLOC Specifications on flops instantiated in pcie_top wrapper file
+##################################################
+# start RLOC for x1 and higher
+INST    "*flop?0*tx_data_0"                RLOC  =   X0Y39;
+INST    "*flop?0*tx_data_1"                RLOC  =   X0Y39;
+INST    "*flop?0*tx_data_2"                RLOC  =   X0Y39;
+INST    "*flop?0*tx_data_3"                RLOC  =   X0Y39;
+INST    "*flop?0*tx_data_4"                RLOC  =   X0Y38;
+INST    "*flop?0*tx_data_5"                RLOC  =   X0Y38;
+INST    "*flop?0*tx_data_6"                RLOC  =   X0Y38;
+INST    "*flop?0*tx_data_7"                RLOC  =   X0Y38;
+INST    "*flop?0*tx_data_k"                RLOC  =   X0Y37;
+INST    "*flop?0*tx_elec_idle"             RLOC  =   X0Y37;
+INST    "*flop?0*tx_detect_rx_loopback"    RLOC  =   X0Y37;
+INST    "*flop?0*tx_compliance"            RLOC  =   X0Y37;
+INST    "*flop?0*power_down_0"             RLOC  =   X0Y36;
+INST    "*flop?0*power_down_1"             RLOC  =   X0Y36;
+INST    "*flop?0*rx_polarity"              RLOC  =   X0Y36;
+INST    "*flop?0*reset"                    RLOC  =   X0Y35;
+INST    "*flop?0*rx_data_0"                RLOC  =   X1Y35;
+INST    "*flop?0*rx_data_1"                RLOC  =   X1Y35;
+INST    "*flop?0*rx_data_2"                RLOC  =   X1Y35;
+INST    "*flop?0*rx_data_3"                RLOC  =   X1Y35;
+INST    "*flop?0*rx_data_4"                RLOC  =   X1Y34;
+INST    "*flop?0*rx_data_5"                RLOC  =   X1Y34;
+INST    "*flop?0*rx_data_6"                RLOC  =   X1Y34;
+INST    "*flop?0*rx_data_7"                RLOC  =   X1Y34;
+INST    "*flop?0*rx_data_k"                RLOC  =   X1Y33;
+INST    "*flop?0*rx_valid"                 RLOC  =   X1Y33;
+INST    "*flop?0*rx_phy_status"            RLOC  =   X1Y33;
+INST    "*flop?0*rxchanisaligned"          RLOC  =   X1Y33;
+INST    "*flop?0*rx_elec_idle"             RLOC  =   X1Y36;
+INST    "*flop?0*rx_status_0"              RLOC  =   X1Y36;
+INST    "*flop?0*rx_status_1"              RLOC  =   X1Y36;
+INST    "*flop?0*rx_status_2"              RLOC  =   X1Y36;
+# end RLOC for x1
+
+# start RLOC for x2 and higher
+INST    "*flop?1*tx_data_0"                RLOC  =   X0Y20;
+INST    "*flop?1*tx_data_1"                RLOC  =   X0Y20;
+INST    "*flop?1*tx_data_2"                RLOC  =   X0Y20;
+INST    "*flop?1*tx_data_3"                RLOC  =   X0Y20;
+INST    "*flop?1*tx_data_4"                RLOC  =   X0Y21;
+INST    "*flop?1*tx_data_5"                RLOC  =   X0Y21;
+INST    "*flop?1*tx_data_6"                RLOC  =   X0Y21;
+INST    "*flop?1*tx_data_7"                RLOC  =   X0Y21;
+INST    "*flop?1*tx_data_k"                RLOC  =   X0Y22;
+INST    "*flop?1*tx_elec_idle"             RLOC  =   X0Y22;
+INST    "*flop?1*tx_detect_rx_loopback"    RLOC  =   X0Y22;
+INST    "*flop?1*tx_compliance"            RLOC  =   X0Y22;
+INST    "*flop?1*power_down_0"             RLOC  =   X0Y23;
+INST    "*flop?1*power_down_1"             RLOC  =   X0Y23;
+INST    "*flop?1*rx_polarity"              RLOC  =   X0Y23;
+INST    "*flop?1*reset"                    RLOC  =   X0Y24;
+INST    "*flop?1*rx_data_0"                RLOC  =   X1Y24;
+INST    "*flop?1*rx_data_1"                RLOC  =   X1Y24;
+INST    "*flop?1*rx_data_2"                RLOC  =   X1Y24;
+INST    "*flop?1*rx_data_3"                RLOC  =   X1Y24;
+INST    "*flop?1*rx_data_4"                RLOC  =   X1Y25;
+INST    "*flop?1*rx_data_5"                RLOC  =   X1Y25;
+INST    "*flop?1*rx_data_6"                RLOC  =   X1Y25;
+INST    "*flop?1*rx_data_7"                RLOC  =   X1Y25;
+INST    "*flop?1*rx_data_k"                RLOC  =   X1Y26;
+INST    "*flop?1*rx_valid"                 RLOC  =   X1Y26;
+INST    "*flop?1*rx_phy_status"            RLOC  =   X1Y26;
+INST    "*flop?1*rxchanisaligned"          RLOC  =   X1Y26;
+INST    "*flop?1*rx_elec_idle"             RLOC  =   X1Y23;
+INST    "*flop?1*rx_status_0"              RLOC  =   X1Y23;
+INST    "*flop?1*rx_status_1"              RLOC  =   X1Y23;
+INST    "*flop?1*rx_status_2"              RLOC  =   X1Y23;       
+# end RLOC for x2
+
+# start RLOC for x4 and higher
+INST    "*flop?2*tx_data_0"                RLOC  =   X0Y19;
+INST    "*flop?2*tx_data_1"                RLOC  =   X0Y19;
+INST    "*flop?2*tx_data_2"                RLOC  =   X0Y19;
+INST    "*flop?2*tx_data_3"                RLOC  =   X0Y19;
+INST    "*flop?2*tx_data_4"                RLOC  =   X0Y18;
+INST    "*flop?2*tx_data_5"                RLOC  =   X0Y18;
+INST    "*flop?2*tx_data_6"                RLOC  =   X0Y18;
+INST    "*flop?2*tx_data_7"                RLOC  =   X0Y18;
+INST    "*flop?2*tx_data_k"                RLOC  =   X0Y17;
+INST    "*flop?2*tx_elec_idle"             RLOC  =   X0Y17;
+INST    "*flop?2*tx_detect_rx_loopback"    RLOC  =   X0Y17;
+INST    "*flop?2*tx_compliance"            RLOC  =   X0Y17;
+INST    "*flop?2*power_down_0"             RLOC  =   X0Y16;
+INST    "*flop?2*power_down_1"             RLOC  =   X0Y16;
+INST    "*flop?2*rx_polarity"              RLOC  =   X0Y16;
+INST    "*flop?2*reset"                    RLOC  =   X0Y15;
+INST    "*flop?2*rx_data_0"                RLOC  =   X1Y15;
+INST    "*flop?2*rx_data_1"                RLOC  =   X1Y15;
+INST    "*flop?2*rx_data_2"                RLOC  =   X1Y15;
+INST    "*flop?2*rx_data_3"                RLOC  =   X1Y15;
+INST    "*flop?2*rx_data_4"                RLOC  =   X1Y14;
+INST    "*flop?2*rx_data_5"                RLOC  =   X1Y14;
+INST    "*flop?2*rx_data_6"                RLOC  =   X1Y14;
+INST    "*flop?2*rx_data_7"                RLOC  =   X1Y14;
+INST    "*flop?2*rx_data_k"                RLOC  =   X1Y13;
+INST    "*flop?2*rx_valid"                 RLOC  =   X1Y13;
+INST    "*flop?2*rx_phy_status"            RLOC  =   X1Y13;
+INST    "*flop?2*rxchanisaligned"          RLOC  =   X1Y13;
+INST    "*flop?2*rx_elec_idle"             RLOC  =   X1Y16;
+INST    "*flop?2*rx_status_0"              RLOC  =   X1Y16;
+INST    "*flop?2*rx_status_1"              RLOC  =   X1Y16;
+INST    "*flop?2*rx_status_2"              RLOC  =   X1Y16;
+
+INST    "*flop?3*tx_data_0"                RLOC  =   X0Y0;
+INST    "*flop?3*tx_data_1"                RLOC  =   X0Y0;
+INST    "*flop?3*tx_data_2"                RLOC  =   X0Y0;
+INST    "*flop?3*tx_data_3"                RLOC  =   X0Y0;
+INST    "*flop?3*tx_data_4"                RLOC  =   X0Y1;
+INST    "*flop?3*tx_data_5"                RLOC  =   X0Y1;
+INST    "*flop?3*tx_data_6"                RLOC  =   X0Y1;
+INST    "*flop?3*tx_data_7"                RLOC  =   X0Y1;
+INST    "*flop?3*tx_data_k"                RLOC  =   X0Y2;
+INST    "*flop?3*tx_elec_idle"             RLOC  =   X0Y2;
+INST    "*flop?3*tx_detect_rx_loopback"    RLOC  =   X0Y2;
+INST    "*flop?3*tx_compliance"            RLOC  =   X0Y2;
+INST    "*flop?3*power_down_0"             RLOC  =   X0Y3;
+INST    "*flop?3*power_down_1"             RLOC  =   X0Y3;
+INST    "*flop?3*rx_polarity"              RLOC  =   X0Y3;
+INST    "*flop?3*reset"                    RLOC  =   X0Y4;
+INST    "*flop?3*rx_data_0"                RLOC  =   X1Y4;
+INST    "*flop?3*rx_data_1"                RLOC  =   X1Y4;
+INST    "*flop?3*rx_data_2"                RLOC  =   X1Y4;
+INST    "*flop?3*rx_data_3"                RLOC  =   X1Y4;
+INST    "*flop?3*rx_data_4"                RLOC  =   X1Y5;
+INST    "*flop?3*rx_data_5"                RLOC  =   X1Y5;
+INST    "*flop?3*rx_data_6"                RLOC  =   X1Y5;
+INST    "*flop?3*rx_data_7"                RLOC  =   X1Y5;
+INST    "*flop?3*rx_data_k"                RLOC  =   X1Y6;
+INST    "*flop?3*rx_elec_idle"             RLOC  =   X1Y3;
+INST    "*flop?3*rx_valid"                 RLOC  =   X1Y6;
+INST    "*flop?3*rx_phy_status"            RLOC  =   X1Y6;
+INST    "*flop?3*rxchanisaligned"          RLOC  =   X1Y6;
+INST    "*flop?3*rx_status_0"              RLOC  =   X1Y3;
+INST    "*flop?3*rx_status_1"              RLOC  =   X1Y3;
+INST    "*flop?3*rx_status_2"              RLOC  =   X1Y3;
+
+
+##################################################
+# Begin specification for GTP locations
+##################################################
+
+# For ML523 LX50T 
+INST  "*/GTPD?2*GTP_i" LOC = GTP_DUAL_X0Y1;
+INST  "*/GTPD?0*GTP_i" LOC = GTP_DUAL_X0Y2;
+# end ML523 LX50T
+
+# end specification for GTP locations
+
+##################################################
+# Begin specification for MAXDELAY constraints
+##################################################
+
+# For LX50T
+# MAXDELAY delay constraint on tx signals in gt wrapper
+NET "*gt_tx_*_reg*"     MAXDELAY =1ns;
+# end LX50T 
+
+# end specification for MAXDELAY constraints
+
+
+##################################################
+# Begin specification for Reference Design BRAM locations
+###################################################
+
+# For LX50T
+INST "*completer/mem/gen_ldword[1].ldword" LOC = RAMB36_X1Y1;
+INST "*completer/mem/gen_ldword[0].ldword" LOC = RAMB36_X1Y2;
+INST "*completer/mem/gen_hdword[1].hdword" LOC = RAMB36_X1Y3;
+INST "*completer/mem/gen_hdword[0].hdword" LOC = RAMB36_X1Y4;
+# end LX50T 
+
+# end specification for Reference Design BRAM locations

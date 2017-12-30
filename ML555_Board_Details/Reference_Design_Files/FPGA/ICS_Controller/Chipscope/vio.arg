@@ -1,0 +1,10 @@
+#
+# Usage: generate.exe vio -f=<arg_file_name>
+#
+-compname=vio
+-outputdirectory=H:\ICS_CONTROLLER_I30_VHDL\ICS_CONTROLLER_I30_VHDL
+-devicefamily=Virtex5
+-srl16type=2
+-asyncinwidth=3
+-asyncoutwidth=13
+-createcdc

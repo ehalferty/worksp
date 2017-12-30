@@ -1,0 +1,704 @@
+| Wirelist created using version 5.2.
+V 5.2
+DESIGN_MAY_CONTAIN_RIPPERS__RECOMPILATION_AND_RELINKING_WITH_RIPPER_VERSION_OF_VIEWBASE_REQUIRED
+K 14050350590 ml555_pcie
+DW ml555_pcie
+|Q ML555_Production_REV01:sodimm_200_ddr2 1
+AS ML555_Production_REV01:sodimm_200_ddr2 DEVICE=SODIMM_200_DDR2
+AS ML555_Production_REV01:sodimm_200_ddr2 LEVEL=STD
+AS ML555_Production_REV01:sodimm_200_ddr2 PARTS=1
+AS ML555_Production_REV01:sodimm_200_ddr2 PKG_TYPE=SODIMM200_DDR2_SKT
+AS ML555_Production_REV01:sodimm_200_ddr2 REFDES=J?
+AS ML555_Production_REV01:sodimm_200_ddr2 PINORDER=A0 A1 A10/AP A11 A12 A2 A3 A4 A5 A6 A7 A8 A9 BA0 BA1 BA2/NC5 CAS_B CK0 CK0_B CK1 CK1_B CKE0 CKE1 DM0 DM1 DM2 DM3 DM4 DM5 DM6 DM7 DQ0 DQ1 DQ10 DQ11 DQ12 DQ13 DQ14 DQ15 DQ16 DQ17 DQ18 DQ19 DQ2 DQ20 DQ21 DQ22 DQ23 DQ24 DQ25 DQ26 DQ27 DQ28 DQ29 DQ3 DQ30 DQ31 DQ32 DQ33 DQ34 DQ35 DQ36 DQ37 DQ38 DQ39 DQ4 DQ40 DQ41 DQ42 DQ43 DQ44 DQ45 DQ46 DQ47 DQ48 DQ49 DQ5 DQ50 DQ51 DQ52 DQ53 DQ54 DQ55 DQ56 DQ57 DQ58 DQ59 DQ6 DQ60 DQ61 DQ62 DQ63 DQ7 DQ8 DQ9 DQS0 DQS0_B DQS1 DQS1_B DQS2 DQS2_B DQS3 DQS3_B DQS4 DQS4_B DQS5 DQS5_B DQS6 DQS6_B DQS7 DQS7_B NC1 NC2 NC3 NC4 NC5 NC6 NC7 NC8 ODT0 ODT1 RAS_B S0_B S1_B SA0 SA1 SCL SDA VDD1 VDD10 VDD11 VDD12 VDD2 VDD3 VDD4 VDD5 VDD6 VDD7 VDD8 VDD9 VDDSPD VREF1 VSS1 VSS10 VSS11 VSS12 VSS13 VSS14 VSS15 VSS16 VSS17 VSS18 VSS19 VSS2 VSS20 VSS21 VSS22 VSS23 VSS24 VSS25 VSS26 VSS27 VSS28 VSS29 VSS3 VSS30 VSS31 VSS32 VSS33 VSS34 VSS35 VSS36 VSS37 VSS38 VSS39 VSS4 VSS40 VSS41 VSS42 VSS43 VSS44 VSS45 VSS46 VSS47 VSS48 VSS49 VSS5 VSS50 VSS51 VSS52 VSS53 VSS54 VSS55 VSS56 VSS58 VSS6 VSS7 VSS8 VSS9 WE_B
+AS ML555_Production_REV01:sodimm_200_ddr2 INOV_VER_REC=22:08_12-9-05
+AP ML555_Production_REV01:sodimm_200_ddr2 1 PINTYPE=IN
+AP ML555_Production_REV01:sodimm_200_ddr2 1 #=102
+AP ML555_Production_REV01:sodimm_200_ddr2 2 PINTYPE=IN
+AP ML555_Production_REV01:sodimm_200_ddr2 2 #=101
+AP ML555_Production_REV01:sodimm_200_ddr2 3 PINTYPE=IN
+AP ML555_Production_REV01:sodimm_200_ddr2 3 #=105
+AP ML555_Production_REV01:sodimm_200_ddr2 4 PINTYPE=IN
+AP ML555_Production_REV01:sodimm_200_ddr2 4 #=90
+AP ML555_Production_REV01:sodimm_200_ddr2 5 PINTYPE=IN
+AP ML555_Production_REV01:sodimm_200_ddr2 5 #=89
+AP ML555_Production_REV01:sodimm_200_ddr2 6 PINTYPE=IN
+AP ML555_Production_REV01:sodimm_200_ddr2 6 #=100
+AP ML555_Production_REV01:sodimm_200_ddr2 7 PINTYPE=IN
+AP ML555_Production_REV01:sodimm_200_ddr2 7 #=99
+AP ML555_Production_REV01:sodimm_200_ddr2 8 PINTYPE=IN
+AP ML555_Production_REV01:sodimm_200_ddr2 8 #=98
+AP ML555_Production_REV01:sodimm_200_ddr2 9 PINTYPE=IN
+AP ML555_Production_REV01:sodimm_200_ddr2 9 #=97
+AP ML555_Production_REV01:sodimm_200_ddr2 10 PINTYPE=IN
+AP ML555_Production_REV01:sodimm_200_ddr2 10 #=94
+AP ML555_Production_REV01:sodimm_200_ddr2 11 PINTYPE=IN
+AP ML555_Production_REV01:sodimm_200_ddr2 11 #=92
+AP ML555_Production_REV01:sodimm_200_ddr2 12 PINTYPE=IN
+AP ML555_Production_REV01:sodimm_200_ddr2 12 #=93
+AP ML555_Production_REV01:sodimm_200_ddr2 13 PINTYPE=IN
+AP ML555_Production_REV01:sodimm_200_ddr2 13 #=91
+AP ML555_Production_REV01:sodimm_200_ddr2 14 PINTYPE=IN
+AP ML555_Production_REV01:sodimm_200_ddr2 14 #=107
+AP ML555_Production_REV01:sodimm_200_ddr2 15 PINTYPE=IN
+AP ML555_Production_REV01:sodimm_200_ddr2 15 #=106
+AP ML555_Production_REV01:sodimm_200_ddr2 16 PINTYPE=IN
+AP ML555_Production_REV01:sodimm_200_ddr2 16 #=85
+AP ML555_Production_REV01:sodimm_200_ddr2 17 PINTYPE=IN
+AP ML555_Production_REV01:sodimm_200_ddr2 17 #=113
+AP ML555_Production_REV01:sodimm_200_ddr2 18 PINTYPE=IN
+AP ML555_Production_REV01:sodimm_200_ddr2 18 #=30
+AP ML555_Production_REV01:sodimm_200_ddr2 19 PINTYPE=IN
+AP ML555_Production_REV01:sodimm_200_ddr2 19 #=32
+AP ML555_Production_REV01:sodimm_200_ddr2 20 PINTYPE=IN
+AP ML555_Production_REV01:sodimm_200_ddr2 20 #=164
+AP ML555_Production_REV01:sodimm_200_ddr2 21 PINTYPE=IN
+AP ML555_Production_REV01:sodimm_200_ddr2 21 #=166
+AP ML555_Production_REV01:sodimm_200_ddr2 22 PINTYPE=IN
+AP ML555_Production_REV01:sodimm_200_ddr2 22 #=79
+AP ML555_Production_REV01:sodimm_200_ddr2 23 PINTYPE=IN
+AP ML555_Production_REV01:sodimm_200_ddr2 23 #=80
+AP ML555_Production_REV01:sodimm_200_ddr2 24 PINTYPE=IN
+AP ML555_Production_REV01:sodimm_200_ddr2 24 #=10
+AP ML555_Production_REV01:sodimm_200_ddr2 25 PINTYPE=IN
+AP ML555_Production_REV01:sodimm_200_ddr2 25 #=26
+AP ML555_Production_REV01:sodimm_200_ddr2 26 PINTYPE=IN
+AP ML555_Production_REV01:sodimm_200_ddr2 26 #=52
+AP ML555_Production_REV01:sodimm_200_ddr2 27 PINTYPE=IN
+AP ML555_Production_REV01:sodimm_200_ddr2 27 #=67
+AP ML555_Production_REV01:sodimm_200_ddr2 28 PINTYPE=IN
+AP ML555_Production_REV01:sodimm_200_ddr2 28 #=130
+AP ML555_Production_REV01:sodimm_200_ddr2 29 PINTYPE=IN
+AP ML555_Production_REV01:sodimm_200_ddr2 29 #=147
+AP ML555_Production_REV01:sodimm_200_ddr2 30 PINTYPE=IN
+AP ML555_Production_REV01:sodimm_200_ddr2 30 #=170
+AP ML555_Production_REV01:sodimm_200_ddr2 31 PINTYPE=IN
+AP ML555_Production_REV01:sodimm_200_ddr2 31 #=185
+AP ML555_Production_REV01:sodimm_200_ddr2 32 PINTYPE=BI
+AP ML555_Production_REV01:sodimm_200_ddr2 32 #=5
+AP ML555_Production_REV01:sodimm_200_ddr2 33 PINTYPE=BI
+AP ML555_Production_REV01:sodimm_200_ddr2 33 #=7
+AP ML555_Production_REV01:sodimm_200_ddr2 34 PINTYPE=BI
+AP ML555_Production_REV01:sodimm_200_ddr2 34 #=35
+AP ML555_Production_REV01:sodimm_200_ddr2 35 PINTYPE=BI
+AP ML555_Production_REV01:sodimm_200_ddr2 35 #=37
+AP ML555_Production_REV01:sodimm_200_ddr2 36 PINTYPE=BI
+AP ML555_Production_REV01:sodimm_200_ddr2 36 #=20
+AP ML555_Production_REV01:sodimm_200_ddr2 37 PINTYPE=BI
+AP ML555_Production_REV01:sodimm_200_ddr2 37 #=22
+AP ML555_Production_REV01:sodimm_200_ddr2 38 PINTYPE=BI
+AP ML555_Production_REV01:sodimm_200_ddr2 38 #=36
+AP ML555_Production_REV01:sodimm_200_ddr2 39 PINTYPE=BI
+AP ML555_Production_REV01:sodimm_200_ddr2 39 #=38
+AP ML555_Production_REV01:sodimm_200_ddr2 40 PINTYPE=BI
+AP ML555_Production_REV01:sodimm_200_ddr2 40 #=43
+AP ML555_Production_REV01:sodimm_200_ddr2 41 PINTYPE=BI
+AP ML555_Production_REV01:sodimm_200_ddr2 41 #=45
+AP ML555_Production_REV01:sodimm_200_ddr2 42 PINTYPE=BI
+AP ML555_Production_REV01:sodimm_200_ddr2 42 #=55
+AP ML555_Production_REV01:sodimm_200_ddr2 43 PINTYPE=BI
+AP ML555_Production_REV01:sodimm_200_ddr2 43 #=57
+AP ML555_Production_REV01:sodimm_200_ddr2 44 PINTYPE=BI
+AP ML555_Production_REV01:sodimm_200_ddr2 44 #=17
+AP ML555_Production_REV01:sodimm_200_ddr2 45 PINTYPE=BI
+AP ML555_Production_REV01:sodimm_200_ddr2 45 #=44
+AP ML555_Production_REV01:sodimm_200_ddr2 46 PINTYPE=BI
+AP ML555_Production_REV01:sodimm_200_ddr2 46 #=46
+AP ML555_Production_REV01:sodimm_200_ddr2 47 PINTYPE=BI
+AP ML555_Production_REV01:sodimm_200_ddr2 47 #=56
+AP ML555_Production_REV01:sodimm_200_ddr2 48 PINTYPE=BI
+AP ML555_Production_REV01:sodimm_200_ddr2 48 #=58
+AP ML555_Production_REV01:sodimm_200_ddr2 49 PINTYPE=BI
+AP ML555_Production_REV01:sodimm_200_ddr2 49 #=61
+AP ML555_Production_REV01:sodimm_200_ddr2 50 PINTYPE=BI
+AP ML555_Production_REV01:sodimm_200_ddr2 50 #=63
+AP ML555_Production_REV01:sodimm_200_ddr2 51 PINTYPE=BI
+AP ML555_Production_REV01:sodimm_200_ddr2 51 #=73
+AP ML555_Production_REV01:sodimm_200_ddr2 52 PINTYPE=BI
+AP ML555_Production_REV01:sodimm_200_ddr2 52 #=75
+AP ML555_Production_REV01:sodimm_200_ddr2 53 PINTYPE=BI
+AP ML555_Production_REV01:sodimm_200_ddr2 53 #=62
+AP ML555_Production_REV01:sodimm_200_ddr2 54 PINTYPE=BI
+AP ML555_Production_REV01:sodimm_200_ddr2 54 #=64
+AP ML555_Production_REV01:sodimm_200_ddr2 55 PINTYPE=BI
+AP ML555_Production_REV01:sodimm_200_ddr2 55 #=19
+AP ML555_Production_REV01:sodimm_200_ddr2 56 PINTYPE=BI
+AP ML555_Production_REV01:sodimm_200_ddr2 56 #=74
+AP ML555_Production_REV01:sodimm_200_ddr2 57 PINTYPE=BI
+AP ML555_Production_REV01:sodimm_200_ddr2 57 #=76
+AP ML555_Production_REV01:sodimm_200_ddr2 58 PINTYPE=BI
+AP ML555_Production_REV01:sodimm_200_ddr2 58 #=123
+AP ML555_Production_REV01:sodimm_200_ddr2 59 PINTYPE=BI
+AP ML555_Production_REV01:sodimm_200_ddr2 59 #=125
+AP ML555_Production_REV01:sodimm_200_ddr2 60 PINTYPE=BI
+AP ML555_Production_REV01:sodimm_200_ddr2 60 #=135
+AP ML555_Production_REV01:sodimm_200_ddr2 61 PINTYPE=BI
+AP ML555_Production_REV01:sodimm_200_ddr2 61 #=137
+AP ML555_Production_REV01:sodimm_200_ddr2 62 PINTYPE=BI
+AP ML555_Production_REV01:sodimm_200_ddr2 62 #=124
+AP ML555_Production_REV01:sodimm_200_ddr2 63 PINTYPE=BI
+AP ML555_Production_REV01:sodimm_200_ddr2 63 #=126
+AP ML555_Production_REV01:sodimm_200_ddr2 64 PINTYPE=BI
+AP ML555_Production_REV01:sodimm_200_ddr2 64 #=134
+AP ML555_Production_REV01:sodimm_200_ddr2 65 PINTYPE=BI
+AP ML555_Production_REV01:sodimm_200_ddr2 65 #=136
+AP ML555_Production_REV01:sodimm_200_ddr2 66 PINTYPE=BI
+AP ML555_Production_REV01:sodimm_200_ddr2 66 #=4
+AP ML555_Production_REV01:sodimm_200_ddr2 67 PINTYPE=BI
+AP ML555_Production_REV01:sodimm_200_ddr2 67 #=141
+AP ML555_Production_REV01:sodimm_200_ddr2 68 PINTYPE=BI
+AP ML555_Production_REV01:sodimm_200_ddr2 68 #=143
+AP ML555_Production_REV01:sodimm_200_ddr2 69 PINTYPE=BI
+AP ML555_Production_REV01:sodimm_200_ddr2 69 #=151
+AP ML555_Production_REV01:sodimm_200_ddr2 70 PINTYPE=BI
+AP ML555_Production_REV01:sodimm_200_ddr2 70 #=153
+AP ML555_Production_REV01:sodimm_200_ddr2 71 PINTYPE=BI
+AP ML555_Production_REV01:sodimm_200_ddr2 71 #=140
+AP ML555_Production_REV01:sodimm_200_ddr2 72 PINTYPE=BI
+AP ML555_Production_REV01:sodimm_200_ddr2 72 #=142
+AP ML555_Production_REV01:sodimm_200_ddr2 73 PINTYPE=BI
+AP ML555_Production_REV01:sodimm_200_ddr2 73 #=152
+AP ML555_Production_REV01:sodimm_200_ddr2 74 PINTYPE=BI
+AP ML555_Production_REV01:sodimm_200_ddr2 74 #=154
+AP ML555_Production_REV01:sodimm_200_ddr2 75 PINTYPE=BI
+AP ML555_Production_REV01:sodimm_200_ddr2 75 #=157
+AP ML555_Production_REV01:sodimm_200_ddr2 76 PINTYPE=BI
+AP ML555_Production_REV01:sodimm_200_ddr2 76 #=159
+AP ML555_Production_REV01:sodimm_200_ddr2 77 PINTYPE=BI
+AP ML555_Production_REV01:sodimm_200_ddr2 77 #=6
+AP ML555_Production_REV01:sodimm_200_ddr2 78 PINTYPE=BI
+AP ML555_Production_REV01:sodimm_200_ddr2 78 #=173
+AP ML555_Production_REV01:sodimm_200_ddr2 79 PINTYPE=BI
+AP ML555_Production_REV01:sodimm_200_ddr2 79 #=175
+AP ML555_Production_REV01:sodimm_200_ddr2 80 PINTYPE=BI
+AP ML555_Production_REV01:sodimm_200_ddr2 80 #=158
+AP ML555_Production_REV01:sodimm_200_ddr2 81 PINTYPE=BI
+AP ML555_Production_REV01:sodimm_200_ddr2 81 #=160
+AP ML555_Production_REV01:sodimm_200_ddr2 82 PINTYPE=BI
+AP ML555_Production_REV01:sodimm_200_ddr2 82 #=174
+AP ML555_Production_REV01:sodimm_200_ddr2 83 PINTYPE=BI
+AP ML555_Production_REV01:sodimm_200_ddr2 83 #=176
+AP ML555_Production_REV01:sodimm_200_ddr2 84 PINTYPE=BI
+AP ML555_Production_REV01:sodimm_200_ddr2 84 #=179
+AP ML555_Production_REV01:sodimm_200_ddr2 85 PINTYPE=BI
+AP ML555_Production_REV01:sodimm_200_ddr2 85 #=181
+AP ML555_Production_REV01:sodimm_200_ddr2 86 PINTYPE=BI
+AP ML555_Production_REV01:sodimm_200_ddr2 86 #=189
+AP ML555_Production_REV01:sodimm_200_ddr2 87 PINTYPE=BI
+AP ML555_Production_REV01:sodimm_200_ddr2 87 #=191
+AP ML555_Production_REV01:sodimm_200_ddr2 88 PINTYPE=BI
+AP ML555_Production_REV01:sodimm_200_ddr2 88 #=14
+AP ML555_Production_REV01:sodimm_200_ddr2 89 PINTYPE=BI
+AP ML555_Production_REV01:sodimm_200_ddr2 89 #=180
+AP ML555_Production_REV01:sodimm_200_ddr2 90 PINTYPE=BI
+AP ML555_Production_REV01:sodimm_200_ddr2 90 #=182
+AP ML555_Production_REV01:sodimm_200_ddr2 91 PINTYPE=BI
+AP ML555_Production_REV01:sodimm_200_ddr2 91 #=192
+AP ML555_Production_REV01:sodimm_200_ddr2 92 PINTYPE=BI
+AP ML555_Production_REV01:sodimm_200_ddr2 92 #=194
+AP ML555_Production_REV01:sodimm_200_ddr2 93 PINTYPE=BI
+AP ML555_Production_REV01:sodimm_200_ddr2 93 #=16
+AP ML555_Production_REV01:sodimm_200_ddr2 94 PINTYPE=BI
+AP ML555_Production_REV01:sodimm_200_ddr2 94 #=23
+AP ML555_Production_REV01:sodimm_200_ddr2 95 PINTYPE=BI
+AP ML555_Production_REV01:sodimm_200_ddr2 95 #=25
+AP ML555_Production_REV01:sodimm_200_ddr2 96 PINTYPE=BI
+AP ML555_Production_REV01:sodimm_200_ddr2 96 #=13
+AP ML555_Production_REV01:sodimm_200_ddr2 97 PINTYPE=BI
+AP ML555_Production_REV01:sodimm_200_ddr2 97 #=11
+AP ML555_Production_REV01:sodimm_200_ddr2 98 PINTYPE=BI
+AP ML555_Production_REV01:sodimm_200_ddr2 98 #=31
+AP ML555_Production_REV01:sodimm_200_ddr2 99 PINTYPE=BI
+AP ML555_Production_REV01:sodimm_200_ddr2 99 #=29
+AP ML555_Production_REV01:sodimm_200_ddr2 100 PINTYPE=BI
+AP ML555_Production_REV01:sodimm_200_ddr2 100 #=51
+AP ML555_Production_REV01:sodimm_200_ddr2 101 PINTYPE=BI
+AP ML555_Production_REV01:sodimm_200_ddr2 101 #=49
+AP ML555_Production_REV01:sodimm_200_ddr2 102 PINTYPE=BI
+AP ML555_Production_REV01:sodimm_200_ddr2 102 #=70
+AP ML555_Production_REV01:sodimm_200_ddr2 103 PINTYPE=BI
+AP ML555_Production_REV01:sodimm_200_ddr2 103 #=68
+AP ML555_Production_REV01:sodimm_200_ddr2 104 PINTYPE=BI
+AP ML555_Production_REV01:sodimm_200_ddr2 104 #=131
+AP ML555_Production_REV01:sodimm_200_ddr2 105 PINTYPE=BI
+AP ML555_Production_REV01:sodimm_200_ddr2 105 #=129
+AP ML555_Production_REV01:sodimm_200_ddr2 106 PINTYPE=BI
+AP ML555_Production_REV01:sodimm_200_ddr2 106 #=148
+AP ML555_Production_REV01:sodimm_200_ddr2 107 PINTYPE=BI
+AP ML555_Production_REV01:sodimm_200_ddr2 107 #=146
+AP ML555_Production_REV01:sodimm_200_ddr2 108 PINTYPE=BI
+AP ML555_Production_REV01:sodimm_200_ddr2 108 #=169
+AP ML555_Production_REV01:sodimm_200_ddr2 109 PINTYPE=BI
+AP ML555_Production_REV01:sodimm_200_ddr2 109 #=167
+AP ML555_Production_REV01:sodimm_200_ddr2 110 PINTYPE=BI
+AP ML555_Production_REV01:sodimm_200_ddr2 110 #=188
+AP ML555_Production_REV01:sodimm_200_ddr2 111 PINTYPE=BI
+AP ML555_Production_REV01:sodimm_200_ddr2 111 #=186
+AP ML555_Production_REV01:sodimm_200_ddr2 112 PINTYPE=IN
+AP ML555_Production_REV01:sodimm_200_ddr2 112 #=69
+AP ML555_Production_REV01:sodimm_200_ddr2 113 PINTYPE=IN
+AP ML555_Production_REV01:sodimm_200_ddr2 113 #=50
+AP ML555_Production_REV01:sodimm_200_ddr2 114 PINTYPE=IN
+AP ML555_Production_REV01:sodimm_200_ddr2 114 #=83
+AP ML555_Production_REV01:sodimm_200_ddr2 115 PINTYPE=IN
+AP ML555_Production_REV01:sodimm_200_ddr2 115 #=84
+AP ML555_Production_REV01:sodimm_200_ddr2 116 PINTYPE=IN
+AP ML555_Production_REV01:sodimm_200_ddr2 116 #=163
+AP ML555_Production_REV01:sodimm_200_ddr2 117 PINTYPE=IN
+AP ML555_Production_REV01:sodimm_200_ddr2 117 #=86
+AP ML555_Production_REV01:sodimm_200_ddr2 118 PINTYPE=IN
+AP ML555_Production_REV01:sodimm_200_ddr2 118 #=116
+AP ML555_Production_REV01:sodimm_200_ddr2 119 PINTYPE=IN
+AP ML555_Production_REV01:sodimm_200_ddr2 119 #=120
+AP ML555_Production_REV01:sodimm_200_ddr2 120 PINTYPE=IN
+AP ML555_Production_REV01:sodimm_200_ddr2 120 #=114
+AP ML555_Production_REV01:sodimm_200_ddr2 121 PINTYPE=IN
+AP ML555_Production_REV01:sodimm_200_ddr2 121 #=119
+AP ML555_Production_REV01:sodimm_200_ddr2 122 PINTYPE=IN
+AP ML555_Production_REV01:sodimm_200_ddr2 122 #=108
+AP ML555_Production_REV01:sodimm_200_ddr2 123 PINTYPE=IN
+AP ML555_Production_REV01:sodimm_200_ddr2 123 #=110
+AP ML555_Production_REV01:sodimm_200_ddr2 124 PINTYPE=IN
+AP ML555_Production_REV01:sodimm_200_ddr2 124 #=115
+AP ML555_Production_REV01:sodimm_200_ddr2 125 PINTYPE=IN
+AP ML555_Production_REV01:sodimm_200_ddr2 125 #=198
+AP ML555_Production_REV01:sodimm_200_ddr2 126 PINTYPE=IN
+AP ML555_Production_REV01:sodimm_200_ddr2 126 #=200
+AP ML555_Production_REV01:sodimm_200_ddr2 127 PINTYPE=IN
+AP ML555_Production_REV01:sodimm_200_ddr2 127 #=197
+AP ML555_Production_REV01:sodimm_200_ddr2 128 PINTYPE=BI
+AP ML555_Production_REV01:sodimm_200_ddr2 128 #=195
+AP ML555_Production_REV01:sodimm_200_ddr2 129 PINTYPE=IN
+AP ML555_Production_REV01:sodimm_200_ddr2 129 #=81
+AP ML555_Production_REV01:sodimm_200_ddr2 130 PINTYPE=IN
+AP ML555_Production_REV01:sodimm_200_ddr2 130 #=112
+AP ML555_Production_REV01:sodimm_200_ddr2 131 PINTYPE=IN
+AP ML555_Production_REV01:sodimm_200_ddr2 131 #=117
+AP ML555_Production_REV01:sodimm_200_ddr2 132 PINTYPE=IN
+AP ML555_Production_REV01:sodimm_200_ddr2 132 #=118
+AP ML555_Production_REV01:sodimm_200_ddr2 133 PINTYPE=IN
+AP ML555_Production_REV01:sodimm_200_ddr2 133 #=82
+AP ML555_Production_REV01:sodimm_200_ddr2 134 PINTYPE=IN
+AP ML555_Production_REV01:sodimm_200_ddr2 134 #=87
+AP ML555_Production_REV01:sodimm_200_ddr2 135 PINTYPE=IN
+AP ML555_Production_REV01:sodimm_200_ddr2 135 #=88
+AP ML555_Production_REV01:sodimm_200_ddr2 136 PINTYPE=IN
+AP ML555_Production_REV01:sodimm_200_ddr2 136 #=95
+AP ML555_Production_REV01:sodimm_200_ddr2 137 PINTYPE=IN
+AP ML555_Production_REV01:sodimm_200_ddr2 137 #=96
+AP ML555_Production_REV01:sodimm_200_ddr2 138 PINTYPE=IN
+AP ML555_Production_REV01:sodimm_200_ddr2 138 #=103
+AP ML555_Production_REV01:sodimm_200_ddr2 139 PINTYPE=IN
+AP ML555_Production_REV01:sodimm_200_ddr2 139 #=104
+AP ML555_Production_REV01:sodimm_200_ddr2 140 PINTYPE=IN
+AP ML555_Production_REV01:sodimm_200_ddr2 140 #=111
+AP ML555_Production_REV01:sodimm_200_ddr2 141 PINTYPE=IN
+AP ML555_Production_REV01:sodimm_200_ddr2 141 #=199
+AP ML555_Production_REV01:sodimm_200_ddr2 142 PINTYPE=IN
+AP ML555_Production_REV01:sodimm_200_ddr2 142 #=1
+AP ML555_Production_REV01:sodimm_200_ddr2 143 PINTYPE=IN
+AP ML555_Production_REV01:sodimm_200_ddr2 143 #=3
+AP ML555_Production_REV01:sodimm_200_ddr2 144 PINTYPE=BI
+AP ML555_Production_REV01:sodimm_200_ddr2 144 #=24
+AP ML555_Production_REV01:sodimm_200_ddr2 145 PINTYPE=IN
+AP ML555_Production_REV01:sodimm_200_ddr2 145 #=33
+AP ML555_Production_REV01:sodimm_200_ddr2 146 PINTYPE=IN
+AP ML555_Production_REV01:sodimm_200_ddr2 146 #=28
+AP ML555_Production_REV01:sodimm_200_ddr2 147 PINTYPE=IN
+AP ML555_Production_REV01:sodimm_200_ddr2 147 #=39
+AP ML555_Production_REV01:sodimm_200_ddr2 148 PINTYPE=IN
+AP ML555_Production_REV01:sodimm_200_ddr2 148 #=34
+AP ML555_Production_REV01:sodimm_200_ddr2 149 PINTYPE=IN
+AP ML555_Production_REV01:sodimm_200_ddr2 149 #=41
+AP ML555_Production_REV01:sodimm_200_ddr2 150 PINTYPE=IN
+AP ML555_Production_REV01:sodimm_200_ddr2 150 #=40
+AP ML555_Production_REV01:sodimm_200_ddr2 151 PINTYPE=IN
+AP ML555_Production_REV01:sodimm_200_ddr2 151 #=47
+AP ML555_Production_REV01:sodimm_200_ddr2 152 PINTYPE=IN
+AP ML555_Production_REV01:sodimm_200_ddr2 152 #=42
+AP ML555_Production_REV01:sodimm_200_ddr2 153 PINTYPE=IN
+AP ML555_Production_REV01:sodimm_200_ddr2 153 #=53
+AP ML555_Production_REV01:sodimm_200_ddr2 154 PINTYPE=IN
+AP ML555_Production_REV01:sodimm_200_ddr2 154 #=2
+AP ML555_Production_REV01:sodimm_200_ddr2 155 PINTYPE=IN
+AP ML555_Production_REV01:sodimm_200_ddr2 155 #=48
+AP ML555_Production_REV01:sodimm_200_ddr2 156 PINTYPE=IN
+AP ML555_Production_REV01:sodimm_200_ddr2 156 #=59
+AP ML555_Production_REV01:sodimm_200_ddr2 157 PINTYPE=IN
+AP ML555_Production_REV01:sodimm_200_ddr2 157 #=54
+AP ML555_Production_REV01:sodimm_200_ddr2 158 PINTYPE=BI
+AP ML555_Production_REV01:sodimm_200_ddr2 158 #=65
+AP ML555_Production_REV01:sodimm_200_ddr2 159 PINTYPE=IN
+AP ML555_Production_REV01:sodimm_200_ddr2 159 #=60
+AP ML555_Production_REV01:sodimm_200_ddr2 160 PINTYPE=IN
+AP ML555_Production_REV01:sodimm_200_ddr2 160 #=71
+AP ML555_Production_REV01:sodimm_200_ddr2 161 PINTYPE=IN
+AP ML555_Production_REV01:sodimm_200_ddr2 161 #=66
+AP ML555_Production_REV01:sodimm_200_ddr2 162 PINTYPE=IN
+AP ML555_Production_REV01:sodimm_200_ddr2 162 #=77
+AP ML555_Production_REV01:sodimm_200_ddr2 163 PINTYPE=IN
+AP ML555_Production_REV01:sodimm_200_ddr2 163 #=72
+AP ML555_Production_REV01:sodimm_200_ddr2 164 PINTYPE=IN
+AP ML555_Production_REV01:sodimm_200_ddr2 164 #=121
+AP ML555_Production_REV01:sodimm_200_ddr2 165 PINTYPE=IN
+AP ML555_Production_REV01:sodimm_200_ddr2 165 #=9
+AP ML555_Production_REV01:sodimm_200_ddr2 166 PINTYPE=IN
+AP ML555_Production_REV01:sodimm_200_ddr2 166 #=78
+AP ML555_Production_REV01:sodimm_200_ddr2 167 PINTYPE=IN
+AP ML555_Production_REV01:sodimm_200_ddr2 167 #=127
+AP ML555_Production_REV01:sodimm_200_ddr2 168 PINTYPE=IN
+AP ML555_Production_REV01:sodimm_200_ddr2 168 #=122
+AP ML555_Production_REV01:sodimm_200_ddr2 169 PINTYPE=IN
+AP ML555_Production_REV01:sodimm_200_ddr2 169 #=133
+AP ML555_Production_REV01:sodimm_200_ddr2 170 PINTYPE=IN
+AP ML555_Production_REV01:sodimm_200_ddr2 170 #=128
+AP ML555_Production_REV01:sodimm_200_ddr2 171 PINTYPE=IN
+AP ML555_Production_REV01:sodimm_200_ddr2 171 #=139
+AP ML555_Production_REV01:sodimm_200_ddr2 172 PINTYPE=IN
+AP ML555_Production_REV01:sodimm_200_ddr2 172 #=132
+AP ML555_Production_REV01:sodimm_200_ddr2 173 PINTYPE=IN
+AP ML555_Production_REV01:sodimm_200_ddr2 173 #=145
+AP ML555_Production_REV01:sodimm_200_ddr2 174 PINTYPE=IN
+AP ML555_Production_REV01:sodimm_200_ddr2 174 #=138
+AP ML555_Production_REV01:sodimm_200_ddr2 175 PINTYPE=IN
+AP ML555_Production_REV01:sodimm_200_ddr2 175 #=149
+AP ML555_Production_REV01:sodimm_200_ddr2 176 PINTYPE=IN
+AP ML555_Production_REV01:sodimm_200_ddr2 176 #=8
+AP ML555_Production_REV01:sodimm_200_ddr2 177 PINTYPE=IN
+AP ML555_Production_REV01:sodimm_200_ddr2 177 #=144
+AP ML555_Production_REV01:sodimm_200_ddr2 178 PINTYPE=IN
+AP ML555_Production_REV01:sodimm_200_ddr2 178 #=155
+AP ML555_Production_REV01:sodimm_200_ddr2 179 PINTYPE=IN
+AP ML555_Production_REV01:sodimm_200_ddr2 179 #=150
+AP ML555_Production_REV01:sodimm_200_ddr2 180 PINTYPE=IN
+AP ML555_Production_REV01:sodimm_200_ddr2 180 #=161
+AP ML555_Production_REV01:sodimm_200_ddr2 181 PINTYPE=IN
+AP ML555_Production_REV01:sodimm_200_ddr2 181 #=156
+AP ML555_Production_REV01:sodimm_200_ddr2 182 PINTYPE=IN
+AP ML555_Production_REV01:sodimm_200_ddr2 182 #=165
+AP ML555_Production_REV01:sodimm_200_ddr2 183 PINTYPE=IN
+AP ML555_Production_REV01:sodimm_200_ddr2 183 #=162
+AP ML555_Production_REV01:sodimm_200_ddr2 184 PINTYPE=IN
+AP ML555_Production_REV01:sodimm_200_ddr2 184 #=171
+AP ML555_Production_REV01:sodimm_200_ddr2 185 PINTYPE=IN
+AP ML555_Production_REV01:sodimm_200_ddr2 185 #=168
+AP ML555_Production_REV01:sodimm_200_ddr2 186 PINTYPE=IN
+AP ML555_Production_REV01:sodimm_200_ddr2 186 #=177
+AP ML555_Production_REV01:sodimm_200_ddr2 187 PINTYPE=IN
+AP ML555_Production_REV01:sodimm_200_ddr2 187 #=15
+AP ML555_Production_REV01:sodimm_200_ddr2 188 PINTYPE=IN
+AP ML555_Production_REV01:sodimm_200_ddr2 188 #=172
+AP ML555_Production_REV01:sodimm_200_ddr2 189 PINTYPE=IN
+AP ML555_Production_REV01:sodimm_200_ddr2 189 #=183
+AP ML555_Production_REV01:sodimm_200_ddr2 190 PINTYPE=IN
+AP ML555_Production_REV01:sodimm_200_ddr2 190 #=178
+AP ML555_Production_REV01:sodimm_200_ddr2 191 PINTYPE=IN
+AP ML555_Production_REV01:sodimm_200_ddr2 191 #=187
+AP ML555_Production_REV01:sodimm_200_ddr2 192 PINTYPE=IN
+AP ML555_Production_REV01:sodimm_200_ddr2 192 #=184
+AP ML555_Production_REV01:sodimm_200_ddr2 193 PINTYPE=IN
+AP ML555_Production_REV01:sodimm_200_ddr2 193 #=193
+AP ML555_Production_REV01:sodimm_200_ddr2 194 PINTYPE=IN
+AP ML555_Production_REV01:sodimm_200_ddr2 194 #=190
+AP ML555_Production_REV01:sodimm_200_ddr2 195 PINTYPE=IN
+AP ML555_Production_REV01:sodimm_200_ddr2 195 #=196
+AP ML555_Production_REV01:sodimm_200_ddr2 196 PINTYPE=IN
+AP ML555_Production_REV01:sodimm_200_ddr2 196 #=12
+AP ML555_Production_REV01:sodimm_200_ddr2 197 PINTYPE=IN
+AP ML555_Production_REV01:sodimm_200_ddr2 197 #=21
+AP ML555_Production_REV01:sodimm_200_ddr2 198 PINTYPE=IN
+AP ML555_Production_REV01:sodimm_200_ddr2 198 #=18
+AP ML555_Production_REV01:sodimm_200_ddr2 199 PINTYPE=IN
+AP ML555_Production_REV01:sodimm_200_ddr2 199 #=27
+AP ML555_Production_REV01:sodimm_200_ddr2 200 PINTYPE=IN
+AP ML555_Production_REV01:sodimm_200_ddr2 200 #=109
+|Q ML555_Production_REV01:r0402 1
+AS ML555_Production_REV01:r0402 PINSWAP=1,2
+AS ML555_Production_REV01:r0402 LEVEL=STD
+AS ML555_Production_REV01:r0402 PARTS=1
+AS ML555_Production_REV01:r0402 DEVICE=MLC_RES_0402
+AS ML555_Production_REV01:r0402 PKG_TYPE=R0402
+AS ML555_Production_REV01:r0402 VALUE=?
+AS ML555_Production_REV01:r0402 REFDES=R?
+AS ML555_Production_REV01:r0402 PINORDER=1 2
+AS ML555_Production_REV01:r0402 INOV_VER_REC=17:16_9-9-04
+AP ML555_Production_REV01:r0402 1 #=1
+AP ML555_Production_REV01:r0402 1 PINTYPE=BI
+AP ML555_Production_REV01:r0402 2 PINTYPE=BI
+AP ML555_Production_REV01:r0402 2 #=2
+G GND
+G DDR2_VCC1V8
+G DDR2_VREF
+G DDR2_VCC1V8
+G DDR2_VCC1V8
+G GND
+G GND
+G GND
+G GND
+G GND
+G GND
+G GND
+G GND
+G GND
+G GND
+G GND
+G GND
+G GND
+G GND
+G GND
+G GND
+G GND
+G GND
+G GND
+G GND
+G GND
+G GND
+G GND
+G GND
+G GND
+G GND
+G GND
+G GND
+G GND
+G GND
+G GND
+G GND
+G GND
+G GND
+G GND
+G GND
+G GND
+G GND
+G GND
+G GND
+G GND
+G GND
+G GND
+G GND
+G GND
+G GND
+G GND
+G GND
+G GND
+G GND
+G GND
+G GND
+G GND
+G GND
+G GND
+G GND
+G GND
+G GND
+M ML555_Production_REV01:sodimm_200_ddr2 $19I628
+I $19I628 ML555_Production_REV01:sodimm_200_ddr2 A0 A1 A10 A11 A12 A2 A3 A4 A5 A6 A7 A8 A9 BA0 BA1 BA2_NC5 CAS_B CK0_P CK0_N CK1_P CK1_N CKE0 ? DM0 DM1 DM2 DM3 DM4 DM5 DM6 DM7 DQ0 DQ1 DQ10 DQ11 DQ12 DQ13 DQ14 DQ15 DQ16 DQ17 DQ18 DQ19 DQ2 DQ20 DQ21 DQ22 DQ23 DQ24 DQ25 DQ26 DQ27 DQ28 DQ29 DQ3 DQ30 DQ31 DQ32 DQ33 DQ34 DQ35 DQ36 DQ37 DQ38 DQ39 DQ4 DQ40 DQ41 DQ42 DQ43 DQ44 DQ45 DQ46 DQ47 DQ48 DQ49 DQ5 DQ50 DQ51 DQ52 DQ53 DQ54 DQ55 DQ56 DQ57 DQ58 DQ59 DQ6 DQ60 DQ61 DQ62 DQ63 DQ7 DQ8 DQ9 DQS0_P DQS0_N DQS1_P DQS1_N DQS2_P DQS2_N DQS3_P DQS3_N DQS4_P DQS4_N DQS5_P DQS5_N DQS6_P DQS6_N DQS7_P DQS7_N ? ? ? ? ? ? ? ? ODT0 ? RAS_B S0_B ? GND GND SCL SDA DDR2_VCC1V8 DDR2_VCC1V8 DDR2_VCC1V8 DDR2_VCC1V8 DDR2_VCC1V8 DDR2_VCC1V8 DDR2_VCC1V8 DDR2_VCC1V8 DDR2_VCC1V8 DDR2_VCC1V8 DDR2_VCC1V8 DDR2_VCC1V8 DDR2_VCC1V8 DDR2_VREF GND GND GND GND GND GND GND GND GND GND GND GND GND GND GND GND GND GND GND GND GND GND GND GND GND GND GND GND GND GND GND GND GND GND GND GND GND GND GND GND GND GND GND GND GND GND GND GND GND GND GND GND GND GND GND GND GND WE_B REFDES=J2`
+|R 22:08_12-9-05
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 1 #=102
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 2 #=101
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 3 #=105
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 4 #=90
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 5 #=89
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 6 #=100
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 7 #=99
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 8 #=98
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 9 #=97
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 10 #=94
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 11 #=92
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 12 #=93
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 13 #=91
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 14 #=107
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 15 #=106
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 16 #=85
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 17 #=113
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 18 #=30
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 19 #=32
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 20 #=164
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 21 #=166
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 22 #=79
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 23 #=80
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 24 #=10
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 25 #=26
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 26 #=52
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 27 #=67
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 28 #=130
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 29 #=147
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 30 #=170
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 31 #=185
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 32 #=5
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 33 #=7
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 34 #=35
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 35 #=37
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 36 #=20
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 37 #=22
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 38 #=36
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 39 #=38
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 40 #=43
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 41 #=45
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 42 #=55
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 43 #=57
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 44 #=17
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 45 #=44
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 46 #=46
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 47 #=56
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 48 #=58
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 49 #=61
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 50 #=63
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 51 #=73
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 52 #=75
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 53 #=62
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 54 #=64
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 55 #=19
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 56 #=74
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 57 #=76
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 58 #=123
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 59 #=125
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 60 #=135
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 61 #=137
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 62 #=124
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 63 #=126
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 64 #=134
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 65 #=136
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 66 #=4
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 67 #=141
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 68 #=143
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 69 #=151
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 70 #=153
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 71 #=140
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 72 #=142
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 73 #=152
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 74 #=154
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 75 #=157
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 76 #=159
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 77 #=6
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 78 #=173
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 79 #=175
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 80 #=158
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 81 #=160
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 82 #=174
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 83 #=176
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 84 #=179
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 85 #=181
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 86 #=189
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 87 #=191
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 88 #=14
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 89 #=180
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 90 #=182
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 91 #=192
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 92 #=194
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 93 #=16
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 94 #=23
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 95 #=25
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 96 #=13
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 97 #=11
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 98 #=31
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 99 #=29
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 100 #=51
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 101 #=49
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 102 #=70
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 103 #=68
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 104 #=131
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 105 #=129
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 106 #=148
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 107 #=146
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 108 #=169
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 109 #=167
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 110 #=188
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 111 #=186
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 112 #=69
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 113 #=50
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 114 #=83
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 115 #=84
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 116 #=163
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 117 #=86
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 118 #=116
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 119 #=120
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 120 #=114
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 121 #=119
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 122 #=108
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 123 #=110
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 124 #=115
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 125 #=198
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 126 #=200
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 127 #=197
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 128 #=195
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 129 #=81
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 130 #=112
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 131 #=117
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 132 #=118
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 133 #=82
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 134 #=87
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 135 #=88
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 136 #=95
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 137 #=96
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 138 #=103
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 139 #=104
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 140 #=111
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 141 #=199
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 142 #=1
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 143 #=3
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 144 #=24
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 145 #=33
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 146 #=28
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 147 #=39
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 148 #=34
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 149 #=41
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 150 #=40
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 151 #=47
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 152 #=42
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 153 #=53
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 154 #=2
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 155 #=48
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 156 #=59
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 157 #=54
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 158 #=65
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 159 #=60
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 160 #=71
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 161 #=66
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 162 #=77
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 163 #=72
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 164 #=121
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 165 #=9
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 166 #=78
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 167 #=127
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 168 #=122
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 169 #=133
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 170 #=128
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 171 #=139
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 172 #=132
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 173 #=145
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 174 #=138
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 175 #=149
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 176 #=8
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 177 #=144
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 178 #=155
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 179 #=150
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 180 #=161
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 181 #=156
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 182 #=165
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 183 #=162
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 184 #=171
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 185 #=168
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 186 #=177
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 187 #=15
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 188 #=172
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 189 #=183
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 190 #=178
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 191 #=187
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 192 #=184
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 193 #=193
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 194 #=190
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 195 #=196
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 196 #=12
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 197 #=21
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 198 #=18
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 199 #=27
+API $19I628 ML555_Production_REV01:sodimm_200_ddr2 200 #=109
+M ML555_Production_REV01:r0402 $19I598
+I $19I598 ML555_Production_REV01:r0402 GND ODT0 VALUE=4.7K`REFDES=R441`
+|R 17:16_9-9-04
+API $19I598 ML555_Production_REV01:r0402 1 #=1
+API $19I598 ML555_Production_REV01:r0402 2 #=2
+M ML555_Production_REV01:r0402 $19I633
+I $19I633 ML555_Production_REV01:r0402 GND CKE0 VALUE=4.7K`REFDES=R443`
+|R 17:16_9-9-04
+API $19I633 ML555_Production_REV01:r0402 1 #=1
+API $19I633 ML555_Production_REV01:r0402 2 #=2
+EW

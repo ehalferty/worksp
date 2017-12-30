@@ -1,0 +1,138 @@
+Release 9.1.01i Map J.32
+Xilinx Map Application Log File for Design 'mem_ep_app_top'
+
+Design Information
+------------------
+Command Line   : map -p xc5vlx50t-1-ff1136 -logic_opt off -ol high -o mapped.ncd
+mem_ep_app_top.ngd mapped.pcf 
+Target Device  : xc5vlx50t
+Target Package : ff1136
+Target Speed   : -1
+Mapper Version : virtex5 -- $Revision: 1.36 $
+Mapped Date    : Fri Feb 23 10:38:55 2007
+
+Mapping design into LUTs...
+Writing file mapped.ngm...
+Running directed packing...
+Running delay-based LUT packing...
+Running timing-driven packing...
+
+Phase 1.1
+Phase 1.1 (Checksum:990231) REAL time: 1 mins 5 secs 
+
+Phase 2.7
+Phase 2.7 (Checksum:1312cfe) REAL time: 1 mins 5 secs 
+
+Phase 3.31
+Phase 3.31 (Checksum:1c9c37d) REAL time: 1 mins 5 secs 
+
+Phase 4.33
+Phase 4.33 (Checksum:26259fc) REAL time: 2 mins 26 secs 
+
+Phase 5.32
+Phase 5.32 (Checksum:2faf07b) REAL time: 2 mins 26 secs 
+
+Phase 6.2
+......
+......
+Phase 6.2 (Checksum:39386fa) REAL time: 2 mins 31 secs 
+
+Phase 7.30
+Phase 7.30 (Checksum:42c1d79) REAL time: 2 mins 31 secs 
+
+Phase 8.3
+Phase 8.3 (Checksum:4c4b3f8) REAL time: 2 mins 32 secs 
+
+Phase 9.5
+Phase 9.5 (Checksum:55d4a77) REAL time: 2 mins 32 secs 
+
+Phase 10.8
+.............
+...
+.......................
+...............
+...............
+...............
+Phase 10.8 (Checksum:1c8b292) REAL time: 2 mins 42 secs 
+
+Phase 11.29
+Phase 11.29 (Checksum:68e7775) REAL time: 2 mins 42 secs 
+
+Phase 12.5
+Phase 12.5 (Checksum:7270df4) REAL time: 2 mins 42 secs 
+
+Phase 13.18
+Phase 13.18 (Checksum:7bfa473) REAL time: 3 mins 31 secs 
+
+Phase 14.5
+Phase 14.5 (Checksum:8583af2) REAL time: 3 mins 31 secs 
+
+Phase 16.34
+Phase 16.34 (Checksum:98967f0) REAL time: 3 mins 31 secs 
+
+REAL time consumed by placer: 4 mins 1 secs 
+CPU  time consumed by placer: 4 mins 1 secs 
+Inspecting route info ...
+Route info done.
+
+Design Summary
+--------------
+
+Design Summary:
+Number of errors:      0
+Number of warnings:    8
+Slice Logic Utilization:
+  Number of Slice Registers:                   961 out of  28,800    3%
+    Number used as Flip Flops:                 953
+    Number used as Latches:                      8
+  Number of Slice LUTs:                        611 out of  28,800    2%
+    Number used as logic:                      604 out of  28,800    2%
+      Number using O6 output only:             577
+      Number using O5 output only:              21
+      Number using O5 and O6:                    6
+    Number used as Memory:                       5 out of   7,680    1%
+      Number used as Shift Register:             5
+        Number using O6 output only:             5
+    Number used as exclusive route-thru:         2
+  Number of route-thrus:                        23 out of  57,600    1%
+    Number using O6 output only:                23
+
+Slice Logic Distribution:
+  Number of occupied Slices:                   470 out of   7,200    6%
+  Number of LUT Flip Flop pairs used:        1,281
+    Number with an unused Flip Flop:           320 out of   1,281   24%
+    Number with an unused LUT:                 670 out of   1,281   52%
+    Number of fully used LUT-FF pairs:         291 out of   1,281   22%
+    Number of unique control sets:              31
+
+  A LUT Flip Flop pair for this architecture represents one LUT paired with
+  one Flip Flop within a slice.  A control set is a unique combination of
+  clock, reset, set, and enable signals for a registered element.
+  The Slice Logic Distribution report is not meaningful if the design is
+  over-mapped for a non-slice resource or if Placement fails.
+
+IO Utilization:
+  Number of bonded IOBs:                         9 out of     480    1%
+
+Specific Feature Utilization:
+  Number of BlockRAM/FIFO:                       7 out of      60   11%
+    Number using BlockRAM only:                  7
+    Total primitives used:
+      Number of 36k BlockRAM used:               7
+    Total Memory used (KB):                    252 out of   2,160   11%
+  Number of BUFG/BUFGCTRLs:                      4 out of      32   12%
+    Number used as BUFGs:                        4
+  Number of BUFDSs:                              1 out of       6   16%
+  Number of GTP_DUALs:                           4 out of       6   66%
+  Number of PCIEs:                               1 out of       1  100%
+  Number of PLL_ADVs:                            1 out of       6   16%
+
+  Number of RPM macros:            1
+Total equivalent gate count for design:  930,117
+Additional JTAG gate count for IOBs:  2,064
+Peak Memory Usage:  441 MB
+Total REAL time to MAP completion:  5 mins 39 secs 
+Total CPU time to MAP completion:   5 mins 37 secs 
+
+Mapping completed.
+See MAP report file "mapped.mrp" for details.

@@ -1,0 +1,15 @@
+verilog work /build/xfndry/IP1_J.12/rtf/virtex5/verilog/src/iSE/unisim_comp.v
+verilog work ../src/pci_express_wrapper.v
+verilog work ../src/pcie_gt_wrapper.v
+verilog work ../src/bram_common.v
+verilog work ../src/pcie_mim_wrapper.v
+verilog work ../src/pcie_reset_logic.v
+verilog work ../src/pcie_clocking.v
+verilog work ../src/pcie_bar_decoder.v
+verilog work ../src/pcie_cmm_decoder.v
+verilog work ../src/pcie_blk_cf_mgmt.v
+verilog work ../src/pcie_top.v
+verilog work ../example_design/completer_mem_block_machine.v
+verilog work ../example_design/completer_mem_block.v
+verilog work ../example_design/completer_mem_block_top.v
+verilog work ../example_design/mem_ep_app_top_ml555.v

@@ -1,0 +1,25 @@
+Release 9.1.01i - netgen J.32
+Copyright (c) 1995-2007 Xilinx, Inc.  All rights reserved.
+
+Command Line: netgen -sim -ofmt verilog -ne -w -tm xilinx_pci_exp_8_lane_ep
+-sdf_path ../../implement/results routed.ncd  
+
+Read and Annotate design 'routed.ncd' ...
+Loading device for application Rf_Device from file '5vlx50t.nph' in environment
+/build/xfndry/IP1_J.12/rtf.
+   "xilinx_pci_exp_8_lane_ep" is an NCD, version 3.1, device xc5vlx50t, package
+ff1136, speed -1
+The STEPPING level for this design is ES.
+The number of routable networks is 4319
+Flattening design ...
+Processing design ... 
+  Preping design's networks ...
+  Preping design's macros ...
+Writing Verilog SDF file '../../implement/results/routed.sdf' ...
+Writing Verilog netlist file 'routed.v' ...
+INFO:NetListWriters:633 - The generated Verilog netlist contains Xilinx SIMPRIM
+   simulation primitives and has to be used with SIMPRIM simulation library for
+   correct compilation and simulation. 
+Number of warnings: 0
+Number of info messages: 1
+Total memory usage is 297840 kilobytes

@@ -1,0 +1,13 @@
+# Output products list for <pci_express_wrapper>
+pci_express_wrapper/src/pci_express_wrapper.v
+pci_express_wrapper/src/pcie_gt_wrapper.v
+pci_express_wrapper/implement/implement.sh
+pci_express_wrapper/implement/mem_ep_app_top.scr
+pci_express_wrapper/pci_express_wrapper_xmdf.tcl
+pci_express_wrapper/example_design/pci_express_wrapper.example
+pci_express_wrapper/simulation/functional/simulate_mti.do
+pci_express_wrapper/simulation/functional/wave.do
+pci_express_wrapper/simulation/functional/simulate_ncsim.sh
+pci_express_wrapper.xco
+pci_express_wrapper_xmdf.tcl
+pci_express_wrapper_flist.txt
